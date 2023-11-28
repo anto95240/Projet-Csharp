@@ -11,31 +11,20 @@ namespace Projet_Csharp
         {
             InitializeComponent();
             timer1.Interval = TIMER_INTERVAL; // Définit l'intervalle du timer
-            progressBar1.Maximum = MAX_PROGRESS; // Définit le maximum de la barre de progression
+            ProgressBar.Maximum = MAX_PROGRESS; // Définit le maximum de la barre de progression
+            
             timer1.Start();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
-
-        private void pictureBox1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Increment(10); // Augmente la barre de progression
 
-            if (progressBar1.Value >= progressBar1.Maximum)
+            ProgressBar.Increment(10); // Augmente la barre de progression
+
+
+
+            if (ProgressBar.Value >= ProgressBar.Maximum)
             {
                 timer1.Stop(); // Arrête le timer une fois le chargement terminé
                 RedirigerVersPageConnexion();

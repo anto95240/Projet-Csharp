@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            label5 = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
             textBoxPassword = new TextBox();
@@ -55,23 +54,9 @@
             label1.TabIndex = 0;
             label1.Text = "CONNEXION";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.Font = new Font("Times New Roman", 10.2F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(218, 491);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 19);
-            label5.TabIndex = 20;
-            label5.Text = "Admin";
-            label5.Click += V_Admin;
-            // 
             // panel2
             // 
-            panel2.BackColor = Color.Crimson;
+            panel2.BackColor = Color.MediumSeaGreen;
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
@@ -81,9 +66,9 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Crimson;
+            panel1.BackColor = Color.MediumSeaGreen;
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 533);
+            panel1.Location = new Point(0, 508);
             panel1.Name = "panel1";
             panel1.Size = new Size(495, 49);
             panel1.TabIndex = 18;
@@ -91,6 +76,7 @@
             // textBoxPassword
             // 
             textBoxPassword.AccessibleName = "";
+            textBoxPassword.BorderStyle = BorderStyle.FixedSingle;
             textBoxPassword.Location = new Point(63, 250);
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.Size = new Size(305, 28);
@@ -99,6 +85,7 @@
             // textBoxUsername
             // 
             textBoxUsername.AccessibleName = "";
+            textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
             textBoxUsername.Location = new Point(63, 152);
             textBoxUsername.Name = "textBoxUsername";
             textBoxUsername.Size = new Size(305, 28);
@@ -126,9 +113,9 @@
             label3.Location = new Point(63, 113);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(174, 26);
+            label3.Size = new Size(65, 26);
             label3.TabIndex = 14;
-            label3.Text = "Nom d'Utilisateur";
+            label3.Text = "Email";
             // 
             // label2
             // 
@@ -157,7 +144,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Crimson;
+            button1.BackColor = Color.SeaGreen;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -176,8 +163,7 @@
             AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(495, 582);
-            Controls.Add(label5);
+            ClientSize = new Size(495, 557);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(textBoxPassword);
@@ -193,7 +179,6 @@
             Name = "Connexion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Connexion";
-            Load += Connexion_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -203,7 +188,6 @@
         #endregion
 
         private Label label1;
-        private Label label5;
         private Panel panel2;
         private Panel panel1;
         private TextBox textBoxPassword;

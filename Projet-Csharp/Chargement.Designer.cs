@@ -31,10 +31,10 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chargement));
             label1 = new Label();
-            progressBar1 = new ProgressBar();
-            pictureBox1 = new PictureBox();
+            ProgressBar = new ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
             label2 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -44,36 +44,22 @@
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Crimson;
             label1.ImageAlign = ContentAlignment.TopCenter;
-            label1.Location = new Point(237, 27);
+            label1.Location = new Point(259, 26);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(151, 23);
+            label1.Size = new Size(118, 23);
             label1.TabIndex = 0;
-            label1.Text = "Gestion de stock";
-            label1.Click += label1_Click;
+            label1.Text = "e-Commerce";
             // 
-            // progressBar1
+            // ProgressBar
             // 
-            progressBar1.BackColor = SystemColors.Window;
-            progressBar1.Location = new Point(76, 268);
-            progressBar1.Name = "progressBar1";
-            progressBar1.RightToLeft = RightToLeft.No;
-            progressBar1.Size = new Size(459, 16);
-            progressBar1.Style = ProgressBarStyle.Continuous;
-            progressBar1.TabIndex = 4;
-            progressBar1.Click += progressBar1_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(224, 71);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(187, 165);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_2;
+            ProgressBar.BackColor = Color.Cyan;
+            ProgressBar.ForeColor = Color.Cyan;
+            ProgressBar.Location = new Point(76, 268);
+            ProgressBar.Name = "ProgressBar";
+            ProgressBar.Size = new Size(459, 16);
+            ProgressBar.Style = ProgressBarStyle.Continuous;
+            ProgressBar.TabIndex = 4;
             // 
             // timer1
             // 
@@ -85,12 +71,23 @@
             label2.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Crimson;
             label2.ImageAlign = ContentAlignment.TopCenter;
-            label2.Location = new Point(183, 302);
+            label2.Location = new Point(167, 302);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(268, 19);
+            label2.Size = new Size(301, 19);
             label2.TabIndex = 5;
-            label2.Text = "Créer par Antoine, Yvenlee, Amadis";
+            label2.Text = "Développé par Antoine, Yvenlee, Amadis";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.None;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
+            pictureBox1.Location = new Point(224, 71);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(187, 165);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // Chargement
             // 
@@ -100,7 +97,7 @@
             ClientSize = new Size(621, 343);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
-            Controls.Add(progressBar1);
+            Controls.Add(ProgressBar);
             Controls.Add(label1);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -116,9 +113,9 @@
         #endregion
 
         private Label label1;
-        private ProgressBar progressBar1;
-        private PictureBox pictureBox1;
+        private ProgressBar ProgressBar;
         private System.Windows.Forms.Timer timer1;
         private Label label2;
+        private PictureBox pictureBox1;
     }
 }
