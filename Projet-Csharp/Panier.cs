@@ -10,25 +10,24 @@ using System.Windows.Forms;
 
 namespace Projet_Csharp
 {
-    public partial class Accueil : Form
+    public partial class Panier : Form
     {
-        public Accueil()
+        public Panier()
         {
             InitializeComponent();
         }
 
-
-        private void Accueil_Load_1(object sender, EventArgs e)
+        private void Panier_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void panier_click(object sender, EventArgs e)
+        private void produit_click(object sender, EventArgs e)
         {
-            // Redirection vers la page de panier après avoir cliqué sur le bouton de panier
-            Panier pagePanier = new Panier();
-            pagePanier.Show(); // Affiche la page de panier
-            this.Hide(); // Cache la page de accueil actuelle
+            // Redirection vers la page de accueil après avoir cliqué sur le bouton de produit
+            Accueil pageProduit = new Accueil();
+            pageProduit.Show(); // Affiche la page de accueil
+            this.Hide(); // Cache la page de panier actuelle
         }
 
         private void compte_click(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace Projet_Csharp
             // Redirection vers la page de compte après avoir cliqué sur le bouton de compte
             Compte pageCompte = new Compte();
             pageCompte.Show(); // Affiche la page de compte
-            this.Hide(); // Cache la page de accueil actuelle
+            this.Hide(); // Cache la page de panier actuelle
         }
 
         private void deconnexion_click(object sender, EventArgs e)
@@ -44,10 +43,7 @@ namespace Projet_Csharp
             // Redirection vers la page de deconnexion après avoir cliqué sur le bouton de deconneexion
             Deconnexion pageDeconnexion = new Deconnexion();
             pageDeconnexion.Show(); // Affiche la page de déconnexion
-            this.Hide(); // Cache la page de accueil actuelle
+            this.Hide(); // Cache la page de panier actuelle
         }
     }
-
 }
-
-

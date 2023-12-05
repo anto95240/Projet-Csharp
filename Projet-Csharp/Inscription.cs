@@ -21,13 +21,13 @@ namespace Projet_Csharp
         private void Button_Inscription(object sender, EventArgs e)
         {
             // Vérifie si les champs nom d'utilisateur et mot de passe sont vides
-            if (string.IsNullOrWhiteSpace(textBoxFirstName.Text) || 
-                string.IsNullOrWhiteSpace(textBoxLastName.Text) || 
-                string.IsNullOrWhiteSpace(textBoxEmail.Text)|| 
-                string.IsNullOrWhiteSpace(textBoxPassword.Text) || 
-                string.IsNullOrWhiteSpace(textBoxAddress.Text) || 
-                string.IsNullOrWhiteSpace(textBoxCity.Text) || 
-                string.IsNullOrWhiteSpace(textBoxEtat.Text) || 
+            if (string.IsNullOrWhiteSpace(textBoxFirstName.Text) ||
+                string.IsNullOrWhiteSpace(textBoxLastName.Text) ||
+                string.IsNullOrWhiteSpace(textBoxEmail.Text) ||
+                string.IsNullOrWhiteSpace(textBoxPassword.Text) ||
+                string.IsNullOrWhiteSpace(textBoxAddress.Text) ||
+                string.IsNullOrWhiteSpace(textBoxCity.Text) ||
+                string.IsNullOrWhiteSpace(textBoxEtat.Text) ||
                 string.IsNullOrWhiteSpace(textBoxPostalCode.Text) ||
                 string.IsNullOrWhiteSpace(textBoxCountry.Text) ||
                 string.IsNullOrWhiteSpace(textBoxAddressType.Text))
@@ -49,6 +49,11 @@ namespace Projet_Csharp
             Connexion pageConnexion = new Connexion();
             pageConnexion.Show(); // Affiche la page d'accueil
             this.Hide(); // Cache la page de inscription actuelle
+        }
+
+        private void textBoxFirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

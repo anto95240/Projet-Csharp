@@ -179,6 +179,7 @@
             Name = "Connexion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Connexion";
+            Load += Connexion_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);

@@ -355,6 +355,7 @@
             textBoxFirstName.Name = "textBoxFirstName";
             textBoxFirstName.Size = new Size(305, 28);
             textBoxFirstName.TabIndex = 20;
+            textBoxFirstName.TextChanged += textBoxFirstName_TextChanged;
             // 
             // label4
             // 

@@ -40,5 +40,10 @@ namespace Projet_Csharp
             pageInscription.Show(); // Affiche la page d'accueil
             this.Hide(); // Cache la page de connexion actuelle
         }
+
+        private void Connexion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
