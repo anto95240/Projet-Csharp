@@ -32,29 +32,29 @@
             panel2 = new Panel();
             panel1 = new Panel();
             label2 = new Label();
-            button2 = new Button();
-            button1 = new Button();
+            btnCONNEXION = new Button();
+            btnINSCRIPTION = new Button();
             panel3 = new Panel();
-            textBoxPassword = new TextBox();
-            textBoxEmail = new TextBox();
-            label11 = new Label();
-            label12 = new Label();
-            textBoxAddressType = new TextBox();
-            label10 = new Label();
-            textBoxCountry = new TextBox();
-            label9 = new Label();
-            textBoxPostalCode = new TextBox();
-            label8 = new Label();
-            textBoxEtat = new TextBox();
-            label7 = new Label();
-            textBoxCity = new TextBox();
-            label6 = new Label();
-            textBoxAddress = new TextBox();
-            label5 = new Label();
-            textBoxLastName = new TextBox();
-            textBoxFirstName = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
+            MdpTEXT = new TextBox();
+            EmailTEXT = new TextBox();
+            MdpTITLE = new Label();
+            EmailTITLE = new Label();
+            TypeAdresseTEXT = new TextBox();
+            TypeAdresseTITLE = new Label();
+            PaysTEXT = new TextBox();
+            PaysTITLE = new Label();
+            CodePostalTEXT = new TextBox();
+            EtatTITLE = new Label();
+            EtatTEXT = new TextBox();
+            CodePostalTITLE = new Label();
+            VilleTEXT = new TextBox();
+            VilleTITLE = new Label();
+            AdresseTEXT = new TextBox();
+            AdresseTITLE = new Label();
+            NomTEXT = new TextBox();
+            PrénomTEXT = new TextBox();
+            NomTITLE = new Label();
+            PrénomTITLE = new Label();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -101,287 +101,287 @@
             label2.TabIndex = 23;
             label2.Text = "ou sinon";
             // 
-            // button2
+            // btnCONNEXION
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.System;
-            button2.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Crimson;
-            button2.Location = new Point(172, 490);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(131, 30);
-            button2.TabIndex = 21;
-            button2.Text = "Connexion";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += Button_connexion;
+            btnCONNEXION.FlatAppearance.BorderSize = 0;
+            btnCONNEXION.FlatStyle = FlatStyle.System;
+            btnCONNEXION.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCONNEXION.ForeColor = Color.Crimson;
+            btnCONNEXION.Location = new Point(172, 490);
+            btnCONNEXION.Margin = new Padding(4, 3, 4, 3);
+            btnCONNEXION.Name = "btnCONNEXION";
+            btnCONNEXION.Size = new Size(131, 30);
+            btnCONNEXION.TabIndex = 21;
+            btnCONNEXION.Text = "Connexion";
+            btnCONNEXION.UseVisualStyleBackColor = false;
+            btnCONNEXION.Click += Button_connexion;
             // 
-            // button1
+            // btnINSCRIPTION
             // 
-            button1.BackColor = Color.SeaGreen;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(116, 393);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(243, 41);
-            button1.TabIndex = 22;
-            button1.Text = "Je m'inscrit gratuitement";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += Button_Inscription;
+            btnINSCRIPTION.BackColor = Color.SeaGreen;
+            btnINSCRIPTION.FlatAppearance.BorderSize = 0;
+            btnINSCRIPTION.FlatStyle = FlatStyle.Flat;
+            btnINSCRIPTION.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnINSCRIPTION.ForeColor = Color.White;
+            btnINSCRIPTION.Location = new Point(116, 393);
+            btnINSCRIPTION.Margin = new Padding(4, 3, 4, 3);
+            btnINSCRIPTION.Name = "btnINSCRIPTION";
+            btnINSCRIPTION.Size = new Size(243, 41);
+            btnINSCRIPTION.TabIndex = 22;
+            btnINSCRIPTION.Text = "Je m'inscrit gratuitement";
+            btnINSCRIPTION.UseVisualStyleBackColor = false;
+            btnINSCRIPTION.Click += Button_Inscription;
             // 
             // panel3
             // 
             panel3.AutoScroll = true;
             panel3.AutoScrollMargin = new Size(0, 20);
             panel3.AutoScrollMinSize = new Size(0, 100);
-            panel3.Controls.Add(textBoxPassword);
-            panel3.Controls.Add(textBoxEmail);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(label12);
-            panel3.Controls.Add(textBoxAddressType);
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(textBoxCountry);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(textBoxPostalCode);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(textBoxEtat);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(textBoxCity);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(textBoxAddress);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(textBoxLastName);
-            panel3.Controls.Add(textBoxFirstName);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label3);
+            panel3.Controls.Add(MdpTEXT);
+            panel3.Controls.Add(EmailTEXT);
+            panel3.Controls.Add(MdpTITLE);
+            panel3.Controls.Add(EmailTITLE);
+            panel3.Controls.Add(TypeAdresseTEXT);
+            panel3.Controls.Add(TypeAdresseTITLE);
+            panel3.Controls.Add(PaysTEXT);
+            panel3.Controls.Add(PaysTITLE);
+            panel3.Controls.Add(CodePostalTEXT);
+            panel3.Controls.Add(EtatTITLE);
+            panel3.Controls.Add(EtatTEXT);
+            panel3.Controls.Add(CodePostalTITLE);
+            panel3.Controls.Add(VilleTEXT);
+            panel3.Controls.Add(VilleTITLE);
+            panel3.Controls.Add(AdresseTEXT);
+            panel3.Controls.Add(AdresseTITLE);
+            panel3.Controls.Add(NomTEXT);
+            panel3.Controls.Add(PrénomTEXT);
+            panel3.Controls.Add(NomTITLE);
+            panel3.Controls.Add(PrénomTITLE);
             panel3.Location = new Point(52, 98);
             panel3.Name = "panel3";
             panel3.Size = new Size(405, 255);
             panel3.TabIndex = 34;
             // 
-            // textBoxPassword
+            // MdpTEXT
             // 
-            textBoxPassword.AccessibleName = "";
-            textBoxPassword.BorderStyle = BorderStyle.FixedSingle;
-            textBoxPassword.Location = new Point(29, 337);
-            textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(305, 28);
-            textBoxPassword.TabIndex = 37;
+            MdpTEXT.AccessibleName = "";
+            MdpTEXT.BorderStyle = BorderStyle.FixedSingle;
+            MdpTEXT.Location = new Point(29, 337);
+            MdpTEXT.Name = "MdpTEXT";
+            MdpTEXT.Size = new Size(305, 28);
+            MdpTEXT.TabIndex = 37;
             // 
-            // textBoxEmail
+            // EmailTEXT
             // 
-            textBoxEmail.AccessibleName = "";
-            textBoxEmail.BorderStyle = BorderStyle.FixedSingle;
-            textBoxEmail.Location = new Point(29, 243);
-            textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(305, 28);
-            textBoxEmail.TabIndex = 36;
+            EmailTEXT.AccessibleName = "";
+            EmailTEXT.BorderStyle = BorderStyle.FixedSingle;
+            EmailTEXT.Location = new Point(29, 243);
+            EmailTEXT.Name = "EmailTEXT";
+            EmailTEXT.Size = new Size(305, 28);
+            EmailTEXT.TabIndex = 36;
             // 
-            // label11
+            // MdpTITLE
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Crimson;
-            label11.Location = new Point(29, 299);
-            label11.Margin = new Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(134, 26);
-            label11.TabIndex = 35;
-            label11.Text = "Mot de Passe";
+            MdpTITLE.AutoSize = true;
+            MdpTITLE.BackColor = Color.White;
+            MdpTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MdpTITLE.ForeColor = Color.Crimson;
+            MdpTITLE.Location = new Point(29, 299);
+            MdpTITLE.Margin = new Padding(4, 0, 4, 0);
+            MdpTITLE.Name = "MdpTITLE";
+            MdpTITLE.Size = new Size(134, 26);
+            MdpTITLE.TabIndex = 35;
+            MdpTITLE.Text = "Mot de Passe";
             // 
-            // label12
+            // EmailTITLE
             // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.White;
-            label12.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.Crimson;
-            label12.Location = new Point(29, 204);
-            label12.Margin = new Padding(4, 0, 4, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(65, 26);
-            label12.TabIndex = 34;
-            label12.Text = "Email";
+            EmailTITLE.AutoSize = true;
+            EmailTITLE.BackColor = Color.White;
+            EmailTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailTITLE.ForeColor = Color.Crimson;
+            EmailTITLE.Location = new Point(29, 204);
+            EmailTITLE.Margin = new Padding(4, 0, 4, 0);
+            EmailTITLE.Name = "EmailTITLE";
+            EmailTITLE.Size = new Size(65, 26);
+            EmailTITLE.TabIndex = 34;
+            EmailTITLE.Text = "Email";
             // 
-            // textBoxAddressType
+            // TypeAdresseTEXT
             // 
-            textBoxAddressType.AccessibleName = "";
-            textBoxAddressType.BorderStyle = BorderStyle.FixedSingle;
-            textBoxAddressType.Location = new Point(29, 977);
-            textBoxAddressType.Name = "textBoxAddressType";
-            textBoxAddressType.Size = new Size(305, 28);
-            textBoxAddressType.TabIndex = 33;
+            TypeAdresseTEXT.AccessibleName = "";
+            TypeAdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
+            TypeAdresseTEXT.Location = new Point(29, 977);
+            TypeAdresseTEXT.Name = "TypeAdresseTEXT";
+            TypeAdresseTEXT.Size = new Size(305, 28);
+            TypeAdresseTEXT.TabIndex = 33;
             // 
-            // label10
+            // TypeAdresseTITLE
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.White;
-            label10.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Crimson;
-            label10.Location = new Point(29, 929);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(147, 26);
-            label10.TabIndex = 32;
-            label10.Text = "Type d'adresse";
+            TypeAdresseTITLE.AutoSize = true;
+            TypeAdresseTITLE.BackColor = Color.White;
+            TypeAdresseTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TypeAdresseTITLE.ForeColor = Color.Crimson;
+            TypeAdresseTITLE.Location = new Point(29, 929);
+            TypeAdresseTITLE.Margin = new Padding(4, 0, 4, 0);
+            TypeAdresseTITLE.Name = "TypeAdresseTITLE";
+            TypeAdresseTITLE.Size = new Size(147, 26);
+            TypeAdresseTITLE.TabIndex = 32;
+            TypeAdresseTITLE.Text = "Type d'adresse";
             // 
-            // textBoxCountry
+            // PaysTEXT
             // 
-            textBoxCountry.AccessibleName = "";
-            textBoxCountry.BorderStyle = BorderStyle.FixedSingle;
-            textBoxCountry.Location = new Point(29, 871);
-            textBoxCountry.Name = "textBoxCountry";
-            textBoxCountry.Size = new Size(305, 28);
-            textBoxCountry.TabIndex = 31;
+            PaysTEXT.AccessibleName = "";
+            PaysTEXT.BorderStyle = BorderStyle.FixedSingle;
+            PaysTEXT.Location = new Point(29, 871);
+            PaysTEXT.Name = "PaysTEXT";
+            PaysTEXT.Size = new Size(305, 28);
+            PaysTEXT.TabIndex = 31;
             // 
-            // label9
+            // PaysTITLE
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.White;
-            label9.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Crimson;
-            label9.Location = new Point(29, 826);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(55, 26);
-            label9.TabIndex = 30;
-            label9.Text = "Pays";
+            PaysTITLE.AutoSize = true;
+            PaysTITLE.BackColor = Color.White;
+            PaysTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PaysTITLE.ForeColor = Color.Crimson;
+            PaysTITLE.Location = new Point(29, 826);
+            PaysTITLE.Margin = new Padding(4, 0, 4, 0);
+            PaysTITLE.Name = "PaysTITLE";
+            PaysTITLE.Size = new Size(55, 26);
+            PaysTITLE.TabIndex = 30;
+            PaysTITLE.Text = "Pays";
             // 
-            // textBoxPostalCode
+            // CodePostalTEXT
             // 
-            textBoxPostalCode.AccessibleName = "";
-            textBoxPostalCode.BorderStyle = BorderStyle.FixedSingle;
-            textBoxPostalCode.Location = new Point(29, 767);
-            textBoxPostalCode.Name = "textBoxPostalCode";
-            textBoxPostalCode.Size = new Size(305, 28);
-            textBoxPostalCode.TabIndex = 29;
+            CodePostalTEXT.AccessibleName = "";
+            CodePostalTEXT.BorderStyle = BorderStyle.FixedSingle;
+            CodePostalTEXT.Location = new Point(29, 767);
+            CodePostalTEXT.Name = "CodePostalTEXT";
+            CodePostalTEXT.Size = new Size(305, 28);
+            CodePostalTEXT.TabIndex = 29;
             // 
-            // label8
+            // EtatTITLE
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.White;
-            label8.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Crimson;
-            label8.Location = new Point(29, 609);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(47, 26);
-            label8.TabIndex = 28;
-            label8.Text = "Etat";
+            EtatTITLE.AutoSize = true;
+            EtatTITLE.BackColor = Color.White;
+            EtatTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EtatTITLE.ForeColor = Color.Crimson;
+            EtatTITLE.Location = new Point(29, 609);
+            EtatTITLE.Margin = new Padding(4, 0, 4, 0);
+            EtatTITLE.Name = "EtatTITLE";
+            EtatTITLE.Size = new Size(47, 26);
+            EtatTITLE.TabIndex = 28;
+            EtatTITLE.Text = "Etat";
             // 
-            // textBoxEtat
+            // EtatTEXT
             // 
-            textBoxEtat.AccessibleName = "";
-            textBoxEtat.BorderStyle = BorderStyle.FixedSingle;
-            textBoxEtat.Location = new Point(29, 660);
-            textBoxEtat.Name = "textBoxEtat";
-            textBoxEtat.Size = new Size(305, 28);
-            textBoxEtat.TabIndex = 27;
+            EtatTEXT.AccessibleName = "";
+            EtatTEXT.BorderStyle = BorderStyle.FixedSingle;
+            EtatTEXT.Location = new Point(29, 660);
+            EtatTEXT.Name = "EtatTEXT";
+            EtatTEXT.Size = new Size(305, 28);
+            EtatTEXT.TabIndex = 27;
             // 
-            // label7
+            // CodePostalTITLE
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.White;
-            label7.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Crimson;
-            label7.Location = new Point(29, 720);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(123, 26);
-            label7.TabIndex = 26;
-            label7.Text = "Code Postal";
+            CodePostalTITLE.AutoSize = true;
+            CodePostalTITLE.BackColor = Color.White;
+            CodePostalTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CodePostalTITLE.ForeColor = Color.Crimson;
+            CodePostalTITLE.Location = new Point(29, 720);
+            CodePostalTITLE.Margin = new Padding(4, 0, 4, 0);
+            CodePostalTITLE.Name = "CodePostalTITLE";
+            CodePostalTITLE.Size = new Size(123, 26);
+            CodePostalTITLE.TabIndex = 26;
+            CodePostalTITLE.Text = "Code Postal";
             // 
-            // textBoxCity
+            // VilleTEXT
             // 
-            textBoxCity.AccessibleName = "";
-            textBoxCity.BorderStyle = BorderStyle.FixedSingle;
-            textBoxCity.Location = new Point(29, 544);
-            textBoxCity.Name = "textBoxCity";
-            textBoxCity.Size = new Size(305, 28);
-            textBoxCity.TabIndex = 25;
+            VilleTEXT.AccessibleName = "";
+            VilleTEXT.BorderStyle = BorderStyle.FixedSingle;
+            VilleTEXT.Location = new Point(29, 544);
+            VilleTEXT.Name = "VilleTEXT";
+            VilleTEXT.Size = new Size(305, 28);
+            VilleTEXT.TabIndex = 25;
             // 
-            // label6
+            // VilleTITLE
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.White;
-            label6.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Crimson;
-            label6.Location = new Point(29, 501);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(55, 26);
-            label6.TabIndex = 24;
-            label6.Text = "Ville";
+            VilleTITLE.AutoSize = true;
+            VilleTITLE.BackColor = Color.White;
+            VilleTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            VilleTITLE.ForeColor = Color.Crimson;
+            VilleTITLE.Location = new Point(29, 501);
+            VilleTITLE.Margin = new Padding(4, 0, 4, 0);
+            VilleTITLE.Name = "VilleTITLE";
+            VilleTITLE.Size = new Size(55, 26);
+            VilleTITLE.TabIndex = 24;
+            VilleTITLE.Text = "Ville";
             // 
-            // textBoxAddress
+            // AdresseTEXT
             // 
-            textBoxAddress.AccessibleName = "";
-            textBoxAddress.BorderStyle = BorderStyle.FixedSingle;
-            textBoxAddress.Location = new Point(29, 437);
-            textBoxAddress.Name = "textBoxAddress";
-            textBoxAddress.Size = new Size(305, 28);
-            textBoxAddress.TabIndex = 23;
+            AdresseTEXT.AccessibleName = "";
+            AdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
+            AdresseTEXT.Location = new Point(29, 437);
+            AdresseTEXT.Name = "AdresseTEXT";
+            AdresseTEXT.Size = new Size(305, 28);
+            AdresseTEXT.TabIndex = 23;
             // 
-            // label5
+            // AdresseTITLE
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Crimson;
-            label5.Location = new Point(29, 396);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(86, 26);
-            label5.TabIndex = 22;
-            label5.Text = "Adresse";
+            AdresseTITLE.AutoSize = true;
+            AdresseTITLE.BackColor = Color.White;
+            AdresseTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AdresseTITLE.ForeColor = Color.Crimson;
+            AdresseTITLE.Location = new Point(29, 396);
+            AdresseTITLE.Margin = new Padding(4, 0, 4, 0);
+            AdresseTITLE.Name = "AdresseTITLE";
+            AdresseTITLE.Size = new Size(86, 26);
+            AdresseTITLE.TabIndex = 22;
+            AdresseTITLE.Text = "Adresse";
             // 
-            // textBoxLastName
+            // NomTEXT
             // 
-            textBoxLastName.AccessibleName = "";
-            textBoxLastName.BorderStyle = BorderStyle.FixedSingle;
-            textBoxLastName.Location = new Point(29, 142);
-            textBoxLastName.Name = "textBoxLastName";
-            textBoxLastName.Size = new Size(305, 28);
-            textBoxLastName.TabIndex = 21;
+            NomTEXT.AccessibleName = "";
+            NomTEXT.BorderStyle = BorderStyle.FixedSingle;
+            NomTEXT.Location = new Point(29, 142);
+            NomTEXT.Name = "NomTEXT";
+            NomTEXT.Size = new Size(305, 28);
+            NomTEXT.TabIndex = 21;
             // 
-            // textBoxFirstName
+            // PrénomTEXT
             // 
-            textBoxFirstName.AccessibleName = "";
-            textBoxFirstName.BorderStyle = BorderStyle.FixedSingle;
-            textBoxFirstName.Location = new Point(29, 50);
-            textBoxFirstName.Name = "textBoxFirstName";
-            textBoxFirstName.Size = new Size(305, 28);
-            textBoxFirstName.TabIndex = 20;
-            textBoxFirstName.TextChanged += textBoxFirstName_TextChanged;
+            PrénomTEXT.AccessibleName = "";
+            PrénomTEXT.BorderStyle = BorderStyle.FixedSingle;
+            PrénomTEXT.Location = new Point(29, 50);
+            PrénomTEXT.Name = "PrénomTEXT";
+            PrénomTEXT.Size = new Size(305, 28);
+            PrénomTEXT.TabIndex = 20;
+            PrénomTEXT.TextChanged += textBoxFirstName_TextChanged;
             // 
-            // label4
+            // NomTITLE
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.White;
-            label4.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Crimson;
-            label4.Location = new Point(29, 104);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(58, 26);
-            label4.TabIndex = 19;
-            label4.Text = "Nom";
+            NomTITLE.AutoSize = true;
+            NomTITLE.BackColor = Color.White;
+            NomTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NomTITLE.ForeColor = Color.Crimson;
+            NomTITLE.Location = new Point(29, 104);
+            NomTITLE.Margin = new Padding(4, 0, 4, 0);
+            NomTITLE.Name = "NomTITLE";
+            NomTITLE.Size = new Size(58, 26);
+            NomTITLE.TabIndex = 19;
+            NomTITLE.Text = "Nom";
             // 
-            // label3
+            // PrénomTITLE
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.White;
-            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Crimson;
-            label3.Location = new Point(29, 11);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 26);
-            label3.TabIndex = 18;
-            label3.Text = "Prénom";
+            PrénomTITLE.AutoSize = true;
+            PrénomTITLE.BackColor = Color.White;
+            PrénomTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PrénomTITLE.ForeColor = Color.Crimson;
+            PrénomTITLE.Location = new Point(29, 11);
+            PrénomTITLE.Margin = new Padding(4, 0, 4, 0);
+            PrénomTITLE.Name = "PrénomTITLE";
+            PrénomTITLE.Size = new Size(85, 26);
+            PrénomTITLE.TabIndex = 18;
+            PrénomTITLE.Text = "Prénom";
             // 
             // Inscription
             // 
@@ -393,8 +393,8 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label2);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCONNEXION);
+            Controls.Add(btnINSCRIPTION);
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
@@ -415,38 +415,38 @@
         private Panel panel2;
         private Panel panel1;
         private Label label2;
-        private Button button2;
-        private Button button1;
+        private Button btnCONNEXION;
+        private Button btnINSCRIPTION;
         private Panel panel3;
         private TextBox textBox1;
-        private Label label5;
-        private TextBox textBoxPassword;
+        private Label AdresseTITLE;
+        private TextBox MdpTEXT;
         private TextBox textBoxUsername;
-        private Label label4;
-        private Label label3;
+        private Label NomTITLE;
+        private Label PrénomTITLE;
         private TextBox textBox5;
-        private Label label9;
+        private Label PaysTITLE;
         private TextBox textBox4;
-        private Label label8;
+        private Label EtatTITLE;
         private TextBox textBox3;
-        private Label label7;
+        private Label CodePostalTITLE;
         private TextBox textBox2;
-        private Label label6;
+        private Label VilleTITLE;
         private TextBox textBox6;
-        private Label label10;
+        private Label TypeAdresseTITLE;
         private TextBox textBox7;
         private TextBox textBox8;
-        private Label label11;
-        private Label label12;
-        private TextBox textBoxEmail;
-        private TextBox textBoxAddressType;
+        private Label MdpTITLE;
+        private Label EmailTITLE;
+        private TextBox EmailTEXT;
+        private TextBox TypeAdresseTEXT;
         private TextBox textBoxPays;
-        private TextBox textBoxPostalCode;
-        private TextBox textBoxEtat;
-        private TextBox textBoxCity;
-        private TextBox textBoxAddress;
-        private TextBox textBoxLastName;
-        private TextBox textBoxFirstName;
-        private TextBox textBoxCountry;
+        private TextBox CodePostalTEXT;
+        private TextBox EtatTEXT;
+        private TextBox VilleTEXT;
+        private TextBox AdresseTEXT;
+        private TextBox NomTEXT;
+        private TextBox PrénomTEXT;
+        private TextBox PaysTEXT;
     }
 }

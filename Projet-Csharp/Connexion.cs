@@ -20,7 +20,7 @@ namespace Projet_Csharp
         private void Button_connexion(object sender, EventArgs e)
         {
             // Vérifie si les champs nom d'utilisateur et mot de passe sont vides
-            if (string.IsNullOrWhiteSpace(textBoxUsername.Text) || string.IsNullOrWhiteSpace(textBoxPassword.Text))
+            if (string.IsNullOrWhiteSpace(EmailTEXT.Text) || string.IsNullOrWhiteSpace(MdpTEXT.Text))
             {
                 MessageBox.Show("Veuillez saisir un email et un mot de passe.");
             }

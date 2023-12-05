@@ -29,222 +29,222 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Panier));
-            panel1 = new Panel();
-            deconnexion2 = new Button();
-            compte2 = new Button();
-            panier2 = new Button();
-            produit2 = new Button();
-            pictureBox5 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            button5 = new Button();
-            button1 = new Button();
+            btnPANIER2 = new Panel();
+            btnDECONNEXION = new Button();
+            btnCOMPTE = new Button();
+            btnPANNIER = new Button();
+            btnPRODUIT = new Button();
+            LogoDECONNEXION = new PictureBox();
+            logoPRODUIT = new PictureBox();
+            logoCOMPTE = new PictureBox();
+            logoPANIER = new PictureBox();
+            logo = new PictureBox();
+            TITLE = new TextBox();
+            logoPASSER_COMMANDE = new Button();
+            btnSUPPR = new Button();
             panel2 = new Panel();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            PrixVISU = new TextBox();
+            QuantitéVISU = new TextBox();
+            DescriptionVISU = new TextBox();
+            NomVISU = new TextBox();
+            btnPANIER2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)LogoDECONNEXION).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoPRODUIT).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoCOMPTE).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoPANIER).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // btnPANIER2
             // 
-            panel1.BackColor = Color.MediumSeaGreen;
-            panel1.Controls.Add(deconnexion2);
-            panel1.Controls.Add(compte2);
-            panel1.Controls.Add(panier2);
-            panel1.Controls.Add(produit2);
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(196, 582);
-            panel1.TabIndex = 1;
+            btnPANIER2.BackColor = Color.MediumSeaGreen;
+            btnPANIER2.Controls.Add(btnDECONNEXION);
+            btnPANIER2.Controls.Add(btnCOMPTE);
+            btnPANIER2.Controls.Add(btnPANNIER);
+            btnPANIER2.Controls.Add(btnPRODUIT);
+            btnPANIER2.Controls.Add(LogoDECONNEXION);
+            btnPANIER2.Controls.Add(logoPRODUIT);
+            btnPANIER2.Controls.Add(logoCOMPTE);
+            btnPANIER2.Controls.Add(logoPANIER);
+            btnPANIER2.Controls.Add(logo);
+            btnPANIER2.Location = new Point(0, 0);
+            btnPANIER2.Name = "btnPANIER2";
+            btnPANIER2.Size = new Size(196, 582);
+            btnPANIER2.TabIndex = 1;
             // 
-            // deconnexion2
+            // btnDECONNEXION
             // 
-            deconnexion2.Location = new Point(50, 511);
-            deconnexion2.Name = "deconnexion2";
-            deconnexion2.Size = new Size(125, 29);
-            deconnexion2.TabIndex = 11;
-            deconnexion2.Text = "Déconnexion";
-            deconnexion2.UseVisualStyleBackColor = true;
-            deconnexion2.Click += deconnexion_click;
+            btnDECONNEXION.Location = new Point(50, 511);
+            btnDECONNEXION.Name = "btnDECONNEXION";
+            btnDECONNEXION.Size = new Size(125, 29);
+            btnDECONNEXION.TabIndex = 11;
+            btnDECONNEXION.Text = "Déconnexion";
+            btnDECONNEXION.UseVisualStyleBackColor = true;
+            btnDECONNEXION.Click += deconnexion_click;
             // 
-            // compte2
+            // btnCOMPTE
             // 
-            compte2.Location = new Point(50, 421);
-            compte2.Name = "compte2";
-            compte2.Size = new Size(125, 29);
-            compte2.TabIndex = 10;
-            compte2.Text = "Mon Compte";
-            compte2.UseVisualStyleBackColor = true;
-            compte2.Click += compte_click;
+            btnCOMPTE.Location = new Point(50, 421);
+            btnCOMPTE.Name = "btnCOMPTE";
+            btnCOMPTE.Size = new Size(125, 29);
+            btnCOMPTE.TabIndex = 10;
+            btnCOMPTE.Text = "Mon Compte";
+            btnCOMPTE.UseVisualStyleBackColor = true;
+            btnCOMPTE.Click += compte_click;
             // 
-            // panier2
+            // btnPANNIER
             // 
-            panier2.Location = new Point(50, 279);
-            panier2.Name = "panier2";
-            panier2.Size = new Size(125, 29);
-            panier2.TabIndex = 9;
-            panier2.Text = "Mon Panier";
-            panier2.UseVisualStyleBackColor = true;
+            btnPANNIER.Location = new Point(50, 279);
+            btnPANNIER.Name = "btnPANNIER";
+            btnPANNIER.Size = new Size(125, 29);
+            btnPANNIER.TabIndex = 9;
+            btnPANNIER.Text = "Mon Panier";
+            btnPANNIER.UseVisualStyleBackColor = true;
             // 
-            // produit2
+            // btnPRODUIT
             // 
-            produit2.Location = new Point(50, 167);
-            produit2.Name = "produit2";
-            produit2.Size = new Size(125, 29);
-            produit2.TabIndex = 1;
-            produit2.Text = "Les Produits";
-            produit2.UseVisualStyleBackColor = true;
-            produit2.Click += produit_click;
+            btnPRODUIT.Location = new Point(50, 167);
+            btnPRODUIT.Name = "btnPRODUIT";
+            btnPRODUIT.Size = new Size(125, 29);
+            btnPRODUIT.TabIndex = 1;
+            btnPRODUIT.Text = "Les Produits";
+            btnPRODUIT.UseVisualStyleBackColor = true;
+            btnPRODUIT.Click += produit_click;
             // 
-            // pictureBox5
+            // LogoDECONNEXION
             // 
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
-            pictureBox5.Location = new Point(16, 512);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(28, 28);
-            pictureBox5.TabIndex = 8;
-            pictureBox5.TabStop = false;
+            LogoDECONNEXION.BackgroundImage = (Image)resources.GetObject("LogoDECONNEXION.BackgroundImage");
+            LogoDECONNEXION.Location = new Point(16, 512);
+            LogoDECONNEXION.Name = "LogoDECONNEXION";
+            LogoDECONNEXION.Size = new Size(28, 28);
+            LogoDECONNEXION.TabIndex = 8;
+            LogoDECONNEXION.TabStop = false;
             // 
-            // pictureBox2
+            // logoPRODUIT
             // 
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.Location = new Point(12, 165);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 30);
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            logoPRODUIT.BackgroundImage = (Image)resources.GetObject("logoPRODUIT.BackgroundImage");
+            logoPRODUIT.Location = new Point(12, 165);
+            logoPRODUIT.Name = "logoPRODUIT";
+            logoPRODUIT.Size = new Size(30, 30);
+            logoPRODUIT.TabIndex = 1;
+            logoPRODUIT.TabStop = false;
             // 
-            // pictureBox4
+            // logoCOMPTE
             // 
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.Location = new Point(16, 422);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(28, 28);
-            pictureBox4.TabIndex = 7;
-            pictureBox4.TabStop = false;
+            logoCOMPTE.BackgroundImage = (Image)resources.GetObject("logoCOMPTE.BackgroundImage");
+            logoCOMPTE.Location = new Point(16, 422);
+            logoCOMPTE.Name = "logoCOMPTE";
+            logoCOMPTE.Size = new Size(28, 28);
+            logoCOMPTE.TabIndex = 7;
+            logoCOMPTE.TabStop = false;
             // 
-            // pictureBox3
+            // logoPANIER
             // 
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.Location = new Point(16, 280);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(28, 28);
-            pictureBox3.TabIndex = 6;
-            pictureBox3.TabStop = false;
+            logoPANIER.BackgroundImage = (Image)resources.GetObject("logoPANIER.BackgroundImage");
+            logoPANIER.Location = new Point(16, 280);
+            logoPANIER.Name = "logoPANIER";
+            logoPANIER.Size = new Size(28, 28);
+            logoPANIER.TabIndex = 6;
+            logoPANIER.TabStop = false;
             // 
-            // pictureBox1
+            // logo
             // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(63, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 63);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            logo.BackColor = Color.White;
+            logo.BackgroundImage = (Image)resources.GetObject("logo.BackgroundImage");
+            logo.Image = (Image)resources.GetObject("logo.Image");
+            logo.Location = new Point(63, 10);
+            logo.Name = "logo";
+            logo.Size = new Size(69, 63);
+            logo.TabIndex = 1;
+            logo.TabStop = false;
             // 
-            // textBox1
+            // TITLE
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(596, 25);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 21);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "MON PANIER";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            TITLE.BorderStyle = BorderStyle.None;
+            TITLE.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            TITLE.Location = new Point(596, 25);
+            TITLE.Name = "TITLE";
+            TITLE.Size = new Size(125, 21);
+            TITLE.TabIndex = 2;
+            TITLE.Text = "MON PANIER";
+            TITLE.TextAlign = HorizontalAlignment.Center;
             // 
-            // button5
+            // logoPASSER_COMMANDE
             // 
-            button5.Anchor = AnchorStyles.None;
-            button5.Location = new Point(912, 530);
-            button5.Name = "button5";
-            button5.Size = new Size(203, 40);
-            button5.TabIndex = 16;
-            button5.Text = "PASSER COMMANDE";
-            button5.UseVisualStyleBackColor = true;
+            logoPASSER_COMMANDE.Anchor = AnchorStyles.None;
+            logoPASSER_COMMANDE.Location = new Point(912, 530);
+            logoPASSER_COMMANDE.Name = "logoPASSER_COMMANDE";
+            logoPASSER_COMMANDE.Size = new Size(203, 40);
+            logoPASSER_COMMANDE.TabIndex = 16;
+            logoPASSER_COMMANDE.Text = "PASSER COMMANDE";
+            logoPASSER_COMMANDE.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSUPPR
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(668, 530);
-            button1.Name = "button1";
-            button1.Size = new Size(221, 40);
-            button1.TabIndex = 17;
-            button1.Text = "SUPPRIMER DU PANIER";
-            button1.UseVisualStyleBackColor = true;
+            btnSUPPR.Anchor = AnchorStyles.None;
+            btnSUPPR.Location = new Point(668, 530);
+            btnSUPPR.Name = "btnSUPPR";
+            btnSUPPR.Size = new Size(221, 40);
+            btnSUPPR.TabIndex = 17;
+            btnSUPPR.Text = "SUPPRIMER DU PANIER";
+            btnSUPPR.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Gainsboro;
-            panel2.Controls.Add(textBox7);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
+            panel2.Controls.Add(PrixVISU);
+            panel2.Controls.Add(QuantitéVISU);
+            panel2.Controls.Add(DescriptionVISU);
+            panel2.Controls.Add(NomVISU);
             panel2.Location = new Point(269, 119);
             panel2.Name = "panel2";
             panel2.Size = new Size(786, 362);
             panel2.TabIndex = 28;
             // 
-            // textBox7
+            // PrixVISU
             // 
-            textBox7.AccessibleName = "";
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(689, 0);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(97, 28);
-            textBox7.TabIndex = 30;
-            textBox7.Text = "PRIX";
-            textBox7.TextAlign = HorizontalAlignment.Center;
+            PrixVISU.AccessibleName = "";
+            PrixVISU.BorderStyle = BorderStyle.FixedSingle;
+            PrixVISU.Location = new Point(689, 0);
+            PrixVISU.Name = "PrixVISU";
+            PrixVISU.Size = new Size(97, 28);
+            PrixVISU.TabIndex = 30;
+            PrixVISU.Text = "PRIX";
+            PrixVISU.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox6
+            // QuantitéVISU
             // 
-            textBox6.AccessibleName = "";
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(567, 0);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(116, 28);
-            textBox6.TabIndex = 29;
-            textBox6.Text = "QUANTITE";
-            textBox6.TextAlign = HorizontalAlignment.Center;
+            QuantitéVISU.AccessibleName = "";
+            QuantitéVISU.BorderStyle = BorderStyle.FixedSingle;
+            QuantitéVISU.Location = new Point(567, 0);
+            QuantitéVISU.Name = "QuantitéVISU";
+            QuantitéVISU.Size = new Size(116, 28);
+            QuantitéVISU.TabIndex = 29;
+            QuantitéVISU.Text = "QUANTITE";
+            QuantitéVISU.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox5
+            // DescriptionVISU
             // 
-            textBox5.AccessibleName = "";
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(228, 0);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(333, 28);
-            textBox5.TabIndex = 28;
-            textBox5.Text = "DESCRIPTION";
-            textBox5.TextAlign = HorizontalAlignment.Center;
+            DescriptionVISU.AccessibleName = "";
+            DescriptionVISU.BorderStyle = BorderStyle.FixedSingle;
+            DescriptionVISU.Location = new Point(228, 0);
+            DescriptionVISU.Name = "DescriptionVISU";
+            DescriptionVISU.Size = new Size(333, 28);
+            DescriptionVISU.TabIndex = 28;
+            DescriptionVISU.Text = "DESCRIPTION";
+            DescriptionVISU.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox4
+            // NomVISU
             // 
-            textBox4.AccessibleName = "";
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(0, 0);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(222, 28);
-            textBox4.TabIndex = 27;
-            textBox4.Text = "Nom";
-            textBox4.TextAlign = HorizontalAlignment.Center;
+            NomVISU.AccessibleName = "";
+            NomVISU.BorderStyle = BorderStyle.FixedSingle;
+            NomVISU.Location = new Point(0, 0);
+            NomVISU.Name = "NomVISU";
+            NomVISU.Size = new Size(222, 28);
+            NomVISU.TabIndex = 27;
+            NomVISU.Text = "Nom";
+            NomVISU.TextAlign = HorizontalAlignment.Center;
             // 
             // Panier
             // 
@@ -253,10 +253,10 @@
             BackColor = Color.White;
             ClientSize = new Size(1130, 582);
             Controls.Add(panel2);
-            Controls.Add(button1);
-            Controls.Add(button5);
-            Controls.Add(textBox1);
-            Controls.Add(panel1);
+            Controls.Add(btnSUPPR);
+            Controls.Add(logoPASSER_COMMANDE);
+            Controls.Add(TITLE);
+            Controls.Add(btnPANIER2);
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
@@ -264,12 +264,12 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Panier";
             Load += Panier_Load;
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            btnPANIER2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)LogoDECONNEXION).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoPRODUIT).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoCOMPTE).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoPANIER).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -278,23 +278,23 @@
 
         #endregion
 
-        private Panel panel1;
-        private Button deconnexion2;
-        private Button compte2;
-        private Button panier2;
-        private Button produit2;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private Button button5;
-        private Button button1;
+        private Panel btnPANIER2;
+        private Button btnDECONNEXION;
+        private Button btnCOMPTE;
+        private Button btnPANNIER;
+        private Button btnPRODUIT;
+        private PictureBox LogoDECONNEXION;
+        private PictureBox logoPRODUIT;
+        private PictureBox logoCOMPTE;
+        private PictureBox logoPANIER;
+        private PictureBox logo;
+        private TextBox TITLE;
+        private Button logoPASSER_COMMANDE;
+        private Button btnSUPPR;
         private Panel panel2;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
+        private TextBox PrixVISU;
+        private TextBox QuantitéVISU;
+        private TextBox DescriptionVISU;
+        private TextBox NomVISU;
     }
 }

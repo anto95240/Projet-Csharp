@@ -30,155 +30,155 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             panel1 = new Panel();
-            deconnexion1 = new Button();
-            compte1 = new Button();
-            panier1 = new Button();
-            produit1 = new Button();
-            pictureBox5 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
+            btnDECONNEXION = new Button();
+            btnCOMPTE = new Button();
+            btnPANIER = new Button();
+            btnPRODUIT = new Button();
+            LogoDECONNEXION = new PictureBox();
+            LogoPRODUIT = new PictureBox();
+            LogoCOMPTE = new PictureBox();
+            LogoPANIER = new PictureBox();
+            Logo1 = new PictureBox();
+            TITLE = new TextBox();
             modif = new Button();
             ajouter = new Button();
             supprimer = new Button();
-            button5 = new Button();
-            textBoxPassword = new TextBox();
-            textBoxUsername = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
+            addPANIER = new Button();
+            DescriptionTEXT = new TextBox();
+            NomTEXT = new TextBox();
+            DescriptionTITLE = new Label();
+            NomTITLE = new Label();
+            PrixTEXT = new TextBox();
+            QuantitéTEXT = new TextBox();
+            PrixTITLE = new Label();
+            QuantitéTITLE = new Label();
             panel2 = new Panel();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
+            PrixVISU = new TextBox();
+            QuantitéVISU = new TextBox();
+            DescriptionVISU = new TextBox();
+            NomVISU = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LogoDECONNEXION).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LogoPRODUIT).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LogoCOMPTE).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LogoPANIER).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Logo1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.MediumSeaGreen;
-            panel1.Controls.Add(deconnexion1);
-            panel1.Controls.Add(compte1);
-            panel1.Controls.Add(panier1);
-            panel1.Controls.Add(produit1);
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(btnDECONNEXION);
+            panel1.Controls.Add(btnCOMPTE);
+            panel1.Controls.Add(btnPANIER);
+            panel1.Controls.Add(btnPRODUIT);
+            panel1.Controls.Add(LogoDECONNEXION);
+            panel1.Controls.Add(LogoPRODUIT);
+            panel1.Controls.Add(LogoCOMPTE);
+            panel1.Controls.Add(LogoPANIER);
+            panel1.Controls.Add(Logo1);
             panel1.Location = new Point(0, 1);
             panel1.Name = "panel1";
             panel1.Size = new Size(196, 582);
             panel1.TabIndex = 0;
             // 
-            // deconnexion1
+            // btnDECONNEXION
             // 
-            deconnexion1.Location = new Point(50, 511);
-            deconnexion1.Name = "deconnexion1";
-            deconnexion1.Size = new Size(125, 29);
-            deconnexion1.TabIndex = 11;
-            deconnexion1.Text = "Déconnexion";
-            deconnexion1.UseVisualStyleBackColor = true;
-            deconnexion1.Click += deconnexion_click;
+            btnDECONNEXION.Location = new Point(50, 511);
+            btnDECONNEXION.Name = "btnDECONNEXION";
+            btnDECONNEXION.Size = new Size(125, 29);
+            btnDECONNEXION.TabIndex = 11;
+            btnDECONNEXION.Text = "Déconnexion";
+            btnDECONNEXION.UseVisualStyleBackColor = true;
+            btnDECONNEXION.Click += deconnexion_click;
             // 
-            // compte1
+            // btnCOMPTE
             // 
-            compte1.Location = new Point(50, 421);
-            compte1.Name = "compte1";
-            compte1.Size = new Size(125, 29);
-            compte1.TabIndex = 10;
-            compte1.Text = "Mon Compte";
-            compte1.UseVisualStyleBackColor = true;
-            compte1.Click += compte_click;
+            btnCOMPTE.Location = new Point(50, 421);
+            btnCOMPTE.Name = "btnCOMPTE";
+            btnCOMPTE.Size = new Size(125, 29);
+            btnCOMPTE.TabIndex = 10;
+            btnCOMPTE.Text = "Mon Compte";
+            btnCOMPTE.UseVisualStyleBackColor = true;
+            btnCOMPTE.Click += compte_click;
             // 
-            // panier1
+            // btnPANIER
             // 
-            panier1.Location = new Point(50, 279);
-            panier1.Name = "panier1";
-            panier1.Size = new Size(125, 29);
-            panier1.TabIndex = 9;
-            panier1.Text = "Mon Panier";
-            panier1.UseVisualStyleBackColor = true;
-            panier1.Click += panier_click;
+            btnPANIER.Location = new Point(50, 279);
+            btnPANIER.Name = "btnPANIER";
+            btnPANIER.Size = new Size(125, 29);
+            btnPANIER.TabIndex = 9;
+            btnPANIER.Text = "Mon Panier";
+            btnPANIER.UseVisualStyleBackColor = true;
+            btnPANIER.Click += panier_click;
             // 
-            // produit1
+            // btnPRODUIT
             // 
-            produit1.Location = new Point(50, 167);
-            produit1.Name = "produit1";
-            produit1.Size = new Size(125, 29);
-            produit1.TabIndex = 1;
-            produit1.Text = "Les Produits";
-            produit1.UseVisualStyleBackColor = true;
+            btnPRODUIT.Location = new Point(50, 167);
+            btnPRODUIT.Name = "btnPRODUIT";
+            btnPRODUIT.Size = new Size(125, 29);
+            btnPRODUIT.TabIndex = 1;
+            btnPRODUIT.Text = "Les Produits";
+            btnPRODUIT.UseVisualStyleBackColor = true;
             // 
-            // pictureBox5
+            // LogoDECONNEXION
             // 
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
-            pictureBox5.Location = new Point(16, 512);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(28, 28);
-            pictureBox5.TabIndex = 8;
-            pictureBox5.TabStop = false;
+            LogoDECONNEXION.BackgroundImage = (Image)resources.GetObject("LogoDECONNEXION.BackgroundImage");
+            LogoDECONNEXION.Location = new Point(16, 512);
+            LogoDECONNEXION.Name = "LogoDECONNEXION";
+            LogoDECONNEXION.Size = new Size(28, 28);
+            LogoDECONNEXION.TabIndex = 8;
+            LogoDECONNEXION.TabStop = false;
             // 
-            // pictureBox2
+            // LogoPRODUIT
             // 
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.Location = new Point(12, 165);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 30);
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            LogoPRODUIT.BackgroundImage = (Image)resources.GetObject("LogoPRODUIT.BackgroundImage");
+            LogoPRODUIT.Location = new Point(12, 165);
+            LogoPRODUIT.Name = "LogoPRODUIT";
+            LogoPRODUIT.Size = new Size(30, 30);
+            LogoPRODUIT.TabIndex = 1;
+            LogoPRODUIT.TabStop = false;
             // 
-            // pictureBox4
+            // LogoCOMPTE
             // 
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.Location = new Point(16, 422);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(28, 28);
-            pictureBox4.TabIndex = 7;
-            pictureBox4.TabStop = false;
+            LogoCOMPTE.BackgroundImage = (Image)resources.GetObject("LogoCOMPTE.BackgroundImage");
+            LogoCOMPTE.Location = new Point(16, 422);
+            LogoCOMPTE.Name = "LogoCOMPTE";
+            LogoCOMPTE.Size = new Size(28, 28);
+            LogoCOMPTE.TabIndex = 7;
+            LogoCOMPTE.TabStop = false;
             // 
-            // pictureBox3
+            // LogoPANIER
             // 
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.Location = new Point(16, 280);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(28, 28);
-            pictureBox3.TabIndex = 6;
-            pictureBox3.TabStop = false;
+            LogoPANIER.BackgroundImage = (Image)resources.GetObject("LogoPANIER.BackgroundImage");
+            LogoPANIER.Location = new Point(16, 280);
+            LogoPANIER.Name = "LogoPANIER";
+            LogoPANIER.Size = new Size(28, 28);
+            LogoPANIER.TabIndex = 6;
+            LogoPANIER.TabStop = false;
             // 
-            // pictureBox1
+            // Logo1
             // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(63, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 63);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            Logo1.BackColor = Color.White;
+            Logo1.BackgroundImage = (Image)resources.GetObject("Logo1.BackgroundImage");
+            Logo1.Image = (Image)resources.GetObject("Logo1.Image");
+            Logo1.Location = new Point(63, 10);
+            Logo1.Name = "Logo1";
+            Logo1.Size = new Size(69, 63);
+            Logo1.TabIndex = 1;
+            Logo1.TabStop = false;
             // 
-            // textBox1
+            // TITLE
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(560, 25);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(192, 21);
-            textBox1.TabIndex = 3;
-            textBox1.Text = "LISTE DES PRODUITS";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            TITLE.BorderStyle = BorderStyle.None;
+            TITLE.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            TITLE.Location = new Point(560, 25);
+            TITLE.Name = "TITLE";
+            TITLE.Size = new Size(192, 21);
+            TITLE.TabIndex = 3;
+            TITLE.Text = "LISTE DES PRODUITS";
+            TITLE.TextAlign = HorizontalAlignment.Center;
             // 
             // modif
             // 
@@ -210,161 +210,162 @@
             supprimer.Text = "SUPPRIMER";
             supprimer.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // addPANIER
             // 
-            button5.Anchor = AnchorStyles.None;
-            button5.Location = new Point(934, 530);
-            button5.Name = "button5";
-            button5.Size = new Size(184, 40);
-            button5.TabIndex = 15;
-            button5.Text = "AJOUTER PANIER";
-            button5.UseVisualStyleBackColor = true;
+            addPANIER.Anchor = AnchorStyles.None;
+            addPANIER.Location = new Point(934, 530);
+            addPANIER.Name = "addPANIER";
+            addPANIER.Size = new Size(184, 40);
+            addPANIER.TabIndex = 15;
+            addPANIER.Text = "AJOUTER PANIER";
+            addPANIER.UseVisualStyleBackColor = true;
             // 
-            // textBoxPassword
+            // DescriptionTEXT
             // 
-            textBoxPassword.AccessibleName = "";
-            textBoxPassword.BorderStyle = BorderStyle.FixedSingle;
-            textBoxPassword.Location = new Point(341, 165);
-            textBoxPassword.Multiline = true;
-            textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.ScrollBars = ScrollBars.Vertical;
-            textBoxPassword.Size = new Size(160, 75);
-            textBoxPassword.TabIndex = 21;
+            DescriptionTEXT.AccessibleName = "";
+            DescriptionTEXT.BorderStyle = BorderStyle.FixedSingle;
+            DescriptionTEXT.Location = new Point(341, 165);
+            DescriptionTEXT.Multiline = true;
+            DescriptionTEXT.Name = "DescriptionTEXT";
+            DescriptionTEXT.ScrollBars = ScrollBars.Vertical;
+            DescriptionTEXT.Size = new Size(160, 75);
+            DescriptionTEXT.TabIndex = 21;
             // 
-            // textBoxUsername
+            // NomTEXT
             // 
-            textBoxUsername.AccessibleName = "";
-            textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
-            textBoxUsername.Location = new Point(299, 110);
-            textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(202, 28);
-            textBoxUsername.TabIndex = 20;
+            NomTEXT.AccessibleName = "";
+            NomTEXT.BorderStyle = BorderStyle.FixedSingle;
+            NomTEXT.Location = new Point(299, 110);
+            NomTEXT.Name = "NomTEXT";
+            NomTEXT.Size = new Size(202, 28);
+            NomTEXT.TabIndex = 20;
             // 
-            // label4
+            // DescriptionTITLE
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.White;
-            label4.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Crimson;
-            label4.Location = new Point(214, 166);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(119, 26);
-            label4.TabIndex = 19;
-            label4.Text = "Description";
+            DescriptionTITLE.AutoSize = true;
+            DescriptionTITLE.BackColor = Color.White;
+            DescriptionTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DescriptionTITLE.ForeColor = Color.Crimson;
+            DescriptionTITLE.Location = new Point(214, 166);
+            DescriptionTITLE.Margin = new Padding(4, 0, 4, 0);
+            DescriptionTITLE.Name = "DescriptionTITLE";
+            DescriptionTITLE.Size = new Size(119, 26);
+            DescriptionTITLE.TabIndex = 19;
+            DescriptionTITLE.Text = "Description";
             // 
-            // label3
+            // NomTITLE
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.White;
-            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Crimson;
-            label3.Location = new Point(214, 110);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 26);
-            label3.TabIndex = 18;
-            label3.Text = "Nom";
+            NomTITLE.AutoSize = true;
+            NomTITLE.BackColor = Color.White;
+            NomTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NomTITLE.ForeColor = Color.Crimson;
+            NomTITLE.Location = new Point(214, 110);
+            NomTITLE.Margin = new Padding(4, 0, 4, 0);
+            NomTITLE.Name = "NomTITLE";
+            NomTITLE.Size = new Size(58, 26);
+            NomTITLE.TabIndex = 18;
+            NomTITLE.Text = "Nom";
             // 
-            // textBox2
+            // PrixTEXT
             // 
-            textBox2.AccessibleName = "";
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(299, 328);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(202, 28);
-            textBox2.TabIndex = 25;
+            PrixTEXT.AccessibleName = "";
+            PrixTEXT.BorderStyle = BorderStyle.FixedSingle;
+            PrixTEXT.Location = new Point(299, 328);
+            PrixTEXT.Name = "PrixTEXT";
+            PrixTEXT.Size = new Size(202, 28);
+            PrixTEXT.TabIndex = 25;
             // 
-            // textBox3
+            // QuantitéTEXT
             // 
-            textBox3.AccessibleName = "";
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(341, 261);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(160, 28);
-            textBox3.TabIndex = 24;
+            QuantitéTEXT.AccessibleName = "";
+            QuantitéTEXT.BorderStyle = BorderStyle.FixedSingle;
+            QuantitéTEXT.Location = new Point(341, 261);
+            QuantitéTEXT.Name = "QuantitéTEXT";
+            QuantitéTEXT.Size = new Size(160, 28);
+            QuantitéTEXT.TabIndex = 24;
             // 
-            // label1
+            // PrixTITLE
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Crimson;
-            label1.Location = new Point(214, 328);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 26);
-            label1.TabIndex = 23;
-            label1.Text = "Prix";
+            PrixTITLE.AutoSize = true;
+            PrixTITLE.BackColor = Color.White;
+            PrixTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PrixTITLE.ForeColor = Color.Crimson;
+            PrixTITLE.Location = new Point(214, 328);
+            PrixTITLE.Margin = new Padding(4, 0, 4, 0);
+            PrixTITLE.Name = "PrixTITLE";
+            PrixTITLE.Size = new Size(50, 26);
+            PrixTITLE.TabIndex = 23;
+            PrixTITLE.Text = "Prix";
             // 
-            // label2
+            // QuantitéTITLE
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Crimson;
-            label2.Location = new Point(214, 263);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 26);
-            label2.TabIndex = 22;
-            label2.Text = "Quantité";
+            QuantitéTITLE.AutoSize = true;
+            QuantitéTITLE.BackColor = Color.White;
+            QuantitéTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            QuantitéTITLE.ForeColor = Color.Crimson;
+            QuantitéTITLE.Location = new Point(214, 263);
+            QuantitéTITLE.Margin = new Padding(4, 0, 4, 0);
+            QuantitéTITLE.Name = "QuantitéTITLE";
+            QuantitéTITLE.Size = new Size(91, 26);
+            QuantitéTITLE.TabIndex = 22;
+            QuantitéTITLE.Text = "Quantité";
             // 
             // panel2
             // 
             panel2.BackColor = Color.Gainsboro;
-            panel2.Controls.Add(textBox7);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
+            panel2.Controls.Add(PrixVISU);
+            panel2.Controls.Add(QuantitéVISU);
+            panel2.Controls.Add(DescriptionVISU);
+            panel2.Controls.Add(NomVISU);
             panel2.Location = new Point(526, 110);
             panel2.Name = "panel2";
             panel2.Size = new Size(591, 362);
             panel2.TabIndex = 26;
+            panel2.Paint += panel2_Paint;
             // 
-            // textBox7
+            // PrixVISU
             // 
-            textBox7.AccessibleName = "";
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(498, 0);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(93, 28);
-            textBox7.TabIndex = 30;
-            textBox7.Text = "PRIX";
-            textBox7.TextAlign = HorizontalAlignment.Center;
+            PrixVISU.AccessibleName = "";
+            PrixVISU.BorderStyle = BorderStyle.FixedSingle;
+            PrixVISU.Location = new Point(498, 0);
+            PrixVISU.Name = "PrixVISU";
+            PrixVISU.Size = new Size(93, 28);
+            PrixVISU.TabIndex = 30;
+            PrixVISU.Text = "PRIX";
+            PrixVISU.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox6
+            // QuantitéVISU
             // 
-            textBox6.AccessibleName = "";
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(377, 0);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(115, 28);
-            textBox6.TabIndex = 29;
-            textBox6.Text = "QUANTITE";
-            textBox6.TextAlign = HorizontalAlignment.Center;
+            QuantitéVISU.AccessibleName = "";
+            QuantitéVISU.BorderStyle = BorderStyle.FixedSingle;
+            QuantitéVISU.Location = new Point(377, 0);
+            QuantitéVISU.Name = "QuantitéVISU";
+            QuantitéVISU.Size = new Size(115, 28);
+            QuantitéVISU.TabIndex = 29;
+            QuantitéVISU.Text = "QUANTITE";
+            QuantitéVISU.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox5
+            // DescriptionVISU
             // 
-            textBox5.AccessibleName = "";
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(129, 0);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(242, 28);
-            textBox5.TabIndex = 28;
-            textBox5.Text = "DESCRIPTION";
-            textBox5.TextAlign = HorizontalAlignment.Center;
+            DescriptionVISU.AccessibleName = "";
+            DescriptionVISU.BorderStyle = BorderStyle.FixedSingle;
+            DescriptionVISU.Location = new Point(129, 0);
+            DescriptionVISU.Name = "DescriptionVISU";
+            DescriptionVISU.Size = new Size(242, 28);
+            DescriptionVISU.TabIndex = 28;
+            DescriptionVISU.Text = "DESCRIPTION";
+            DescriptionVISU.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox4
+            // NomVISU
             // 
-            textBox4.AccessibleName = "";
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(0, 0);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(123, 28);
-            textBox4.TabIndex = 27;
-            textBox4.Text = "Nom";
-            textBox4.TextAlign = HorizontalAlignment.Center;
+            NomVISU.AccessibleName = "";
+            NomVISU.BorderStyle = BorderStyle.FixedSingle;
+            NomVISU.Location = new Point(0, 0);
+            NomVISU.Name = "NomVISU";
+            NomVISU.Size = new Size(123, 28);
+            NomVISU.TabIndex = 27;
+            NomVISU.Text = "Nom";
+            NomVISU.TextAlign = HorizontalAlignment.Center;
             // 
             // Accueil
             // 
@@ -373,19 +374,19 @@
             BackColor = Color.White;
             ClientSize = new Size(1130, 582);
             Controls.Add(panel2);
-            Controls.Add(textBoxPassword);
-            Controls.Add(textBox2);
-            Controls.Add(textBox3);
-            Controls.Add(label1);
-            Controls.Add(label2);
-            Controls.Add(textBoxUsername);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(button5);
+            Controls.Add(DescriptionTEXT);
+            Controls.Add(PrixTEXT);
+            Controls.Add(QuantitéTEXT);
+            Controls.Add(PrixTITLE);
+            Controls.Add(QuantitéTITLE);
+            Controls.Add(NomTEXT);
+            Controls.Add(DescriptionTITLE);
+            Controls.Add(NomTITLE);
+            Controls.Add(addPANIER);
             Controls.Add(supprimer);
             Controls.Add(ajouter);
             Controls.Add(modif);
-            Controls.Add(textBox1);
+            Controls.Add(TITLE);
             Controls.Add(panel1);
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -395,11 +396,11 @@
             Text = "Accueil";
             Load += Accueil_Load_1;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogoDECONNEXION).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogoPRODUIT).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogoCOMPTE).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogoPANIER).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Logo1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -409,32 +410,32 @@
         #endregion
 
         private Panel panel1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private Button panier1;
-        private Button produit1;
-        private Button deconnexion1;
-        private Button compte1;
-        private TextBox textBox1;
+        private PictureBox Logo1;
+        private PictureBox LogoPRODUIT;
+        private PictureBox LogoDECONNEXION;
+        private PictureBox LogoCOMPTE;
+        private PictureBox LogoPANIER;
+        private Button btnPANIER;
+        private Button btnPRODUIT;
+        private Button btnDECONNEXION;
+        private Button btnCOMPTE;
+        private TextBox TITLE;
         private Button modif;
         private Button ajouter;
         private Button supprimer;
-        private Button button5;
-        private TextBox textBoxPassword;
-        private TextBox textBoxUsername;
-        private Label label4;
-        private Label label3;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Label label1;
-        private Label label2;
+        private Button addPANIER;
+        private TextBox DescriptionTEXT;
+        private TextBox NomTEXT;
+        private Label DescriptionTITLE;
+        private Label NomTITLE;
+        private TextBox PrixTEXT;
+        private TextBox QuantitéTEXT;
+        private Label PrixTITLE;
+        private Label QuantitéTITLE;
         private Panel panel2;
-        private TextBox textBox4;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox PrixVISU;
+        private TextBox QuantitéVISU;
+        private TextBox DescriptionVISU;
+        private TextBox NomVISU;
     }
 }

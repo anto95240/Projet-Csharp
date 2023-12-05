@@ -31,13 +31,13 @@
             label1 = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
-            textBoxPassword = new TextBox();
-            textBoxUsername = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
+            MdpTEXT = new TextBox();
+            EmailTEXT = new TextBox();
+            MdpTITLE = new Label();
+            EmailTITLE = new Label();
             label2 = new Label();
-            button2 = new Button();
-            button1 = new Button();
+            btnINSCRIPTION = new Button();
+            btnCONNEXIOIN = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,49 +73,49 @@
             panel1.Size = new Size(495, 49);
             panel1.TabIndex = 18;
             // 
-            // textBoxPassword
+            // MdpTEXT
             // 
-            textBoxPassword.AccessibleName = "";
-            textBoxPassword.BorderStyle = BorderStyle.FixedSingle;
-            textBoxPassword.Location = new Point(63, 250);
-            textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(305, 28);
-            textBoxPassword.TabIndex = 17;
+            MdpTEXT.AccessibleName = "";
+            MdpTEXT.BorderStyle = BorderStyle.FixedSingle;
+            MdpTEXT.Location = new Point(63, 250);
+            MdpTEXT.Name = "MdpTEXT";
+            MdpTEXT.Size = new Size(305, 28);
+            MdpTEXT.TabIndex = 17;
             // 
-            // textBoxUsername
+            // EmailTEXT
             // 
-            textBoxUsername.AccessibleName = "";
-            textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
-            textBoxUsername.Location = new Point(63, 152);
-            textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(305, 28);
-            textBoxUsername.TabIndex = 16;
+            EmailTEXT.AccessibleName = "";
+            EmailTEXT.BorderStyle = BorderStyle.FixedSingle;
+            EmailTEXT.Location = new Point(63, 152);
+            EmailTEXT.Name = "EmailTEXT";
+            EmailTEXT.Size = new Size(305, 28);
+            EmailTEXT.TabIndex = 16;
             // 
-            // label4
+            // MdpTITLE
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.White;
-            label4.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Crimson;
-            label4.Location = new Point(63, 212);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(134, 26);
-            label4.TabIndex = 15;
-            label4.Text = "Mot de Passe";
+            MdpTITLE.AutoSize = true;
+            MdpTITLE.BackColor = Color.White;
+            MdpTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MdpTITLE.ForeColor = Color.Crimson;
+            MdpTITLE.Location = new Point(63, 212);
+            MdpTITLE.Margin = new Padding(4, 0, 4, 0);
+            MdpTITLE.Name = "MdpTITLE";
+            MdpTITLE.Size = new Size(134, 26);
+            MdpTITLE.TabIndex = 15;
+            MdpTITLE.Text = "Mot de Passe";
             // 
-            // label3
+            // EmailTITLE
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.White;
-            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Crimson;
-            label3.Location = new Point(63, 113);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 26);
-            label3.TabIndex = 14;
-            label3.Text = "Email";
+            EmailTITLE.AutoSize = true;
+            EmailTITLE.BackColor = Color.White;
+            EmailTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailTITLE.ForeColor = Color.Crimson;
+            EmailTITLE.Location = new Point(63, 113);
+            EmailTITLE.Margin = new Padding(4, 0, 4, 0);
+            EmailTITLE.Name = "EmailTITLE";
+            EmailTITLE.Size = new Size(65, 26);
+            EmailTITLE.TabIndex = 14;
+            EmailTITLE.Text = "Email";
             // 
             // label2
             // 
@@ -127,36 +127,36 @@
             label2.TabIndex = 13;
             label2.Text = "ou sinon";
             // 
-            // button2
+            // btnINSCRIPTION
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.System;
-            button2.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Crimson;
-            button2.Location = new Point(175, 427);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(131, 30);
-            button2.TabIndex = 11;
-            button2.Text = "Inscription";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += Button_inscription;
+            btnINSCRIPTION.FlatAppearance.BorderSize = 0;
+            btnINSCRIPTION.FlatStyle = FlatStyle.System;
+            btnINSCRIPTION.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnINSCRIPTION.ForeColor = Color.Crimson;
+            btnINSCRIPTION.Location = new Point(175, 427);
+            btnINSCRIPTION.Margin = new Padding(4, 3, 4, 3);
+            btnINSCRIPTION.Name = "btnINSCRIPTION";
+            btnINSCRIPTION.Size = new Size(131, 30);
+            btnINSCRIPTION.TabIndex = 11;
+            btnINSCRIPTION.Text = "Inscription";
+            btnINSCRIPTION.UseVisualStyleBackColor = false;
+            btnINSCRIPTION.Click += Button_inscription;
             // 
-            // button1
+            // btnCONNEXIOIN
             // 
-            button1.BackColor = Color.SeaGreen;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(148, 329);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(190, 41);
-            button1.TabIndex = 12;
-            button1.Text = "Se Connecter";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += Button_connexion;
+            btnCONNEXIOIN.BackColor = Color.SeaGreen;
+            btnCONNEXIOIN.FlatAppearance.BorderSize = 0;
+            btnCONNEXIOIN.FlatStyle = FlatStyle.Flat;
+            btnCONNEXIOIN.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCONNEXIOIN.ForeColor = Color.White;
+            btnCONNEXIOIN.Location = new Point(148, 329);
+            btnCONNEXIOIN.Margin = new Padding(4, 3, 4, 3);
+            btnCONNEXIOIN.Name = "btnCONNEXIOIN";
+            btnCONNEXIOIN.Size = new Size(190, 41);
+            btnCONNEXIOIN.TabIndex = 12;
+            btnCONNEXIOIN.Text = "Se Connecter";
+            btnCONNEXIOIN.UseVisualStyleBackColor = false;
+            btnCONNEXIOIN.Click += Button_connexion;
             // 
             // Connexion
             // 
@@ -166,13 +166,13 @@
             ClientSize = new Size(495, 557);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(textBoxPassword);
-            Controls.Add(textBoxUsername);
-            Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(MdpTEXT);
+            Controls.Add(EmailTEXT);
+            Controls.Add(MdpTITLE);
+            Controls.Add(EmailTITLE);
             Controls.Add(label2);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnINSCRIPTION);
+            Controls.Add(btnCONNEXIOIN);
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
@@ -191,12 +191,12 @@
         private Label label1;
         private Panel panel2;
         private Panel panel1;
-        private TextBox textBoxPassword;
-        private TextBox textBoxUsername;
-        private Label label4;
-        private Label label3;
+        private TextBox MdpTEXT;
+        private TextBox EmailTEXT;
+        private Label MdpTITLE;
+        private Label EmailTITLE;
         private Label label2;
-        private Button button2;
-        private Button button1;
+        private Button btnINSCRIPTION;
+        private Button btnCONNEXIOIN;
     }
 }

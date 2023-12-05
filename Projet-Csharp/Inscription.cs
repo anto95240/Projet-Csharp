@@ -21,16 +21,16 @@ namespace Projet_Csharp
         private void Button_Inscription(object sender, EventArgs e)
         {
             // Vérifie si les champs nom d'utilisateur et mot de passe sont vides
-            if (string.IsNullOrWhiteSpace(textBoxFirstName.Text) ||
-                string.IsNullOrWhiteSpace(textBoxLastName.Text) ||
-                string.IsNullOrWhiteSpace(textBoxEmail.Text) ||
-                string.IsNullOrWhiteSpace(textBoxPassword.Text) ||
-                string.IsNullOrWhiteSpace(textBoxAddress.Text) ||
-                string.IsNullOrWhiteSpace(textBoxCity.Text) ||
-                string.IsNullOrWhiteSpace(textBoxEtat.Text) ||
-                string.IsNullOrWhiteSpace(textBoxPostalCode.Text) ||
-                string.IsNullOrWhiteSpace(textBoxCountry.Text) ||
-                string.IsNullOrWhiteSpace(textBoxAddressType.Text))
+            if (string.IsNullOrWhiteSpace(PrénomTEXT.Text) ||
+                string.IsNullOrWhiteSpace(NomTEXT.Text) ||
+                string.IsNullOrWhiteSpace(EmailTEXT.Text) ||
+                string.IsNullOrWhiteSpace(MdpTEXT.Text) ||
+                string.IsNullOrWhiteSpace(AdresseTEXT.Text) ||
+                string.IsNullOrWhiteSpace(VilleTEXT.Text) ||
+                string.IsNullOrWhiteSpace(EtatTEXT.Text) ||
+                string.IsNullOrWhiteSpace(CodePostalTEXT.Text) ||
+                string.IsNullOrWhiteSpace(PaysTEXT.Text) ||
+                string.IsNullOrWhiteSpace(TypeAdresseTEXT.Text))
             {
                 MessageBox.Show("Veuillez remplir tous les champs.");
             }

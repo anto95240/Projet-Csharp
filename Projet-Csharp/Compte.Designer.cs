@@ -30,58 +30,58 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compte));
             panel1 = new Panel();
-            deconnexion3 = new Button();
-            compte3 = new Button();
-            panier3 = new Button();
-            produit3 = new Button();
-            pictureBox5 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            tabControl1 = new TabControl();
+            btnDECONNEXION = new Button();
+            btnCOMPTE = new Button();
+            btnPANIER = new Button();
+            btnPRODUIT = new Button();
+            logoDECONNEXION = new PictureBox();
+            logoPRODUITS = new PictureBox();
+            logoCOMPTE = new PictureBox();
+            logoPANNIER = new PictureBox();
+            logo = new PictureBox();
+            Onglet = new TabControl();
             info = new TabPage();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox4 = new TextBox();
-            textBox24 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            TypeAdresseTITLE = new TextBox();
+            TypeAdresseTEXT = new TextBox();
+            CodePostalTITLE = new TextBox();
+            CodePostalTEXT = new TextBox();
+            PaysTITLE = new TextBox();
+            EtatTITLE = new TextBox();
+            PaysTEXT = new TextBox();
+            EtatTEXT = new TextBox();
+            VilleTITLE = new TextBox();
+            AdresseTITLE = new TextBox();
+            VilleTEXT = new TextBox();
+            AdresseTEXT = new TextBox();
+            MdpTITLE = new TextBox();
+            MailTITLE = new TextBox();
+            MdpTEXT = new TextBox();
+            MailTEXT = new TextBox();
+            NomTITLE = new TextBox();
+            PrénomTITLE = new TextBox();
+            NomTEXT = new TextBox();
+            PrénomTEXT = new TextBox();
             button5 = new Button();
             commande = new TabPage();
-            textBox25 = new TextBox();
-            textBox23 = new TextBox();
-            textBox22 = new TextBox();
-            textBox21 = new TextBox();
-            button6 = new Button();
+            StatusVISU_C = new TextBox();
+            DateVISU_C = new TextBox();
+            DescriptionVISU_C = new TextBox();
+            NomVISU_C = new TextBox();
+            btnANNULER_COMMANDE = new Button();
             factures = new TabPage();
-            textBox30 = new TextBox();
-            textBox26 = new TextBox();
-            textBox28 = new TextBox();
-            textBox27 = new TextBox();
-            textBox29 = new TextBox();
-            textBox1 = new TextBox();
+            PrixTotalVISU_F = new TextBox();
+            QuantitéVISU_F = new TextBox();
+            DescriptionVISU_F = new TextBox();
+            DateVISU_F = new TextBox();
+            NomVISU_F = new TextBox();
+            TITLE = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)logoDECONNEXION).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoPRODUITS).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoCOMPTE).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoPANNIER).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
+            Onglet.SuspendLayout();
             info.SuspendLayout();
             commande.SuspendLayout();
             factures.SuspendLayout();
@@ -90,146 +90,146 @@
             // panel1
             // 
             panel1.BackColor = Color.MediumSeaGreen;
-            panel1.Controls.Add(deconnexion3);
-            panel1.Controls.Add(compte3);
-            panel1.Controls.Add(panier3);
-            panel1.Controls.Add(produit3);
-            panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(btnDECONNEXION);
+            panel1.Controls.Add(btnCOMPTE);
+            panel1.Controls.Add(btnPANIER);
+            panel1.Controls.Add(btnPRODUIT);
+            panel1.Controls.Add(logoDECONNEXION);
+            panel1.Controls.Add(logoPRODUITS);
+            panel1.Controls.Add(logoCOMPTE);
+            panel1.Controls.Add(logoPANNIER);
+            panel1.Controls.Add(logo);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(196, 582);
             panel1.TabIndex = 1;
             // 
-            // deconnexion3
+            // btnDECONNEXION
             // 
-            deconnexion3.Location = new Point(50, 511);
-            deconnexion3.Name = "deconnexion3";
-            deconnexion3.Size = new Size(125, 29);
-            deconnexion3.TabIndex = 11;
-            deconnexion3.Text = "Déconnexion";
-            deconnexion3.UseVisualStyleBackColor = true;
-            deconnexion3.Click += deconnexion_click;
+            btnDECONNEXION.Location = new Point(50, 511);
+            btnDECONNEXION.Name = "btnDECONNEXION";
+            btnDECONNEXION.Size = new Size(125, 29);
+            btnDECONNEXION.TabIndex = 11;
+            btnDECONNEXION.Text = "Déconnexion";
+            btnDECONNEXION.UseVisualStyleBackColor = true;
+            btnDECONNEXION.Click += deconnexion_click;
             // 
-            // compte3
+            // btnCOMPTE
             // 
-            compte3.Location = new Point(50, 421);
-            compte3.Name = "compte3";
-            compte3.Size = new Size(125, 29);
-            compte3.TabIndex = 10;
-            compte3.Text = "Mon Compte";
-            compte3.UseVisualStyleBackColor = true;
+            btnCOMPTE.Location = new Point(50, 421);
+            btnCOMPTE.Name = "btnCOMPTE";
+            btnCOMPTE.Size = new Size(125, 29);
+            btnCOMPTE.TabIndex = 10;
+            btnCOMPTE.Text = "Mon Compte";
+            btnCOMPTE.UseVisualStyleBackColor = true;
             // 
-            // panier3
+            // btnPANIER
             // 
-            panier3.Location = new Point(50, 279);
-            panier3.Name = "panier3";
-            panier3.Size = new Size(125, 29);
-            panier3.TabIndex = 9;
-            panier3.Text = "Mon Panier";
-            panier3.UseVisualStyleBackColor = true;
-            panier3.Click += panier_click;
+            btnPANIER.Location = new Point(50, 279);
+            btnPANIER.Name = "btnPANIER";
+            btnPANIER.Size = new Size(125, 29);
+            btnPANIER.TabIndex = 9;
+            btnPANIER.Text = "Mon Panier";
+            btnPANIER.UseVisualStyleBackColor = true;
+            btnPANIER.Click += panier_click;
             // 
-            // produit3
+            // btnPRODUIT
             // 
-            produit3.Location = new Point(50, 167);
-            produit3.Name = "produit3";
-            produit3.Size = new Size(125, 29);
-            produit3.TabIndex = 1;
-            produit3.Text = "Les Produits";
-            produit3.UseVisualStyleBackColor = true;
-            produit3.Click += produit_click;
+            btnPRODUIT.Location = new Point(50, 167);
+            btnPRODUIT.Name = "btnPRODUIT";
+            btnPRODUIT.Size = new Size(125, 29);
+            btnPRODUIT.TabIndex = 1;
+            btnPRODUIT.Text = "Les Produits";
+            btnPRODUIT.UseVisualStyleBackColor = true;
+            btnPRODUIT.Click += produit_click;
             // 
-            // pictureBox5
+            // logoDECONNEXION
             // 
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
-            pictureBox5.Location = new Point(16, 512);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(28, 28);
-            pictureBox5.TabIndex = 8;
-            pictureBox5.TabStop = false;
+            logoDECONNEXION.BackgroundImage = (Image)resources.GetObject("logoDECONNEXION.BackgroundImage");
+            logoDECONNEXION.Location = new Point(16, 512);
+            logoDECONNEXION.Name = "logoDECONNEXION";
+            logoDECONNEXION.Size = new Size(28, 28);
+            logoDECONNEXION.TabIndex = 8;
+            logoDECONNEXION.TabStop = false;
             // 
-            // pictureBox2
+            // logoPRODUITS
             // 
-            pictureBox2.AccessibleRole = AccessibleRole.TitleBar;
-            pictureBox2.Anchor = AnchorStyles.None;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.Location = new Point(12, 165);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 30);
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            logoPRODUITS.AccessibleRole = AccessibleRole.TitleBar;
+            logoPRODUITS.Anchor = AnchorStyles.None;
+            logoPRODUITS.BackgroundImage = (Image)resources.GetObject("logoPRODUITS.BackgroundImage");
+            logoPRODUITS.Location = new Point(12, 165);
+            logoPRODUITS.Name = "logoPRODUITS";
+            logoPRODUITS.Size = new Size(30, 30);
+            logoPRODUITS.TabIndex = 1;
+            logoPRODUITS.TabStop = false;
             // 
-            // pictureBox4
+            // logoCOMPTE
             // 
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.Location = new Point(16, 422);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(28, 28);
-            pictureBox4.TabIndex = 7;
-            pictureBox4.TabStop = false;
+            logoCOMPTE.BackgroundImage = (Image)resources.GetObject("logoCOMPTE.BackgroundImage");
+            logoCOMPTE.Location = new Point(16, 422);
+            logoCOMPTE.Name = "logoCOMPTE";
+            logoCOMPTE.Size = new Size(28, 28);
+            logoCOMPTE.TabIndex = 7;
+            logoCOMPTE.TabStop = false;
             // 
-            // pictureBox3
+            // logoPANNIER
             // 
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.Location = new Point(16, 280);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(28, 28);
-            pictureBox3.TabIndex = 6;
-            pictureBox3.TabStop = false;
+            logoPANNIER.BackgroundImage = (Image)resources.GetObject("logoPANNIER.BackgroundImage");
+            logoPANNIER.Location = new Point(16, 280);
+            logoPANNIER.Name = "logoPANNIER";
+            logoPANNIER.Size = new Size(28, 28);
+            logoPANNIER.TabIndex = 6;
+            logoPANNIER.TabStop = false;
             // 
-            // pictureBox1
+            // logo
             // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(63, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 63);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            logo.BackColor = Color.White;
+            logo.BackgroundImage = (Image)resources.GetObject("logo.BackgroundImage");
+            logo.Image = (Image)resources.GetObject("logo.Image");
+            logo.Location = new Point(63, 10);
+            logo.Name = "logo";
+            logo.Size = new Size(69, 63);
+            logo.TabIndex = 1;
+            logo.TabStop = false;
             // 
-            // tabControl1
+            // Onglet
             // 
-            tabControl1.Appearance = TabAppearance.FlatButtons;
-            tabControl1.Controls.Add(info);
-            tabControl1.Controls.Add(commande);
-            tabControl1.Controls.Add(factures);
-            tabControl1.ItemSize = new Size(100, 40);
-            tabControl1.Location = new Point(217, 81);
-            tabControl1.Name = "tabControl1";
-            tabControl1.Padding = new Point(40, 3);
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(901, 489);
-            tabControl1.TabIndex = 2;
+            Onglet.Appearance = TabAppearance.FlatButtons;
+            Onglet.Controls.Add(info);
+            Onglet.Controls.Add(commande);
+            Onglet.Controls.Add(factures);
+            Onglet.ItemSize = new Size(100, 40);
+            Onglet.Location = new Point(217, 81);
+            Onglet.Name = "Onglet";
+            Onglet.Padding = new Point(40, 3);
+            Onglet.SelectedIndex = 0;
+            Onglet.Size = new Size(901, 489);
+            Onglet.TabIndex = 2;
             // 
             // info
             // 
             info.BackColor = SystemColors.Control;
             info.BackgroundImageLayout = ImageLayout.Center;
-            info.Controls.Add(textBox14);
-            info.Controls.Add(textBox15);
-            info.Controls.Add(textBox19);
-            info.Controls.Add(textBox20);
-            info.Controls.Add(textBox9);
-            info.Controls.Add(textBox10);
-            info.Controls.Add(textBox11);
-            info.Controls.Add(textBox12);
-            info.Controls.Add(textBox13);
-            info.Controls.Add(textBox16);
-            info.Controls.Add(textBox17);
-            info.Controls.Add(textBox18);
-            info.Controls.Add(textBox5);
-            info.Controls.Add(textBox6);
-            info.Controls.Add(textBox7);
-            info.Controls.Add(textBox8);
-            info.Controls.Add(textBox4);
-            info.Controls.Add(textBox24);
-            info.Controls.Add(textBox3);
-            info.Controls.Add(textBox2);
+            info.Controls.Add(TypeAdresseTITLE);
+            info.Controls.Add(TypeAdresseTEXT);
+            info.Controls.Add(CodePostalTITLE);
+            info.Controls.Add(CodePostalTEXT);
+            info.Controls.Add(PaysTITLE);
+            info.Controls.Add(EtatTITLE);
+            info.Controls.Add(PaysTEXT);
+            info.Controls.Add(EtatTEXT);
+            info.Controls.Add(VilleTITLE);
+            info.Controls.Add(AdresseTITLE);
+            info.Controls.Add(VilleTEXT);
+            info.Controls.Add(AdresseTEXT);
+            info.Controls.Add(MdpTITLE);
+            info.Controls.Add(MailTITLE);
+            info.Controls.Add(MdpTEXT);
+            info.Controls.Add(MailTEXT);
+            info.Controls.Add(NomTITLE);
+            info.Controls.Add(PrénomTITLE);
+            info.Controls.Add(NomTEXT);
+            info.Controls.Add(PrénomTEXT);
             info.Controls.Add(button5);
             info.ImeMode = ImeMode.NoControl;
             info.Location = new Point(4, 44);
@@ -240,205 +240,205 @@
             info.TabIndex = 0;
             info.Text = "Mes Informations";
             // 
-            // textBox14
+            // TypeAdresseTITLE
             // 
-            textBox14.BackColor = SystemColors.Control;
-            textBox14.BorderStyle = BorderStyle.None;
-            textBox14.Location = new Point(565, 305);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(222, 21);
-            textBox14.TabIndex = 67;
-            textBox14.Text = "Type d'Adresse : ";
+            TypeAdresseTITLE.BackColor = SystemColors.Control;
+            TypeAdresseTITLE.BorderStyle = BorderStyle.None;
+            TypeAdresseTITLE.Location = new Point(565, 305);
+            TypeAdresseTITLE.Name = "TypeAdresseTITLE";
+            TypeAdresseTITLE.Size = new Size(222, 21);
+            TypeAdresseTITLE.TabIndex = 67;
+            TypeAdresseTITLE.Text = "Type d'Adresse : ";
             // 
-            // textBox15
+            // TypeAdresseTEXT
             // 
-            textBox15.AccessibleName = "";
-            textBox15.BorderStyle = BorderStyle.FixedSingle;
-            textBox15.Location = new Point(565, 337);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(222, 28);
-            textBox15.TabIndex = 66;
-            textBox15.TextAlign = HorizontalAlignment.Center;
+            TypeAdresseTEXT.AccessibleName = "";
+            TypeAdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
+            TypeAdresseTEXT.Location = new Point(565, 337);
+            TypeAdresseTEXT.Name = "TypeAdresseTEXT";
+            TypeAdresseTEXT.Size = new Size(222, 28);
+            TypeAdresseTEXT.TabIndex = 66;
+            TypeAdresseTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox19
+            // CodePostalTITLE
             // 
-            textBox19.BackColor = SystemColors.Control;
-            textBox19.BorderStyle = BorderStyle.None;
-            textBox19.Location = new Point(565, 209);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(222, 21);
-            textBox19.TabIndex = 65;
-            textBox19.Text = "Code Postal : ";
+            CodePostalTITLE.BackColor = SystemColors.Control;
+            CodePostalTITLE.BorderStyle = BorderStyle.None;
+            CodePostalTITLE.Location = new Point(565, 209);
+            CodePostalTITLE.Name = "CodePostalTITLE";
+            CodePostalTITLE.Size = new Size(222, 21);
+            CodePostalTITLE.TabIndex = 65;
+            CodePostalTITLE.Text = "Code Postal : ";
             // 
-            // textBox20
+            // CodePostalTEXT
             // 
-            textBox20.AccessibleName = "";
-            textBox20.BorderStyle = BorderStyle.FixedSingle;
-            textBox20.Location = new Point(565, 240);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(222, 28);
-            textBox20.TabIndex = 64;
-            textBox20.TextAlign = HorizontalAlignment.Center;
+            CodePostalTEXT.AccessibleName = "";
+            CodePostalTEXT.BorderStyle = BorderStyle.FixedSingle;
+            CodePostalTEXT.Location = new Point(565, 240);
+            CodePostalTEXT.Name = "CodePostalTEXT";
+            CodePostalTEXT.Size = new Size(222, 28);
+            CodePostalTEXT.TabIndex = 64;
+            CodePostalTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox9
+            // PaysTITLE
             // 
-            textBox9.BackColor = SystemColors.Control;
-            textBox9.BorderStyle = BorderStyle.None;
-            textBox9.Location = new Point(295, 305);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(222, 21);
-            textBox9.TabIndex = 63;
-            textBox9.Text = "Pays : ";
+            PaysTITLE.BackColor = SystemColors.Control;
+            PaysTITLE.BorderStyle = BorderStyle.None;
+            PaysTITLE.Location = new Point(295, 305);
+            PaysTITLE.Name = "PaysTITLE";
+            PaysTITLE.Size = new Size(222, 21);
+            PaysTITLE.TabIndex = 63;
+            PaysTITLE.Text = "Pays : ";
             // 
-            // textBox10
+            // EtatTITLE
             // 
-            textBox10.BackColor = SystemColors.Control;
-            textBox10.BorderStyle = BorderStyle.None;
-            textBox10.Location = new Point(27, 305);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(222, 21);
-            textBox10.TabIndex = 62;
-            textBox10.Text = "Etat : ";
+            EtatTITLE.BackColor = SystemColors.Control;
+            EtatTITLE.BorderStyle = BorderStyle.None;
+            EtatTITLE.Location = new Point(27, 305);
+            EtatTITLE.Name = "EtatTITLE";
+            EtatTITLE.Size = new Size(222, 21);
+            EtatTITLE.TabIndex = 62;
+            EtatTITLE.Text = "Etat : ";
             // 
-            // textBox11
+            // PaysTEXT
             // 
-            textBox11.AccessibleName = "";
-            textBox11.BorderStyle = BorderStyle.FixedSingle;
-            textBox11.Location = new Point(295, 337);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(222, 28);
-            textBox11.TabIndex = 61;
-            textBox11.TextAlign = HorizontalAlignment.Center;
+            PaysTEXT.AccessibleName = "";
+            PaysTEXT.BorderStyle = BorderStyle.FixedSingle;
+            PaysTEXT.Location = new Point(295, 337);
+            PaysTEXT.Name = "PaysTEXT";
+            PaysTEXT.Size = new Size(222, 28);
+            PaysTEXT.TabIndex = 61;
+            PaysTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox12
+            // EtatTEXT
             // 
-            textBox12.AccessibleName = "";
-            textBox12.BorderStyle = BorderStyle.FixedSingle;
-            textBox12.Location = new Point(27, 337);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(222, 28);
-            textBox12.TabIndex = 60;
-            textBox12.TextAlign = HorizontalAlignment.Center;
+            EtatTEXT.AccessibleName = "";
+            EtatTEXT.BorderStyle = BorderStyle.FixedSingle;
+            EtatTEXT.Location = new Point(27, 337);
+            EtatTEXT.Name = "EtatTEXT";
+            EtatTEXT.Size = new Size(222, 28);
+            EtatTEXT.TabIndex = 60;
+            EtatTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox13
+            // VilleTITLE
             // 
-            textBox13.BackColor = SystemColors.Control;
-            textBox13.BorderStyle = BorderStyle.None;
-            textBox13.Location = new Point(295, 209);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(222, 21);
-            textBox13.TabIndex = 59;
-            textBox13.Text = "Ville : ";
+            VilleTITLE.BackColor = SystemColors.Control;
+            VilleTITLE.BorderStyle = BorderStyle.None;
+            VilleTITLE.Location = new Point(295, 209);
+            VilleTITLE.Name = "VilleTITLE";
+            VilleTITLE.Size = new Size(222, 21);
+            VilleTITLE.TabIndex = 59;
+            VilleTITLE.Text = "Ville : ";
             // 
-            // textBox16
+            // AdresseTITLE
             // 
-            textBox16.BackColor = SystemColors.Control;
-            textBox16.BorderStyle = BorderStyle.None;
-            textBox16.Location = new Point(27, 209);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(222, 21);
-            textBox16.TabIndex = 58;
-            textBox16.Text = "Adresse : ";
+            AdresseTITLE.BackColor = SystemColors.Control;
+            AdresseTITLE.BorderStyle = BorderStyle.None;
+            AdresseTITLE.Location = new Point(27, 209);
+            AdresseTITLE.Name = "AdresseTITLE";
+            AdresseTITLE.Size = new Size(222, 21);
+            AdresseTITLE.TabIndex = 58;
+            AdresseTITLE.Text = "Adresse : ";
             // 
-            // textBox17
+            // VilleTEXT
             // 
-            textBox17.AccessibleName = "";
-            textBox17.BorderStyle = BorderStyle.FixedSingle;
-            textBox17.Location = new Point(295, 240);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(222, 28);
-            textBox17.TabIndex = 57;
-            textBox17.TextAlign = HorizontalAlignment.Center;
+            VilleTEXT.AccessibleName = "";
+            VilleTEXT.BorderStyle = BorderStyle.FixedSingle;
+            VilleTEXT.Location = new Point(295, 240);
+            VilleTEXT.Name = "VilleTEXT";
+            VilleTEXT.Size = new Size(222, 28);
+            VilleTEXT.TabIndex = 57;
+            VilleTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox18
+            // AdresseTEXT
             // 
-            textBox18.AccessibleName = "";
-            textBox18.BorderStyle = BorderStyle.FixedSingle;
-            textBox18.Location = new Point(27, 240);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(222, 28);
-            textBox18.TabIndex = 56;
-            textBox18.TextAlign = HorizontalAlignment.Center;
+            AdresseTEXT.AccessibleName = "";
+            AdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
+            AdresseTEXT.Location = new Point(27, 240);
+            AdresseTEXT.Name = "AdresseTEXT";
+            AdresseTEXT.Size = new Size(222, 28);
+            AdresseTEXT.TabIndex = 56;
+            AdresseTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox5
+            // MdpTITLE
             // 
-            textBox5.BackColor = SystemColors.Control;
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Location = new Point(295, 100);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(222, 21);
-            textBox5.TabIndex = 55;
-            textBox5.Text = "Mot de Passe : ";
+            MdpTITLE.BackColor = SystemColors.Control;
+            MdpTITLE.BorderStyle = BorderStyle.None;
+            MdpTITLE.Location = new Point(295, 100);
+            MdpTITLE.Name = "MdpTITLE";
+            MdpTITLE.Size = new Size(222, 21);
+            MdpTITLE.TabIndex = 55;
+            MdpTITLE.Text = "Mot de Passe : ";
             // 
-            // textBox6
+            // MailTITLE
             // 
-            textBox6.BackColor = SystemColors.Control;
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Location = new Point(27, 100);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(222, 21);
-            textBox6.TabIndex = 54;
-            textBox6.Text = "Mail : ";
+            MailTITLE.BackColor = SystemColors.Control;
+            MailTITLE.BorderStyle = BorderStyle.None;
+            MailTITLE.Location = new Point(27, 100);
+            MailTITLE.Name = "MailTITLE";
+            MailTITLE.Size = new Size(222, 21);
+            MailTITLE.TabIndex = 54;
+            MailTITLE.Text = "Mail : ";
             // 
-            // textBox7
+            // MdpTEXT
             // 
-            textBox7.AccessibleName = "";
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(295, 134);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(222, 28);
-            textBox7.TabIndex = 53;
-            textBox7.TextAlign = HorizontalAlignment.Center;
+            MdpTEXT.AccessibleName = "";
+            MdpTEXT.BorderStyle = BorderStyle.FixedSingle;
+            MdpTEXT.Location = new Point(295, 134);
+            MdpTEXT.Name = "MdpTEXT";
+            MdpTEXT.Size = new Size(222, 28);
+            MdpTEXT.TabIndex = 53;
+            MdpTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox8
+            // MailTEXT
             // 
-            textBox8.AccessibleName = "";
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(27, 134);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(222, 28);
-            textBox8.TabIndex = 52;
-            textBox8.TextAlign = HorizontalAlignment.Center;
+            MailTEXT.AccessibleName = "";
+            MailTEXT.BorderStyle = BorderStyle.FixedSingle;
+            MailTEXT.Location = new Point(27, 134);
+            MailTEXT.Name = "MailTEXT";
+            MailTEXT.Size = new Size(222, 28);
+            MailTEXT.TabIndex = 52;
+            MailTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox4
+            // NomTITLE
             // 
-            textBox4.BackColor = SystemColors.Control;
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(295, 18);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(222, 21);
-            textBox4.TabIndex = 51;
-            textBox4.Text = "Nom : ";
+            NomTITLE.BackColor = SystemColors.Control;
+            NomTITLE.BorderStyle = BorderStyle.None;
+            NomTITLE.Location = new Point(295, 18);
+            NomTITLE.Name = "NomTITLE";
+            NomTITLE.Size = new Size(222, 21);
+            NomTITLE.TabIndex = 51;
+            NomTITLE.Text = "Nom : ";
             // 
-            // textBox24
+            // PrénomTITLE
             // 
-            textBox24.BackColor = SystemColors.Control;
-            textBox24.BorderStyle = BorderStyle.None;
-            textBox24.Location = new Point(27, 18);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(222, 21);
-            textBox24.TabIndex = 50;
-            textBox24.Text = "Prénom : ";
+            PrénomTITLE.BackColor = SystemColors.Control;
+            PrénomTITLE.BorderStyle = BorderStyle.None;
+            PrénomTITLE.Location = new Point(27, 18);
+            PrénomTITLE.Name = "PrénomTITLE";
+            PrénomTITLE.Size = new Size(222, 21);
+            PrénomTITLE.TabIndex = 50;
+            PrénomTITLE.Text = "Prénom : ";
             // 
-            // textBox3
+            // NomTEXT
             // 
-            textBox3.AccessibleName = "";
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(295, 51);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(222, 28);
-            textBox3.TabIndex = 31;
-            textBox3.TextAlign = HorizontalAlignment.Center;
+            NomTEXT.AccessibleName = "";
+            NomTEXT.BorderStyle = BorderStyle.FixedSingle;
+            NomTEXT.Location = new Point(295, 51);
+            NomTEXT.Name = "NomTEXT";
+            NomTEXT.Size = new Size(222, 28);
+            NomTEXT.TabIndex = 31;
+            NomTEXT.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox2
+            // PrénomTEXT
             // 
-            textBox2.AccessibleName = "";
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(27, 51);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(222, 28);
-            textBox2.TabIndex = 29;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            PrénomTEXT.AccessibleName = "";
+            PrénomTEXT.BorderStyle = BorderStyle.FixedSingle;
+            PrénomTEXT.Location = new Point(27, 51);
+            PrénomTEXT.Name = "PrénomTEXT";
+            PrénomTEXT.Size = new Size(222, 28);
+            PrénomTEXT.TabIndex = 29;
+            PrénomTEXT.TextAlign = HorizontalAlignment.Center;
             // 
             // button5
             // 
@@ -453,11 +453,11 @@
             // commande
             // 
             commande.BackgroundImageLayout = ImageLayout.Center;
-            commande.Controls.Add(textBox25);
-            commande.Controls.Add(textBox23);
-            commande.Controls.Add(textBox22);
-            commande.Controls.Add(textBox21);
-            commande.Controls.Add(button6);
+            commande.Controls.Add(StatusVISU_C);
+            commande.Controls.Add(DateVISU_C);
+            commande.Controls.Add(DescriptionVISU_C);
+            commande.Controls.Add(NomVISU_C);
+            commande.Controls.Add(btnANNULER_COMMANDE);
             commande.Location = new Point(4, 44);
             commande.Name = "commande";
             commande.Padding = new Padding(3);
@@ -466,68 +466,68 @@
             commande.Text = "Mes Commandes";
             commande.UseVisualStyleBackColor = true;
             // 
-            // textBox25
+            // StatusVISU_C
             // 
-            textBox25.AccessibleName = "";
-            textBox25.BorderStyle = BorderStyle.FixedSingle;
-            textBox25.Location = new Point(726, 6);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(161, 28);
-            textBox25.TabIndex = 33;
-            textBox25.Text = "STATUS";
-            textBox25.TextAlign = HorizontalAlignment.Center;
+            StatusVISU_C.AccessibleName = "";
+            StatusVISU_C.BorderStyle = BorderStyle.FixedSingle;
+            StatusVISU_C.Location = new Point(726, 6);
+            StatusVISU_C.Name = "StatusVISU_C";
+            StatusVISU_C.Size = new Size(161, 28);
+            StatusVISU_C.TabIndex = 33;
+            StatusVISU_C.Text = "STATUS";
+            StatusVISU_C.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox23
+            // DateVISU_C
             // 
-            textBox23.AccessibleName = "";
-            textBox23.BorderStyle = BorderStyle.FixedSingle;
-            textBox23.Location = new Point(558, 6);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(162, 28);
-            textBox23.TabIndex = 32;
-            textBox23.Text = "DATE";
-            textBox23.TextAlign = HorizontalAlignment.Center;
+            DateVISU_C.AccessibleName = "";
+            DateVISU_C.BorderStyle = BorderStyle.FixedSingle;
+            DateVISU_C.Location = new Point(558, 6);
+            DateVISU_C.Name = "DateVISU_C";
+            DateVISU_C.Size = new Size(162, 28);
+            DateVISU_C.TabIndex = 32;
+            DateVISU_C.Text = "DATE";
+            DateVISU_C.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox22
+            // DescriptionVISU_C
             // 
-            textBox22.AccessibleName = "";
-            textBox22.BorderStyle = BorderStyle.FixedSingle;
-            textBox22.Location = new Point(185, 6);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(367, 28);
-            textBox22.TabIndex = 31;
-            textBox22.Text = "DESCRIPTION";
-            textBox22.TextAlign = HorizontalAlignment.Center;
+            DescriptionVISU_C.AccessibleName = "";
+            DescriptionVISU_C.BorderStyle = BorderStyle.FixedSingle;
+            DescriptionVISU_C.Location = new Point(185, 6);
+            DescriptionVISU_C.Name = "DescriptionVISU_C";
+            DescriptionVISU_C.Size = new Size(367, 28);
+            DescriptionVISU_C.TabIndex = 31;
+            DescriptionVISU_C.Text = "DESCRIPTION";
+            DescriptionVISU_C.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox21
+            // NomVISU_C
             // 
-            textBox21.AccessibleName = "";
-            textBox21.BorderStyle = BorderStyle.FixedSingle;
-            textBox21.Location = new Point(6, 6);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(173, 28);
-            textBox21.TabIndex = 30;
-            textBox21.Text = "NOM";
-            textBox21.TextAlign = HorizontalAlignment.Center;
+            NomVISU_C.AccessibleName = "";
+            NomVISU_C.BorderStyle = BorderStyle.FixedSingle;
+            NomVISU_C.Location = new Point(6, 6);
+            NomVISU_C.Name = "NomVISU_C";
+            NomVISU_C.Size = new Size(173, 28);
+            NomVISU_C.TabIndex = 30;
+            NomVISU_C.Text = "NOM";
+            NomVISU_C.TextAlign = HorizontalAlignment.Center;
             // 
-            // button6
+            // btnANNULER_COMMANDE
             // 
-            button6.Anchor = AnchorStyles.None;
-            button6.Location = new Point(667, 395);
-            button6.Name = "button6";
-            button6.Size = new Size(220, 40);
-            button6.TabIndex = 13;
-            button6.Text = "ANNULER COMMANDE";
-            button6.UseVisualStyleBackColor = true;
+            btnANNULER_COMMANDE.Anchor = AnchorStyles.None;
+            btnANNULER_COMMANDE.Location = new Point(667, 395);
+            btnANNULER_COMMANDE.Name = "btnANNULER_COMMANDE";
+            btnANNULER_COMMANDE.Size = new Size(220, 40);
+            btnANNULER_COMMANDE.TabIndex = 13;
+            btnANNULER_COMMANDE.Text = "ANNULER COMMANDE";
+            btnANNULER_COMMANDE.UseVisualStyleBackColor = true;
             // 
             // factures
             // 
             factures.BackgroundImageLayout = ImageLayout.Center;
-            factures.Controls.Add(textBox30);
-            factures.Controls.Add(textBox26);
-            factures.Controls.Add(textBox28);
-            factures.Controls.Add(textBox27);
-            factures.Controls.Add(textBox29);
+            factures.Controls.Add(PrixTotalVISU_F);
+            factures.Controls.Add(QuantitéVISU_F);
+            factures.Controls.Add(DescriptionVISU_F);
+            factures.Controls.Add(DateVISU_F);
+            factures.Controls.Add(NomVISU_F);
             factures.Location = new Point(4, 44);
             factures.Name = "factures";
             factures.Size = new Size(893, 441);
@@ -535,71 +535,71 @@
             factures.Text = "Mes Factures";
             factures.UseVisualStyleBackColor = true;
             // 
-            // textBox30
+            // PrixTotalVISU_F
             // 
-            textBox30.AccessibleName = "";
-            textBox30.BorderStyle = BorderStyle.FixedSingle;
-            textBox30.Location = new Point(744, 6);
-            textBox30.Name = "textBox30";
-            textBox30.Size = new Size(142, 28);
-            textBox30.TabIndex = 38;
-            textBox30.Text = "PRIX TOTAL";
-            textBox30.TextAlign = HorizontalAlignment.Center;
+            PrixTotalVISU_F.AccessibleName = "";
+            PrixTotalVISU_F.BorderStyle = BorderStyle.FixedSingle;
+            PrixTotalVISU_F.Location = new Point(744, 6);
+            PrixTotalVISU_F.Name = "PrixTotalVISU_F";
+            PrixTotalVISU_F.Size = new Size(142, 28);
+            PrixTotalVISU_F.TabIndex = 38;
+            PrixTotalVISU_F.Text = "PRIX TOTAL";
+            PrixTotalVISU_F.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox26
+            // QuantitéVISU_F
             // 
-            textBox26.AccessibleName = "";
-            textBox26.BorderStyle = BorderStyle.FixedSingle;
-            textBox26.Location = new Point(594, 6);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(144, 28);
-            textBox26.TabIndex = 37;
-            textBox26.Text = "QUANTITE";
-            textBox26.TextAlign = HorizontalAlignment.Center;
+            QuantitéVISU_F.AccessibleName = "";
+            QuantitéVISU_F.BorderStyle = BorderStyle.FixedSingle;
+            QuantitéVISU_F.Location = new Point(594, 6);
+            QuantitéVISU_F.Name = "QuantitéVISU_F";
+            QuantitéVISU_F.Size = new Size(144, 28);
+            QuantitéVISU_F.TabIndex = 37;
+            QuantitéVISU_F.Text = "QUANTITE";
+            QuantitéVISU_F.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox28
+            // DescriptionVISU_F
             // 
-            textBox28.AccessibleName = "";
-            textBox28.BorderStyle = BorderStyle.FixedSingle;
-            textBox28.Location = new Point(161, 6);
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(260, 28);
-            textBox28.TabIndex = 35;
-            textBox28.Text = "DESCRIPTION";
-            textBox28.TextAlign = HorizontalAlignment.Center;
+            DescriptionVISU_F.AccessibleName = "";
+            DescriptionVISU_F.BorderStyle = BorderStyle.FixedSingle;
+            DescriptionVISU_F.Location = new Point(161, 6);
+            DescriptionVISU_F.Name = "DescriptionVISU_F";
+            DescriptionVISU_F.Size = new Size(260, 28);
+            DescriptionVISU_F.TabIndex = 35;
+            DescriptionVISU_F.Text = "DESCRIPTION";
+            DescriptionVISU_F.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox27
+            // DateVISU_F
             // 
-            textBox27.AccessibleName = "";
-            textBox27.BorderStyle = BorderStyle.FixedSingle;
-            textBox27.Location = new Point(427, 6);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(161, 28);
-            textBox27.TabIndex = 36;
-            textBox27.Text = "DATE";
-            textBox27.TextAlign = HorizontalAlignment.Center;
+            DateVISU_F.AccessibleName = "";
+            DateVISU_F.BorderStyle = BorderStyle.FixedSingle;
+            DateVISU_F.Location = new Point(427, 6);
+            DateVISU_F.Name = "DateVISU_F";
+            DateVISU_F.Size = new Size(161, 28);
+            DateVISU_F.TabIndex = 36;
+            DateVISU_F.Text = "DATE";
+            DateVISU_F.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox29
+            // NomVISU_F
             // 
-            textBox29.AccessibleName = "";
-            textBox29.BorderStyle = BorderStyle.FixedSingle;
-            textBox29.Location = new Point(5, 6);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(150, 28);
-            textBox29.TabIndex = 34;
-            textBox29.Text = "NOM";
-            textBox29.TextAlign = HorizontalAlignment.Center;
+            NomVISU_F.AccessibleName = "";
+            NomVISU_F.BorderStyle = BorderStyle.FixedSingle;
+            NomVISU_F.Location = new Point(5, 6);
+            NomVISU_F.Name = "NomVISU_F";
+            NomVISU_F.Size = new Size(150, 28);
+            NomVISU_F.TabIndex = 34;
+            NomVISU_F.Text = "NOM";
+            NomVISU_F.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox1
+            // TITLE
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(604, 25);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 21);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "MON COMPTE";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            TITLE.BorderStyle = BorderStyle.None;
+            TITLE.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            TITLE.Location = new Point(604, 25);
+            TITLE.Name = "TITLE";
+            TITLE.Size = new Size(125, 21);
+            TITLE.TabIndex = 0;
+            TITLE.Text = "MON COMPTE";
+            TITLE.TextAlign = HorizontalAlignment.Center;
             // 
             // Compte
             // 
@@ -607,8 +607,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1130, 582);
-            Controls.Add(textBox1);
-            Controls.Add(tabControl1);
+            Controls.Add(TITLE);
+            Controls.Add(Onglet);
             Controls.Add(panel1);
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -618,12 +618,12 @@
             Text = "Compte";
             Load += Compte_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)logoDECONNEXION).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoPRODUITS).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoCOMPTE).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoPANNIER).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
+            Onglet.ResumeLayout(false);
             info.ResumeLayout(false);
             info.PerformLayout();
             commande.ResumeLayout(false);
@@ -637,50 +637,50 @@
         #endregion
 
         private Panel panel1;
-        private Button deconnexion3;
-        private Button compte3;
-        private Button panier3;
-        private Button produit3;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
-        private TabControl tabControl1;
+        private Button btnDECONNEXION;
+        private Button btnCOMPTE;
+        private Button btnPANIER;
+        private Button btnPRODUIT;
+        private PictureBox logoDECONNEXION;
+        private PictureBox logoPRODUITS;
+        private PictureBox logoCOMPTE;
+        private PictureBox logoPANNIER;
+        private PictureBox logo;
+        private TabControl Onglet;
         private TabPage info;
         private TabPage commande;
         private TabPage factures;
-        private TextBox textBox1;
+        private TextBox TITLE;
         private Button button5;
-        private Button button6;
-        private TextBox textBox24;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox4;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox19;
-        private TextBox textBox20;
-        private TextBox textBox25;
-        private TextBox textBox23;
-        private TextBox textBox22;
-        private TextBox textBox21;
-        private TextBox textBox30;
-        private TextBox textBox26;
-        private TextBox textBox28;
-        private TextBox textBox27;
-        private TextBox textBox29;
+        private Button btnANNULER_COMMANDE;
+        private TextBox PrénomTITLE;
+        private TextBox NomTEXT;
+        private TextBox PrénomTEXT;
+        private TextBox PaysTITLE;
+        private TextBox EtatTITLE;
+        private TextBox PaysTEXT;
+        private TextBox EtatTEXT;
+        private TextBox VilleTITLE;
+        private TextBox AdresseTITLE;
+        private TextBox VilleTEXT;
+        private TextBox AdresseTEXT;
+        private TextBox MdpTITLE;
+        private TextBox MailTITLE;
+        private TextBox MdpTEXT;
+        private TextBox MailTEXT;
+        private TextBox NomTITLE;
+        private TextBox TypeAdresseTITLE;
+        private TextBox TypeAdresseTEXT;
+        private TextBox CodePostalTITLE;
+        private TextBox CodePostalTEXT;
+        private TextBox StatusVISU_C;
+        private TextBox DateVISU_C;
+        private TextBox DescriptionVISU_C;
+        private TextBox NomVISU_C;
+        private TextBox PrixTotalVISU_F;
+        private TextBox QuantitéVISU_F;
+        private TextBox DescriptionVISU_F;
+        private TextBox DateVISU_F;
+        private TextBox NomVISU_F;
     }
 }

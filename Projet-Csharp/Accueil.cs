@@ -1,4 +1,4 @@
-﻿using System;
+﻿isusing System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +45,16 @@ namespace Projet_Csharp
             Deconnexion pageDeconnexion = new Deconnexion();
             pageDeconnexion.Show(); // Affiche la page de déconnexion
             this.Hide(); // Cache la page de accueil actuelle
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
