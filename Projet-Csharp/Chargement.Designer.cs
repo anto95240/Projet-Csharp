@@ -105,6 +105,7 @@
             Name = "Chargement";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chargement";
+            Load += Chargement_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

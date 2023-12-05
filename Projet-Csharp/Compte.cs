@@ -45,5 +45,10 @@ namespace Projet_Csharp
             pageDeconnexion.Show(); // Affiche la page de déconnexion
             this.Hide(); // Cache la page de compte actuelle
         }
+
+        private void factures_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

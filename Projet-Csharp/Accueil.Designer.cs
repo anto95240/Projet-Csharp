@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             panel1 = new Panel();
             btnDECONNEXION = new Button();
@@ -57,6 +58,7 @@
             QuantitéVISU = new TextBox();
             DescriptionVISU = new TextBox();
             NomVISU = new TextBox();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LogoDECONNEXION).BeginInit();
             ((System.ComponentModel.ISupportInitialize)LogoPRODUIT).BeginInit();
@@ -367,6 +369,11 @@
             NomVISU.Text = "Nom";
             NomVISU.TextAlign = HorizontalAlignment.Center;
             // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 50;
+            guna2Elipse1.TargetControl = this;
+            // 
             // Accueil
             // 
             AutoScaleDimensions = new SizeF(10F, 20F);
@@ -437,5 +444,6 @@
         private TextBox QuantitéVISU;
         private TextBox DescriptionVISU;
         private TextBox NomVISU;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

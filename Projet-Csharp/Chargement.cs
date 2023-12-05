@@ -12,7 +12,7 @@ namespace Projet_Csharp
             InitializeComponent();
             timer1.Interval = TIMER_INTERVAL; // Définit l'intervalle du timer
             ProgressBar.Maximum = MAX_PROGRESS; // Définit le maximum de la barre de progression
-            
+
             timer1.Start();
 
         }
@@ -36,6 +36,11 @@ namespace Projet_Csharp
             Connexion pageConnexion = new Connexion();
             pageConnexion.Show();
             this.Hide();
+        }
+
+        private void Chargement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

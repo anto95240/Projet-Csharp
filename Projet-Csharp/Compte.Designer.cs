@@ -534,6 +534,7 @@
             factures.TabIndex = 2;
             factures.Text = "Mes Factures";
             factures.UseVisualStyleBackColor = true;
+            factures.Click += factures_Click;
             // 
             // PrixTotalVISU_F
             // 
