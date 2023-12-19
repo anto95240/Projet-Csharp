@@ -108,5 +108,10 @@ namespace Projet_Csharp
             pageConnexion.Show(); // Affiche la page d'accueil
             this.Hide(); // Cache la page de inscription actuelle
         }
+
+        private void Inscription_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

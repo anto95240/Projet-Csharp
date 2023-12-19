@@ -39,6 +39,21 @@ namespace Projet_Csharp
             pageCompte.Show(); // Affiche la page de compte
             this.Hide(); // Cache la page de accueil actuelle
         }
+        private void command_click(object sender, EventArgs e)
+        {
+            // Redirection vers la page de Command après avoir cliqué sur le bouton de compte
+            Command pageCommand = new Command();
+            pageCommand.Show(); // Affiche la page de commande
+            this.Hide(); // Cache la page de accueil actuelle
+        }
+
+        private void facture_click(object sender, EventArgs e)
+        {
+            // Redirection vers la page de Facture après avoir cliqué sur le bouton de compte
+            Facture pageFacture = new Facture();
+            pageFacture.Show(); // Affiche la page de facture
+            this.Hide(); // Cache la page de accueil actuelle
+        }
 
         private void deconnexion_click(object sender, EventArgs e)
         {
@@ -125,10 +140,10 @@ namespace Projet_Csharp
                     string Description = DescriptionTEXT.Text;
                     int Price = int.Parse(PrixTEXT.Text); // Convertir en décimal
                     int Stock_Quantity = int.Parse(QuantitéTEXT.Text); // Convertir en entier
-          
+
                     string Req = "UPDATE product_Table SET Name = '{0}', Description = '{1}', Price = '{2}', Stock_Quantity = '{3}' WHERE ProductId = {4}";
 
-                    Req = string.Format(Req, Name, Description, Price, Stock_Quantity,Cle);
+                    Req = string.Format(Req, Name, Description, Price, Stock_Quantity, Cle);
                     Con.EnvoyerData(Req);
 
                     MessageBox.Show("Produit Modifié!!!!");
@@ -139,7 +154,7 @@ namespace Projet_Csharp
                     DescriptionTEXT.Text = "";
                     PrixTEXT.Text = "";
                     QuantitéTEXT.Text = "";
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -193,6 +208,8 @@ namespace Projet_Csharp
         {
 
         }
+
+        
     }
 
 }

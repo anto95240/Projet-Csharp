@@ -383,6 +383,7 @@
             Name = "Inscription";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inscription";
+            Load += Inscription_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);

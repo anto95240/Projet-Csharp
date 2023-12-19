@@ -30,16 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compte));
             panel1 = new Panel();
+            button2 = new Button();
+            btnCommand = new Button();
             panel3 = new Panel();
             btnDECONNEXION = new Button();
             btnCOMPTE = new Button();
             btnPANIER = new Button();
             btnPRODUIT = new Button();
             Logo1 = new PictureBox();
-            Onglet = new TabControl();
-            info = new TabPage();
-            TypeAdresseTITLE = new TextBox();
-            TypeAdresseTEXT = new TextBox();
             CodePostalTITLE = new TextBox();
             CodePostalTEXT = new TextBox();
             PaysTITLE = new TextBox();
@@ -53,36 +51,22 @@
             MdpTITLE = new TextBox();
             MailTITLE = new TextBox();
             MdpTEXT = new TextBox();
-            MailTEXT = new TextBox();
+            EmailTEXT = new TextBox();
             NomTITLE = new TextBox();
             PrénomTITLE = new TextBox();
             NomTEXT = new TextBox();
-            PrénomTEXT = new TextBox();
-            button5 = new Button();
-            commande = new TabPage();
-            StatusVISU_C = new TextBox();
-            DateVISU_C = new TextBox();
-            DescriptionVISU_C = new TextBox();
-            NomVISU_C = new TextBox();
-            btnANNULER_COMMANDE = new Button();
-            factures = new TabPage();
-            PrixTotalVISU_F = new TextBox();
-            QuantitéVISU_F = new TextBox();
-            DescriptionVISU_F = new TextBox();
-            DateVISU_F = new TextBox();
-            NomVISU_F = new TextBox();
-            TITLE = new TextBox();
+            PrénomText = new TextBox();
+            btnModifer = new Button();
+            textBox1 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Logo1).BeginInit();
-            Onglet.SuspendLayout();
-            info.SuspendLayout();
-            commande.SuspendLayout();
-            factures.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.MediumSeaGreen;
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnCommand);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(btnDECONNEXION);
             panel1.Controls.Add(btnCOMPTE);
@@ -91,13 +75,45 @@
             panel1.Controls.Add(Logo1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(183, 582);
+            panel1.Size = new Size(211, 582);
             panel1.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = SystemColors.ControlLightLight;
+            button2.Image = Properties.Resources.icon_compte1;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(16, 439);
+            button2.Name = "button2";
+            button2.Size = new Size(192, 32);
+            button2.TabIndex = 21;
+            button2.Text = "Mes Factures";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += facture_click;
+            // 
+            // btnCommand
+            // 
+            btnCommand.FlatAppearance.BorderSize = 0;
+            btnCommand.FlatStyle = FlatStyle.Flat;
+            btnCommand.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCommand.ForeColor = SystemColors.ControlLightLight;
+            btnCommand.Image = Properties.Resources.icon_compte1;
+            btnCommand.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCommand.Location = new Point(16, 374);
+            btnCommand.Name = "btnCommand";
+            btnCommand.Size = new Size(192, 32);
+            btnCommand.TabIndex = 20;
+            btnCommand.Text = "     Mes Commandes";
+            btnCommand.UseVisualStyleBackColor = true;
+            btnCommand.Click += command_click;
             // 
             // panel3
             // 
             panel3.BackColor = SystemColors.ControlLightLight;
-            panel3.Location = new Point(3, 421);
+            panel3.Location = new Point(5, 301);
             panel3.Name = "panel3";
             panel3.Size = new Size(5, 32);
             panel3.TabIndex = 19;
@@ -112,10 +128,9 @@
             btnDECONNEXION.ImageAlign = ContentAlignment.MiddleLeft;
             btnDECONNEXION.Location = new Point(16, 511);
             btnDECONNEXION.Name = "btnDECONNEXION";
-            btnDECONNEXION.Size = new Size(164, 32);
+            btnDECONNEXION.Size = new Size(192, 32);
             btnDECONNEXION.TabIndex = 16;
             btnDECONNEXION.Text = "Déconnexion";
-            btnDECONNEXION.TextAlign = ContentAlignment.MiddleRight;
             btnDECONNEXION.UseVisualStyleBackColor = true;
             btnDECONNEXION.Click += deconnexion_click;
             // 
@@ -127,12 +142,11 @@
             btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
             btnCOMPTE.Image = Properties.Resources.icon_compte1;
             btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCOMPTE.Location = new Point(16, 421);
+            btnCOMPTE.Location = new Point(16, 301);
             btnCOMPTE.Name = "btnCOMPTE";
-            btnCOMPTE.Size = new Size(164, 32);
+            btnCOMPTE.Size = new Size(192, 32);
             btnCOMPTE.TabIndex = 15;
             btnCOMPTE.Text = "Mon Compte";
-            btnCOMPTE.TextAlign = ContentAlignment.MiddleRight;
             btnCOMPTE.UseVisualStyleBackColor = true;
             // 
             // btnPANIER
@@ -143,12 +157,11 @@
             btnPANIER.ForeColor = SystemColors.ControlLightLight;
             btnPANIER.Image = Properties.Resources.icon_panier1;
             btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPANIER.Location = new Point(16, 279);
+            btnPANIER.Location = new Point(16, 225);
             btnPANIER.Name = "btnPANIER";
-            btnPANIER.Size = new Size(164, 32);
+            btnPANIER.Size = new Size(192, 32);
             btnPANIER.TabIndex = 14;
             btnPANIER.Text = "Mon Panier";
-            btnPANIER.TextAlign = ContentAlignment.MiddleRight;
             btnPANIER.UseVisualStyleBackColor = true;
             btnPANIER.Click += panier_click;
             // 
@@ -160,13 +173,12 @@
             btnPRODUIT.ForeColor = SystemColors.ControlLightLight;
             btnPRODUIT.Image = Properties.Resources.Icon_produit1;
             btnPRODUIT.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPRODUIT.Location = new Point(16, 165);
+            btnPRODUIT.Location = new Point(16, 143);
             btnPRODUIT.Name = "btnPRODUIT";
             btnPRODUIT.RightToLeft = RightToLeft.No;
-            btnPRODUIT.Size = new Size(164, 32);
+            btnPRODUIT.Size = new Size(192, 32);
             btnPRODUIT.TabIndex = 12;
             btnPRODUIT.Text = "Les Produits";
-            btnPRODUIT.TextAlign = ContentAlignment.MiddleRight;
             btnPRODUIT.UseVisualStyleBackColor = true;
             btnPRODUIT.Click += produit_click;
             // 
@@ -181,415 +193,198 @@
             Logo1.TabIndex = 13;
             Logo1.TabStop = false;
             // 
-            // Onglet
-            // 
-            Onglet.Appearance = TabAppearance.FlatButtons;
-            Onglet.Controls.Add(info);
-            Onglet.Controls.Add(commande);
-            Onglet.Controls.Add(factures);
-            Onglet.ItemSize = new Size(100, 40);
-            Onglet.Location = new Point(217, 81);
-            Onglet.Name = "Onglet";
-            Onglet.Padding = new Point(40, 3);
-            Onglet.SelectedIndex = 0;
-            Onglet.Size = new Size(901, 489);
-            Onglet.TabIndex = 2;
-            // 
-            // info
-            // 
-            info.BackColor = SystemColors.Control;
-            info.BackgroundImageLayout = ImageLayout.Center;
-            info.Controls.Add(TypeAdresseTITLE);
-            info.Controls.Add(TypeAdresseTEXT);
-            info.Controls.Add(CodePostalTITLE);
-            info.Controls.Add(CodePostalTEXT);
-            info.Controls.Add(PaysTITLE);
-            info.Controls.Add(EtatTITLE);
-            info.Controls.Add(PaysTEXT);
-            info.Controls.Add(EtatTEXT);
-            info.Controls.Add(VilleTITLE);
-            info.Controls.Add(AdresseTITLE);
-            info.Controls.Add(VilleTEXT);
-            info.Controls.Add(AdresseTEXT);
-            info.Controls.Add(MdpTITLE);
-            info.Controls.Add(MailTITLE);
-            info.Controls.Add(MdpTEXT);
-            info.Controls.Add(MailTEXT);
-            info.Controls.Add(NomTITLE);
-            info.Controls.Add(PrénomTITLE);
-            info.Controls.Add(NomTEXT);
-            info.Controls.Add(PrénomTEXT);
-            info.Controls.Add(button5);
-            info.ImeMode = ImeMode.NoControl;
-            info.Location = new Point(4, 44);
-            info.Name = "info";
-            info.Padding = new Padding(3);
-            info.RightToLeft = RightToLeft.No;
-            info.Size = new Size(893, 441);
-            info.TabIndex = 0;
-            info.Text = "Mes Informations";
-            // 
-            // TypeAdresseTITLE
-            // 
-            TypeAdresseTITLE.BackColor = SystemColors.Control;
-            TypeAdresseTITLE.BorderStyle = BorderStyle.None;
-            TypeAdresseTITLE.Location = new Point(565, 305);
-            TypeAdresseTITLE.Name = "TypeAdresseTITLE";
-            TypeAdresseTITLE.Size = new Size(222, 21);
-            TypeAdresseTITLE.TabIndex = 67;
-            TypeAdresseTITLE.Text = "Type d'Adresse : ";
-            // 
-            // TypeAdresseTEXT
-            // 
-            TypeAdresseTEXT.AccessibleName = "";
-            TypeAdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
-            TypeAdresseTEXT.Location = new Point(565, 337);
-            TypeAdresseTEXT.Name = "TypeAdresseTEXT";
-            TypeAdresseTEXT.Size = new Size(222, 28);
-            TypeAdresseTEXT.TabIndex = 66;
-            TypeAdresseTEXT.TextAlign = HorizontalAlignment.Center;
-            // 
             // CodePostalTITLE
             // 
-            CodePostalTITLE.BackColor = SystemColors.Control;
+            CodePostalTITLE.BackColor = Color.White;
             CodePostalTITLE.BorderStyle = BorderStyle.None;
-            CodePostalTITLE.Location = new Point(565, 209);
+            CodePostalTITLE.Location = new Point(797, 301);
             CodePostalTITLE.Name = "CodePostalTITLE";
             CodePostalTITLE.Size = new Size(222, 21);
-            CodePostalTITLE.TabIndex = 65;
+            CodePostalTITLE.TabIndex = 86;
             CodePostalTITLE.Text = "Code Postal : ";
             // 
             // CodePostalTEXT
             // 
             CodePostalTEXT.AccessibleName = "";
             CodePostalTEXT.BorderStyle = BorderStyle.FixedSingle;
-            CodePostalTEXT.Location = new Point(565, 240);
+            CodePostalTEXT.Location = new Point(797, 332);
             CodePostalTEXT.Name = "CodePostalTEXT";
             CodePostalTEXT.Size = new Size(222, 28);
-            CodePostalTEXT.TabIndex = 64;
-            CodePostalTEXT.TextAlign = HorizontalAlignment.Center;
+            CodePostalTEXT.TabIndex = 85;
             // 
             // PaysTITLE
             // 
-            PaysTITLE.BackColor = SystemColors.Control;
+            PaysTITLE.BackColor = Color.White;
             PaysTITLE.BorderStyle = BorderStyle.None;
-            PaysTITLE.Location = new Point(295, 305);
+            PaysTITLE.Location = new Point(527, 397);
             PaysTITLE.Name = "PaysTITLE";
             PaysTITLE.Size = new Size(222, 21);
-            PaysTITLE.TabIndex = 63;
+            PaysTITLE.TabIndex = 84;
             PaysTITLE.Text = "Pays : ";
             // 
             // EtatTITLE
             // 
-            EtatTITLE.BackColor = SystemColors.Control;
+            EtatTITLE.BackColor = Color.White;
             EtatTITLE.BorderStyle = BorderStyle.None;
-            EtatTITLE.Location = new Point(27, 305);
+            EtatTITLE.Location = new Point(259, 397);
             EtatTITLE.Name = "EtatTITLE";
             EtatTITLE.Size = new Size(222, 21);
-            EtatTITLE.TabIndex = 62;
+            EtatTITLE.TabIndex = 83;
             EtatTITLE.Text = "Etat : ";
             // 
             // PaysTEXT
             // 
             PaysTEXT.AccessibleName = "";
             PaysTEXT.BorderStyle = BorderStyle.FixedSingle;
-            PaysTEXT.Location = new Point(295, 337);
+            PaysTEXT.Location = new Point(527, 429);
             PaysTEXT.Name = "PaysTEXT";
             PaysTEXT.Size = new Size(222, 28);
-            PaysTEXT.TabIndex = 61;
-            PaysTEXT.TextAlign = HorizontalAlignment.Center;
+            PaysTEXT.TabIndex = 82;
             // 
             // EtatTEXT
             // 
             EtatTEXT.AccessibleName = "";
             EtatTEXT.BorderStyle = BorderStyle.FixedSingle;
-            EtatTEXT.Location = new Point(27, 337);
+            EtatTEXT.Location = new Point(259, 429);
             EtatTEXT.Name = "EtatTEXT";
             EtatTEXT.Size = new Size(222, 28);
-            EtatTEXT.TabIndex = 60;
-            EtatTEXT.TextAlign = HorizontalAlignment.Center;
+            EtatTEXT.TabIndex = 81;
             // 
             // VilleTITLE
             // 
-            VilleTITLE.BackColor = SystemColors.Control;
+            VilleTITLE.BackColor = Color.White;
             VilleTITLE.BorderStyle = BorderStyle.None;
-            VilleTITLE.Location = new Point(295, 209);
+            VilleTITLE.Location = new Point(527, 301);
             VilleTITLE.Name = "VilleTITLE";
             VilleTITLE.Size = new Size(222, 21);
-            VilleTITLE.TabIndex = 59;
+            VilleTITLE.TabIndex = 80;
             VilleTITLE.Text = "Ville : ";
             // 
             // AdresseTITLE
             // 
-            AdresseTITLE.BackColor = SystemColors.Control;
+            AdresseTITLE.BackColor = Color.White;
             AdresseTITLE.BorderStyle = BorderStyle.None;
-            AdresseTITLE.Location = new Point(27, 209);
+            AdresseTITLE.Location = new Point(259, 301);
             AdresseTITLE.Name = "AdresseTITLE";
             AdresseTITLE.Size = new Size(222, 21);
-            AdresseTITLE.TabIndex = 58;
+            AdresseTITLE.TabIndex = 79;
             AdresseTITLE.Text = "Adresse : ";
             // 
             // VilleTEXT
             // 
             VilleTEXT.AccessibleName = "";
             VilleTEXT.BorderStyle = BorderStyle.FixedSingle;
-            VilleTEXT.Location = new Point(295, 240);
+            VilleTEXT.Location = new Point(527, 332);
             VilleTEXT.Name = "VilleTEXT";
             VilleTEXT.Size = new Size(222, 28);
-            VilleTEXT.TabIndex = 57;
-            VilleTEXT.TextAlign = HorizontalAlignment.Center;
+            VilleTEXT.TabIndex = 78;
             // 
             // AdresseTEXT
             // 
             AdresseTEXT.AccessibleName = "";
             AdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
-            AdresseTEXT.Location = new Point(27, 240);
+            AdresseTEXT.Location = new Point(259, 332);
             AdresseTEXT.Name = "AdresseTEXT";
             AdresseTEXT.Size = new Size(222, 28);
-            AdresseTEXT.TabIndex = 56;
-            AdresseTEXT.TextAlign = HorizontalAlignment.Center;
+            AdresseTEXT.TabIndex = 77;
             // 
             // MdpTITLE
             // 
-            MdpTITLE.BackColor = SystemColors.Control;
+            MdpTITLE.BackColor = Color.White;
             MdpTITLE.BorderStyle = BorderStyle.None;
-            MdpTITLE.Location = new Point(295, 100);
+            MdpTITLE.Location = new Point(527, 192);
             MdpTITLE.Name = "MdpTITLE";
             MdpTITLE.Size = new Size(222, 21);
-            MdpTITLE.TabIndex = 55;
+            MdpTITLE.TabIndex = 76;
             MdpTITLE.Text = "Mot de Passe : ";
             // 
             // MailTITLE
             // 
-            MailTITLE.BackColor = SystemColors.Control;
+            MailTITLE.BackColor = Color.White;
             MailTITLE.BorderStyle = BorderStyle.None;
-            MailTITLE.Location = new Point(27, 100);
+            MailTITLE.Location = new Point(259, 192);
             MailTITLE.Name = "MailTITLE";
             MailTITLE.Size = new Size(222, 21);
-            MailTITLE.TabIndex = 54;
+            MailTITLE.TabIndex = 75;
             MailTITLE.Text = "Mail : ";
             // 
             // MdpTEXT
             // 
             MdpTEXT.AccessibleName = "";
             MdpTEXT.BorderStyle = BorderStyle.FixedSingle;
-            MdpTEXT.Location = new Point(295, 134);
+            MdpTEXT.Location = new Point(527, 226);
             MdpTEXT.Name = "MdpTEXT";
             MdpTEXT.Size = new Size(222, 28);
-            MdpTEXT.TabIndex = 53;
-            MdpTEXT.TextAlign = HorizontalAlignment.Center;
+            MdpTEXT.TabIndex = 74;
             // 
-            // MailTEXT
+            // EmailTEXT
             // 
-            MailTEXT.AccessibleName = "";
-            MailTEXT.BorderStyle = BorderStyle.FixedSingle;
-            MailTEXT.Location = new Point(27, 134);
-            MailTEXT.Name = "MailTEXT";
-            MailTEXT.Size = new Size(222, 28);
-            MailTEXT.TabIndex = 52;
-            MailTEXT.TextAlign = HorizontalAlignment.Center;
+            EmailTEXT.AccessibleName = "";
+            EmailTEXT.BorderStyle = BorderStyle.FixedSingle;
+            EmailTEXT.Location = new Point(259, 226);
+            EmailTEXT.Name = "EmailTEXT";
+            EmailTEXT.Size = new Size(222, 28);
+            EmailTEXT.TabIndex = 73;
             // 
             // NomTITLE
             // 
-            NomTITLE.BackColor = SystemColors.Control;
+            NomTITLE.BackColor = Color.White;
             NomTITLE.BorderStyle = BorderStyle.None;
-            NomTITLE.Location = new Point(295, 18);
+            NomTITLE.Location = new Point(527, 110);
             NomTITLE.Name = "NomTITLE";
             NomTITLE.Size = new Size(222, 21);
-            NomTITLE.TabIndex = 51;
+            NomTITLE.TabIndex = 72;
             NomTITLE.Text = "Nom : ";
             // 
             // PrénomTITLE
             // 
-            PrénomTITLE.BackColor = SystemColors.Control;
+            PrénomTITLE.BackColor = Color.White;
             PrénomTITLE.BorderStyle = BorderStyle.None;
-            PrénomTITLE.Location = new Point(27, 18);
+            PrénomTITLE.Location = new Point(259, 110);
             PrénomTITLE.Name = "PrénomTITLE";
             PrénomTITLE.Size = new Size(222, 21);
-            PrénomTITLE.TabIndex = 50;
+            PrénomTITLE.TabIndex = 71;
             PrénomTITLE.Text = "Prénom : ";
             // 
             // NomTEXT
             // 
             NomTEXT.AccessibleName = "";
             NomTEXT.BorderStyle = BorderStyle.FixedSingle;
-            NomTEXT.Location = new Point(295, 51);
+            NomTEXT.Location = new Point(527, 143);
             NomTEXT.Name = "NomTEXT";
             NomTEXT.Size = new Size(222, 28);
-            NomTEXT.TabIndex = 31;
-            NomTEXT.TextAlign = HorizontalAlignment.Center;
+            NomTEXT.TabIndex = 70;
             // 
-            // PrénomTEXT
+            // PrénomText
             // 
-            PrénomTEXT.AccessibleName = "";
-            PrénomTEXT.BorderStyle = BorderStyle.FixedSingle;
-            PrénomTEXT.Location = new Point(27, 51);
-            PrénomTEXT.Name = "PrénomTEXT";
-            PrénomTEXT.Size = new Size(222, 28);
-            PrénomTEXT.TabIndex = 29;
-            PrénomTEXT.TextAlign = HorizontalAlignment.Center;
+            PrénomText.AccessibleName = "";
+            PrénomText.BorderStyle = BorderStyle.FixedSingle;
+            PrénomText.Location = new Point(259, 143);
+            PrénomText.Name = "PrénomText";
+            PrénomText.Size = new Size(222, 28);
+            PrénomText.TabIndex = 69;
             // 
-            // button5
+            // btnModifer
             // 
-            button5.Anchor = AnchorStyles.None;
-            button5.Location = new Point(737, 395);
-            button5.Name = "button5";
-            button5.Size = new Size(150, 40);
-            button5.TabIndex = 12;
-            button5.Text = "MODIFIER";
-            button5.UseVisualStyleBackColor = true;
+            btnModifer.Anchor = AnchorStyles.None;
+            btnModifer.Location = new Point(960, 520);
+            btnModifer.Name = "btnModifer";
+            btnModifer.Size = new Size(150, 40);
+            btnModifer.TabIndex = 68;
+            btnModifer.Text = "MODIFIER";
+            btnModifer.UseVisualStyleBackColor = true;
+            btnModifer.Click += btnModifier;
             // 
-            // commande
+            // textBox1
             // 
-            commande.BackgroundImageLayout = ImageLayout.Center;
-            commande.Controls.Add(StatusVISU_C);
-            commande.Controls.Add(DateVISU_C);
-            commande.Controls.Add(DescriptionVISU_C);
-            commande.Controls.Add(NomVISU_C);
-            commande.Controls.Add(btnANNULER_COMMANDE);
-            commande.Location = new Point(4, 44);
-            commande.Name = "commande";
-            commande.Padding = new Padding(3);
-            commande.Size = new Size(893, 441);
-            commande.TabIndex = 1;
-            commande.Text = "Mes Commandes";
-            commande.UseVisualStyleBackColor = true;
-            // 
-            // StatusVISU_C
-            // 
-            StatusVISU_C.AccessibleName = "";
-            StatusVISU_C.BorderStyle = BorderStyle.FixedSingle;
-            StatusVISU_C.Location = new Point(726, 6);
-            StatusVISU_C.Name = "StatusVISU_C";
-            StatusVISU_C.Size = new Size(161, 28);
-            StatusVISU_C.TabIndex = 33;
-            StatusVISU_C.Text = "STATUS";
-            StatusVISU_C.TextAlign = HorizontalAlignment.Center;
-            // 
-            // DateVISU_C
-            // 
-            DateVISU_C.AccessibleName = "";
-            DateVISU_C.BorderStyle = BorderStyle.FixedSingle;
-            DateVISU_C.Location = new Point(558, 6);
-            DateVISU_C.Name = "DateVISU_C";
-            DateVISU_C.Size = new Size(162, 28);
-            DateVISU_C.TabIndex = 32;
-            DateVISU_C.Text = "DATE";
-            DateVISU_C.TextAlign = HorizontalAlignment.Center;
-            // 
-            // DescriptionVISU_C
-            // 
-            DescriptionVISU_C.AccessibleName = "";
-            DescriptionVISU_C.BorderStyle = BorderStyle.FixedSingle;
-            DescriptionVISU_C.Location = new Point(185, 6);
-            DescriptionVISU_C.Name = "DescriptionVISU_C";
-            DescriptionVISU_C.Size = new Size(367, 28);
-            DescriptionVISU_C.TabIndex = 31;
-            DescriptionVISU_C.Text = "DESCRIPTION";
-            DescriptionVISU_C.TextAlign = HorizontalAlignment.Center;
-            // 
-            // NomVISU_C
-            // 
-            NomVISU_C.AccessibleName = "";
-            NomVISU_C.BorderStyle = BorderStyle.FixedSingle;
-            NomVISU_C.Location = new Point(6, 6);
-            NomVISU_C.Name = "NomVISU_C";
-            NomVISU_C.Size = new Size(173, 28);
-            NomVISU_C.TabIndex = 30;
-            NomVISU_C.Text = "NOM";
-            NomVISU_C.TextAlign = HorizontalAlignment.Center;
-            // 
-            // btnANNULER_COMMANDE
-            // 
-            btnANNULER_COMMANDE.Anchor = AnchorStyles.None;
-            btnANNULER_COMMANDE.Location = new Point(667, 395);
-            btnANNULER_COMMANDE.Name = "btnANNULER_COMMANDE";
-            btnANNULER_COMMANDE.Size = new Size(220, 40);
-            btnANNULER_COMMANDE.TabIndex = 13;
-            btnANNULER_COMMANDE.Text = "ANNULER COMMANDE";
-            btnANNULER_COMMANDE.UseVisualStyleBackColor = true;
-            // 
-            // factures
-            // 
-            factures.BackgroundImageLayout = ImageLayout.Center;
-            factures.Controls.Add(PrixTotalVISU_F);
-            factures.Controls.Add(QuantitéVISU_F);
-            factures.Controls.Add(DescriptionVISU_F);
-            factures.Controls.Add(DateVISU_F);
-            factures.Controls.Add(NomVISU_F);
-            factures.Location = new Point(4, 44);
-            factures.Name = "factures";
-            factures.Size = new Size(893, 441);
-            factures.TabIndex = 2;
-            factures.Text = "Mes Factures";
-            factures.UseVisualStyleBackColor = true;
-            factures.Click += factures_Click;
-            // 
-            // PrixTotalVISU_F
-            // 
-            PrixTotalVISU_F.AccessibleName = "";
-            PrixTotalVISU_F.BorderStyle = BorderStyle.FixedSingle;
-            PrixTotalVISU_F.Location = new Point(744, 6);
-            PrixTotalVISU_F.Name = "PrixTotalVISU_F";
-            PrixTotalVISU_F.Size = new Size(142, 28);
-            PrixTotalVISU_F.TabIndex = 38;
-            PrixTotalVISU_F.Text = "PRIX TOTAL";
-            PrixTotalVISU_F.TextAlign = HorizontalAlignment.Center;
-            // 
-            // QuantitéVISU_F
-            // 
-            QuantitéVISU_F.AccessibleName = "";
-            QuantitéVISU_F.BorderStyle = BorderStyle.FixedSingle;
-            QuantitéVISU_F.Location = new Point(594, 6);
-            QuantitéVISU_F.Name = "QuantitéVISU_F";
-            QuantitéVISU_F.Size = new Size(144, 28);
-            QuantitéVISU_F.TabIndex = 37;
-            QuantitéVISU_F.Text = "QUANTITE";
-            QuantitéVISU_F.TextAlign = HorizontalAlignment.Center;
-            // 
-            // DescriptionVISU_F
-            // 
-            DescriptionVISU_F.AccessibleName = "";
-            DescriptionVISU_F.BorderStyle = BorderStyle.FixedSingle;
-            DescriptionVISU_F.Location = new Point(161, 6);
-            DescriptionVISU_F.Name = "DescriptionVISU_F";
-            DescriptionVISU_F.Size = new Size(260, 28);
-            DescriptionVISU_F.TabIndex = 35;
-            DescriptionVISU_F.Text = "DESCRIPTION";
-            DescriptionVISU_F.TextAlign = HorizontalAlignment.Center;
-            // 
-            // DateVISU_F
-            // 
-            DateVISU_F.AccessibleName = "";
-            DateVISU_F.BorderStyle = BorderStyle.FixedSingle;
-            DateVISU_F.Location = new Point(427, 6);
-            DateVISU_F.Name = "DateVISU_F";
-            DateVISU_F.Size = new Size(161, 28);
-            DateVISU_F.TabIndex = 36;
-            DateVISU_F.Text = "DATE";
-            DateVISU_F.TextAlign = HorizontalAlignment.Center;
-            // 
-            // NomVISU_F
-            // 
-            NomVISU_F.AccessibleName = "";
-            NomVISU_F.BorderStyle = BorderStyle.FixedSingle;
-            NomVISU_F.Location = new Point(5, 6);
-            NomVISU_F.Name = "NomVISU_F";
-            NomVISU_F.Size = new Size(150, 28);
-            NomVISU_F.TabIndex = 34;
-            NomVISU_F.Text = "NOM";
-            NomVISU_F.TextAlign = HorizontalAlignment.Center;
-            // 
-            // TITLE
-            // 
-            TITLE.BorderStyle = BorderStyle.None;
-            TITLE.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            TITLE.Location = new Point(604, 25);
-            TITLE.Name = "TITLE";
-            TITLE.Size = new Size(125, 21);
-            TITLE.TabIndex = 0;
-            TITLE.Text = "MON COMPTE";
-            TITLE.TextAlign = HorizontalAlignment.Center;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(546, 30);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(205, 21);
+            textBox1.TabIndex = 89;
+            textBox1.Text = "MES INFORMATIONS";
+            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // Compte
             // 
@@ -597,8 +392,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1130, 582);
-            Controls.Add(TITLE);
-            Controls.Add(Onglet);
+            Controls.Add(textBox1);
+            Controls.Add(CodePostalTITLE);
+            Controls.Add(CodePostalTEXT);
+            Controls.Add(PaysTITLE);
+            Controls.Add(EtatTITLE);
+            Controls.Add(PaysTEXT);
+            Controls.Add(EtatTEXT);
+            Controls.Add(VilleTITLE);
+            Controls.Add(AdresseTITLE);
+            Controls.Add(VilleTEXT);
+            Controls.Add(AdresseTEXT);
+            Controls.Add(MdpTITLE);
+            Controls.Add(MailTITLE);
+            Controls.Add(MdpTEXT);
+            Controls.Add(EmailTEXT);
+            Controls.Add(NomTITLE);
+            Controls.Add(PrénomTITLE);
+            Controls.Add(NomTEXT);
+            Controls.Add(PrénomText);
+            Controls.Add(btnModifer);
             Controls.Add(panel1);
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -609,13 +422,6 @@
             Load += Compte_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Logo1).EndInit();
-            Onglet.ResumeLayout(false);
-            info.ResumeLayout(false);
-            info.PerformLayout();
-            commande.ResumeLayout(false);
-            commande.PerformLayout();
-            factures.ResumeLayout(false);
-            factures.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -623,16 +429,16 @@
         #endregion
 
         private Panel panel1;
-        private TabControl Onglet;
-        private TabPage info;
-        private TabPage commande;
-        private TabPage factures;
-        private TextBox TITLE;
-        private Button button5;
-        private Button btnANNULER_COMMANDE;
-        private TextBox PrénomTITLE;
-        private TextBox NomTEXT;
-        private TextBox PrénomTEXT;
+        private Button btnDECONNEXION;
+        private Button btnCOMPTE;
+        private Button btnPANIER;
+        private Button btnPRODUIT;
+        private PictureBox Logo1;
+        private Panel panel3;
+        private Button button2;
+        private Button btnCommand;
+        private TextBox CodePostalTITLE;
+        private TextBox CodePostalTEXT;
         private TextBox PaysTITLE;
         private TextBox EtatTITLE;
         private TextBox PaysTEXT;
@@ -644,26 +450,12 @@
         private TextBox MdpTITLE;
         private TextBox MailTITLE;
         private TextBox MdpTEXT;
-        private TextBox MailTEXT;
+        private TextBox EmailTEXT;
         private TextBox NomTITLE;
-        private TextBox TypeAdresseTITLE;
-        private TextBox TypeAdresseTEXT;
-        private TextBox CodePostalTITLE;
-        private TextBox CodePostalTEXT;
-        private TextBox StatusVISU_C;
-        private TextBox DateVISU_C;
-        private TextBox DescriptionVISU_C;
-        private TextBox NomVISU_C;
-        private TextBox PrixTotalVISU_F;
-        private TextBox QuantitéVISU_F;
-        private TextBox DescriptionVISU_F;
-        private TextBox DateVISU_F;
-        private TextBox NomVISU_F;
-        private Button btnDECONNEXION;
-        private Button btnCOMPTE;
-        private Button btnPANIER;
-        private Button btnPRODUIT;
-        private PictureBox Logo1;
-        private Panel panel3;
+        private TextBox PrénomTITLE;
+        private TextBox NomTEXT;
+        private TextBox PrénomText;
+        private Button btnModifer;
+        private TextBox textBox1;
     }
 }

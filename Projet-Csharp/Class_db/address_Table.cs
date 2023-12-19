@@ -19,7 +19,7 @@ namespace Projet_Csharp.Class_db
 
         public string State { get; set; }
 
-        public int PostalCode { get; set; }
+        public string PostalCode { get; set; }
 
         public string Country { get; set; }
 

@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle34 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle35 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle36 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Panier));
             TITLE = new TextBox();
             logoPASSER_COMMANDE = new Button();
             btnSUPPR = new Button();
             ListePanier = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1 = new Panel();
-            panel3 = new Panel();
             btnDECONNEXION = new Button();
             Logo1 = new PictureBox();
-            btnCOMPTE = new Button();
             btnPRODUIT = new Button();
+            btnFACTURE = new Button();
+            btnCOMMAND = new Button();
+            btnCOMPTE = new Button();
             btnPANIER = new Button();
+            panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)ListePanier).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Logo1).BeginInit();
@@ -81,27 +83,27 @@
             // 
             // ListePanier
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            ListePanier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle34.BackColor = Color.White;
+            ListePanier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
             ListePanier.BackgroundColor = SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            ListePanier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle35.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle35.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle35.ForeColor = Color.White;
+            dataGridViewCellStyle35.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = DataGridViewTriState.True;
+            ListePanier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
             ListePanier.ColumnHeadersHeight = 22;
             ListePanier.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            ListePanier.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle36.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = Color.White;
+            dataGridViewCellStyle36.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle36.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle36.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle36.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle36.WrapMode = DataGridViewTriState.False;
+            ListePanier.DefaultCellStyle = dataGridViewCellStyle36;
             ListePanier.GridColor = Color.Silver;
             ListePanier.Location = new Point(279, 88);
             ListePanier.Name = "ListePanier";
@@ -135,24 +137,17 @@
             // 
             panel1.BackColor = Color.MediumSeaGreen;
             panel1.Controls.Add(panel3);
+            panel1.Controls.Add(btnFACTURE);
+            panel1.Controls.Add(btnCOMMAND);
+            panel1.Controls.Add(btnCOMPTE);
+            panel1.Controls.Add(btnPANIER);
             panel1.Controls.Add(btnDECONNEXION);
             panel1.Controls.Add(Logo1);
-            panel1.Controls.Add(btnCOMPTE);
             panel1.Controls.Add(btnPRODUIT);
-            panel1.Controls.Add(btnPANIER);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(183, 582);
+            panel1.Size = new Size(211, 582);
             panel1.TabIndex = 77;
-            panel1.Paint += panel1_Paint;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.ControlLightLight;
-            panel3.Location = new Point(2, 279);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(5, 32);
-            panel3.TabIndex = 83;
             // 
             // btnDECONNEXION
             // 
@@ -164,10 +159,9 @@
             btnDECONNEXION.ImageAlign = ContentAlignment.MiddleLeft;
             btnDECONNEXION.Location = new Point(16, 511);
             btnDECONNEXION.Name = "btnDECONNEXION";
-            btnDECONNEXION.Size = new Size(164, 32);
+            btnDECONNEXION.Size = new Size(192, 32);
             btnDECONNEXION.TabIndex = 82;
             btnDECONNEXION.Text = "Déconnexion";
-            btnDECONNEXION.TextAlign = ContentAlignment.MiddleRight;
             btnDECONNEXION.UseVisualStyleBackColor = true;
             btnDECONNEXION.Click += deconnexion_click;
             // 
@@ -182,23 +176,6 @@
             Logo1.TabIndex = 79;
             Logo1.TabStop = false;
             // 
-            // btnCOMPTE
-            // 
-            btnCOMPTE.FlatAppearance.BorderSize = 0;
-            btnCOMPTE.FlatStyle = FlatStyle.Flat;
-            btnCOMPTE.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
-            btnCOMPTE.Image = Properties.Resources.icon_compte1;
-            btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCOMPTE.Location = new Point(16, 421);
-            btnCOMPTE.Name = "btnCOMPTE";
-            btnCOMPTE.Size = new Size(164, 32);
-            btnCOMPTE.TabIndex = 81;
-            btnCOMPTE.Text = "Mon Compte";
-            btnCOMPTE.TextAlign = ContentAlignment.MiddleRight;
-            btnCOMPTE.UseVisualStyleBackColor = true;
-            btnCOMPTE.Click += compte_click;
-            // 
             // btnPRODUIT
             // 
             btnPRODUIT.FlatAppearance.BorderSize = 0;
@@ -207,15 +184,62 @@
             btnPRODUIT.ForeColor = SystemColors.ControlLightLight;
             btnPRODUIT.Image = Properties.Resources.Icon_produit1;
             btnPRODUIT.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPRODUIT.Location = new Point(16, 165);
+            btnPRODUIT.Location = new Point(16, 143);
             btnPRODUIT.Name = "btnPRODUIT";
             btnPRODUIT.RightToLeft = RightToLeft.No;
-            btnPRODUIT.Size = new Size(164, 32);
+            btnPRODUIT.Size = new Size(192, 32);
             btnPRODUIT.TabIndex = 78;
             btnPRODUIT.Text = "Les Produits";
-            btnPRODUIT.TextAlign = ContentAlignment.MiddleRight;
             btnPRODUIT.UseVisualStyleBackColor = true;
             btnPRODUIT.Click += produit_click;
+            // 
+            // btnFACTURE
+            // 
+            btnFACTURE.FlatAppearance.BorderSize = 0;
+            btnFACTURE.FlatStyle = FlatStyle.Flat;
+            btnFACTURE.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFACTURE.ForeColor = SystemColors.ControlLightLight;
+            btnFACTURE.Image = Properties.Resources.icon_compte1;
+            btnFACTURE.ImageAlign = ContentAlignment.MiddleLeft;
+            btnFACTURE.Location = new Point(16, 439);
+            btnFACTURE.Name = "btnFACTURE";
+            btnFACTURE.Size = new Size(192, 32);
+            btnFACTURE.TabIndex = 86;
+            btnFACTURE.Text = "Mes Factures";
+            btnFACTURE.UseVisualStyleBackColor = true;
+            btnFACTURE.Click += facture_click;
+            // 
+            // btnCOMMAND
+            // 
+            btnCOMMAND.FlatAppearance.BorderSize = 0;
+            btnCOMMAND.FlatStyle = FlatStyle.Flat;
+            btnCOMMAND.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCOMMAND.ForeColor = SystemColors.ControlLightLight;
+            btnCOMMAND.Image = Properties.Resources.icon_compte1;
+            btnCOMMAND.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCOMMAND.Location = new Point(16, 374);
+            btnCOMMAND.Name = "btnCOMMAND";
+            btnCOMMAND.Size = new Size(192, 32);
+            btnCOMMAND.TabIndex = 85;
+            btnCOMMAND.Text = "     Mes Commandes";
+            btnCOMMAND.UseVisualStyleBackColor = true;
+            btnCOMMAND.Click += command_click;
+            // 
+            // btnCOMPTE
+            // 
+            btnCOMPTE.FlatAppearance.BorderSize = 0;
+            btnCOMPTE.FlatStyle = FlatStyle.Flat;
+            btnCOMPTE.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
+            btnCOMPTE.Image = Properties.Resources.icon_compte1;
+            btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCOMPTE.Location = new Point(16, 301);
+            btnCOMPTE.Name = "btnCOMPTE";
+            btnCOMPTE.Size = new Size(192, 32);
+            btnCOMPTE.TabIndex = 84;
+            btnCOMPTE.Text = "Mon Compte";
+            btnCOMPTE.UseVisualStyleBackColor = true;
+            btnCOMPTE.Click += compte_click;
             // 
             // btnPANIER
             // 
@@ -225,13 +249,20 @@
             btnPANIER.ForeColor = SystemColors.ControlLightLight;
             btnPANIER.Image = Properties.Resources.icon_panier1;
             btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPANIER.Location = new Point(16, 279);
+            btnPANIER.Location = new Point(16, 225);
             btnPANIER.Name = "btnPANIER";
-            btnPANIER.Size = new Size(164, 32);
-            btnPANIER.TabIndex = 80;
+            btnPANIER.Size = new Size(192, 32);
+            btnPANIER.TabIndex = 83;
             btnPANIER.Text = "Mon Panier";
-            btnPANIER.TextAlign = ContentAlignment.MiddleRight;
             btnPANIER.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ControlLightLight;
+            panel3.Location = new Point(5, 225);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(5, 32);
+            panel3.TabIndex = 78;
             // 
             // Panier
             // 
@@ -266,8 +297,10 @@
         private Panel panel1;
         private Button btnDECONNEXION;
         private PictureBox Logo1;
-        private Button btnCOMPTE;
         private Button btnPRODUIT;
+        private Button btnFACTURE;
+        private Button btnCOMMAND;
+        private Button btnCOMPTE;
         private Button btnPANIER;
         private Panel panel3;
     }

@@ -7,6 +7,9 @@
     <Compile Update="Chargement.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Command.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Compte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Deconnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Facture.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
