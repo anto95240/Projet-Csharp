@@ -21,5 +21,10 @@ namespace Projet_Csharp
         {
 
         }
+
+        private void btnQuitter(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

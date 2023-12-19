@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projet_Csharp.Class_db;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Projet_Csharp
 {
@@ -64,18 +67,20 @@ namespace Projet_Csharp
                 {
                     string Name = NomTEXT.Text;
                     string Description = DescriptionTEXT.Text;
-                    int Price = Convert.ToInt32(PrixTEXT.Text); // Convertir en décimal
-                    int Stock_Quantity = Convert.ToInt32(QuantitéTEXT.Text); // Convertir en entier
+                    int Price = int.Parse(PrixTEXT.Text); // Convertir en décimal
+                    int Stock_Quantity = int.Parse(QuantitéTEXT.Text); // Convertir en entier
 
-                    string Req = "INSERT INTO product_Table VALUES ('{0}','{1}','{2}','{3}')";
-                    Req = string.Format(Req, Name, Description, Price, Stock_Quantity);
 
-                    // Exécution de la commande
-                    Con.EnvoyerData(Req);
+                    string Req = "INSERT INTO product_Table (Name, Description, Price, Stock_Quantity) VALUES (@Name, @Description, @Price, @Stock_Quantity)";
 
-                    MessageBox.Show("Produit Ajouté!!!");
+                    // Exécution de la requête avec les paramètres
+                    Con.EnvoyerData(Req, new SqlParameter("@Name", Name), new SqlParameter("@Description", Description), new SqlParameter("@Price", Price), new SqlParameter("@Stock_Quantity", Stock_Quantity));
+
+
+                    MessageBox.Show("Produit Ajouté!!!!");
 
                     AfficherProduits();
+
                     NomTEXT.Text = "";
                     DescriptionTEXT.Text = "";
                     PrixTEXT.Text = "";
@@ -120,21 +125,21 @@ namespace Projet_Csharp
                     string Description = DescriptionTEXT.Text;
                     int Price = int.Parse(PrixTEXT.Text); // Convertir en décimal
                     int Stock_Quantity = int.Parse(QuantitéTEXT.Text); // Convertir en entier
+          
+                    string Req = "UPDATE product_Table SET Name = '{0}', Description = '{1}', Price = '{2}', Stock_Quantity = '{3}' WHERE ProductId = {4}";
 
-                    string Req = "UPDATE product_Table SET Name = '{0}',Description = '{1}',Price = {2},Stock_Quantity = {3} WHERE ProductId = {4}";
-                    Req = string.Format(Req, Name, Description, Price, Stock_Quantity, Cle);
-
-
-                    // Exécution de la commande
+                    Req = string.Format(Req, Name, Description, Price, Stock_Quantity,Cle);
                     Con.EnvoyerData(Req);
 
-                    MessageBox.Show("Produit Modifié!!!");
+                    MessageBox.Show("Produit Modifié!!!!");
 
                     AfficherProduits();
+
                     NomTEXT.Text = "";
                     DescriptionTEXT.Text = "";
                     PrixTEXT.Text = "";
                     QuantitéTEXT.Text = "";
+                    
                 }
                 catch (Exception ex)
                 {
@@ -179,6 +184,15 @@ namespace Projet_Csharp
             }
         }
 
+        private void btnAddPanier(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

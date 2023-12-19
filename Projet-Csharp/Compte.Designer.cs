@@ -30,15 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compte));
             panel1 = new Panel();
+            panel3 = new Panel();
             btnDECONNEXION = new Button();
             btnCOMPTE = new Button();
             btnPANIER = new Button();
             btnPRODUIT = new Button();
-            logoDECONNEXION = new PictureBox();
-            logoPRODUITS = new PictureBox();
-            logoCOMPTE = new PictureBox();
-            logoPANNIER = new PictureBox();
-            logo = new PictureBox();
+            Logo1 = new PictureBox();
             Onglet = new TabControl();
             info = new TabPage();
             TypeAdresseTITLE = new TextBox();
@@ -76,11 +73,7 @@
             NomVISU_F = new TextBox();
             TITLE = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)logoDECONNEXION).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logoPRODUITS).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logoCOMPTE).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logoPANNIER).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Logo1).BeginInit();
             Onglet.SuspendLayout();
             info.SuspendLayout();
             commande.SuspendLayout();
@@ -90,107 +83,103 @@
             // panel1
             // 
             panel1.BackColor = Color.MediumSeaGreen;
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(btnDECONNEXION);
             panel1.Controls.Add(btnCOMPTE);
             panel1.Controls.Add(btnPANIER);
             panel1.Controls.Add(btnPRODUIT);
-            panel1.Controls.Add(logoDECONNEXION);
-            panel1.Controls.Add(logoPRODUITS);
-            panel1.Controls.Add(logoCOMPTE);
-            panel1.Controls.Add(logoPANNIER);
-            panel1.Controls.Add(logo);
+            panel1.Controls.Add(Logo1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(196, 582);
+            panel1.Size = new Size(183, 582);
             panel1.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ControlLightLight;
+            panel3.Location = new Point(3, 421);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(5, 32);
+            panel3.TabIndex = 19;
             // 
             // btnDECONNEXION
             // 
-            btnDECONNEXION.Location = new Point(50, 511);
+            btnDECONNEXION.FlatAppearance.BorderSize = 0;
+            btnDECONNEXION.FlatStyle = FlatStyle.Flat;
+            btnDECONNEXION.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDECONNEXION.ForeColor = SystemColors.ControlLightLight;
+            btnDECONNEXION.Image = Properties.Resources.icon_deconnexion1;
+            btnDECONNEXION.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDECONNEXION.Location = new Point(16, 511);
             btnDECONNEXION.Name = "btnDECONNEXION";
-            btnDECONNEXION.Size = new Size(125, 29);
-            btnDECONNEXION.TabIndex = 11;
+            btnDECONNEXION.Size = new Size(164, 32);
+            btnDECONNEXION.TabIndex = 16;
             btnDECONNEXION.Text = "Déconnexion";
+            btnDECONNEXION.TextAlign = ContentAlignment.MiddleRight;
             btnDECONNEXION.UseVisualStyleBackColor = true;
             btnDECONNEXION.Click += deconnexion_click;
             // 
             // btnCOMPTE
             // 
-            btnCOMPTE.Location = new Point(50, 421);
+            btnCOMPTE.FlatAppearance.BorderSize = 0;
+            btnCOMPTE.FlatStyle = FlatStyle.Flat;
+            btnCOMPTE.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
+            btnCOMPTE.Image = Properties.Resources.icon_compte1;
+            btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCOMPTE.Location = new Point(16, 421);
             btnCOMPTE.Name = "btnCOMPTE";
-            btnCOMPTE.Size = new Size(125, 29);
-            btnCOMPTE.TabIndex = 10;
+            btnCOMPTE.Size = new Size(164, 32);
+            btnCOMPTE.TabIndex = 15;
             btnCOMPTE.Text = "Mon Compte";
+            btnCOMPTE.TextAlign = ContentAlignment.MiddleRight;
             btnCOMPTE.UseVisualStyleBackColor = true;
             // 
             // btnPANIER
             // 
-            btnPANIER.Location = new Point(50, 279);
+            btnPANIER.FlatAppearance.BorderSize = 0;
+            btnPANIER.FlatStyle = FlatStyle.Flat;
+            btnPANIER.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPANIER.ForeColor = SystemColors.ControlLightLight;
+            btnPANIER.Image = Properties.Resources.icon_panier1;
+            btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPANIER.Location = new Point(16, 279);
             btnPANIER.Name = "btnPANIER";
-            btnPANIER.Size = new Size(125, 29);
-            btnPANIER.TabIndex = 9;
+            btnPANIER.Size = new Size(164, 32);
+            btnPANIER.TabIndex = 14;
             btnPANIER.Text = "Mon Panier";
+            btnPANIER.TextAlign = ContentAlignment.MiddleRight;
             btnPANIER.UseVisualStyleBackColor = true;
             btnPANIER.Click += panier_click;
             // 
             // btnPRODUIT
             // 
-            btnPRODUIT.Location = new Point(50, 167);
+            btnPRODUIT.FlatAppearance.BorderSize = 0;
+            btnPRODUIT.FlatStyle = FlatStyle.Flat;
+            btnPRODUIT.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPRODUIT.ForeColor = SystemColors.ControlLightLight;
+            btnPRODUIT.Image = Properties.Resources.Icon_produit1;
+            btnPRODUIT.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPRODUIT.Location = new Point(16, 165);
             btnPRODUIT.Name = "btnPRODUIT";
-            btnPRODUIT.Size = new Size(125, 29);
-            btnPRODUIT.TabIndex = 1;
+            btnPRODUIT.RightToLeft = RightToLeft.No;
+            btnPRODUIT.Size = new Size(164, 32);
+            btnPRODUIT.TabIndex = 12;
             btnPRODUIT.Text = "Les Produits";
+            btnPRODUIT.TextAlign = ContentAlignment.MiddleRight;
             btnPRODUIT.UseVisualStyleBackColor = true;
             btnPRODUIT.Click += produit_click;
             // 
-            // logoDECONNEXION
+            // Logo1
             // 
-            logoDECONNEXION.BackgroundImage = (Image)resources.GetObject("logoDECONNEXION.BackgroundImage");
-            logoDECONNEXION.Location = new Point(16, 512);
-            logoDECONNEXION.Name = "logoDECONNEXION";
-            logoDECONNEXION.Size = new Size(28, 28);
-            logoDECONNEXION.TabIndex = 8;
-            logoDECONNEXION.TabStop = false;
-            // 
-            // logoPRODUITS
-            // 
-            logoPRODUITS.AccessibleRole = AccessibleRole.TitleBar;
-            logoPRODUITS.Anchor = AnchorStyles.None;
-            logoPRODUITS.BackgroundImage = (Image)resources.GetObject("logoPRODUITS.BackgroundImage");
-            logoPRODUITS.Location = new Point(12, 165);
-            logoPRODUITS.Name = "logoPRODUITS";
-            logoPRODUITS.Size = new Size(30, 30);
-            logoPRODUITS.TabIndex = 1;
-            logoPRODUITS.TabStop = false;
-            // 
-            // logoCOMPTE
-            // 
-            logoCOMPTE.BackgroundImage = (Image)resources.GetObject("logoCOMPTE.BackgroundImage");
-            logoCOMPTE.Location = new Point(16, 422);
-            logoCOMPTE.Name = "logoCOMPTE";
-            logoCOMPTE.Size = new Size(28, 28);
-            logoCOMPTE.TabIndex = 7;
-            logoCOMPTE.TabStop = false;
-            // 
-            // logoPANNIER
-            // 
-            logoPANNIER.BackgroundImage = (Image)resources.GetObject("logoPANNIER.BackgroundImage");
-            logoPANNIER.Location = new Point(16, 280);
-            logoPANNIER.Name = "logoPANNIER";
-            logoPANNIER.Size = new Size(28, 28);
-            logoPANNIER.TabIndex = 6;
-            logoPANNIER.TabStop = false;
-            // 
-            // logo
-            // 
-            logo.BackColor = Color.White;
-            logo.BackgroundImage = (Image)resources.GetObject("logo.BackgroundImage");
-            logo.Image = (Image)resources.GetObject("logo.Image");
-            logo.Location = new Point(63, 10);
-            logo.Name = "logo";
-            logo.Size = new Size(69, 63);
-            logo.TabIndex = 1;
-            logo.TabStop = false;
+            Logo1.BackColor = Color.White;
+            Logo1.BackgroundImage = (Image)resources.GetObject("Logo1.BackgroundImage");
+            Logo1.Image = (Image)resources.GetObject("Logo1.Image");
+            Logo1.Location = new Point(60, 10);
+            Logo1.Name = "Logo1";
+            Logo1.Size = new Size(69, 63);
+            Logo1.TabIndex = 13;
+            Logo1.TabStop = false;
             // 
             // Onglet
             // 
@@ -619,11 +608,7 @@
             Text = "Compte";
             Load += Compte_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)logoDECONNEXION).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logoPRODUITS).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logoCOMPTE).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logoPANNIER).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Logo1).EndInit();
             Onglet.ResumeLayout(false);
             info.ResumeLayout(false);
             info.PerformLayout();
@@ -638,15 +623,6 @@
         #endregion
 
         private Panel panel1;
-        private Button btnDECONNEXION;
-        private Button btnCOMPTE;
-        private Button btnPANIER;
-        private Button btnPRODUIT;
-        private PictureBox logoDECONNEXION;
-        private PictureBox logoPRODUITS;
-        private PictureBox logoCOMPTE;
-        private PictureBox logoPANNIER;
-        private PictureBox logo;
         private TabControl Onglet;
         private TabPage info;
         private TabPage commande;
@@ -683,5 +659,11 @@
         private TextBox DescriptionVISU_F;
         private TextBox DateVISU_F;
         private TextBox NomVISU_F;
+        private Button btnDECONNEXION;
+        private Button btnCOMPTE;
+        private Button btnPANIER;
+        private Button btnPRODUIT;
+        private PictureBox Logo1;
+        private Panel panel3;
     }
 }

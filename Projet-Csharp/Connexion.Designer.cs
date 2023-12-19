@@ -78,8 +78,9 @@
             MdpTEXT.AccessibleName = "";
             MdpTEXT.BorderStyle = BorderStyle.FixedSingle;
             MdpTEXT.Location = new Point(63, 250);
+            MdpTEXT.Multiline = true;
             MdpTEXT.Name = "MdpTEXT";
-            MdpTEXT.Size = new Size(305, 28);
+            MdpTEXT.Size = new Size(305, 30);
             MdpTEXT.TabIndex = 17;
             // 
             // EmailTEXT
@@ -87,8 +88,9 @@
             EmailTEXT.AccessibleName = "";
             EmailTEXT.BorderStyle = BorderStyle.FixedSingle;
             EmailTEXT.Location = new Point(63, 152);
+            EmailTEXT.Multiline = true;
             EmailTEXT.Name = "EmailTEXT";
-            EmailTEXT.Size = new Size(305, 28);
+            EmailTEXT.Size = new Size(305, 30);
             EmailTEXT.TabIndex = 16;
             // 
             // MdpTITLE

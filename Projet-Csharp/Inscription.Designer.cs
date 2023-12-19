@@ -35,12 +35,10 @@
             btnCONNEXION = new Button();
             btnINSCRIPTION = new Button();
             panel3 = new Panel();
-            MdpTEXT = new TextBox();
-            EmailTEXT = new TextBox();
-            MdpTITLE = new Label();
-            EmailTITLE = new Label();
-            TypeAdresseTEXT = new TextBox();
-            TypeAdresseTITLE = new Label();
+            NomTEXT = new TextBox();
+            PrénomText = new TextBox();
+            NomTITLE = new Label();
+            PrénomTITLE = new Label();
             PaysTEXT = new TextBox();
             PaysTITLE = new Label();
             CodePostalTEXT = new TextBox();
@@ -51,10 +49,10 @@
             VilleTITLE = new Label();
             AdresseTEXT = new TextBox();
             AdresseTITLE = new Label();
-            NomTEXT = new TextBox();
-            PrénomTEXT = new TextBox();
-            NomTITLE = new Label();
-            PrénomTITLE = new Label();
+            MdpTEXT = new TextBox();
+            EmailTEXT = new TextBox();
+            MdpTITLE = new Label();
+            EmailTITLE = new Label();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -137,12 +135,10 @@
             panel3.AutoScroll = true;
             panel3.AutoScrollMargin = new Size(0, 20);
             panel3.AutoScrollMinSize = new Size(0, 100);
-            panel3.Controls.Add(MdpTEXT);
-            panel3.Controls.Add(EmailTEXT);
-            panel3.Controls.Add(MdpTITLE);
-            panel3.Controls.Add(EmailTITLE);
-            panel3.Controls.Add(TypeAdresseTEXT);
-            panel3.Controls.Add(TypeAdresseTITLE);
+            panel3.Controls.Add(NomTEXT);
+            panel3.Controls.Add(PrénomText);
+            panel3.Controls.Add(NomTITLE);
+            panel3.Controls.Add(PrénomTITLE);
             panel3.Controls.Add(PaysTEXT);
             panel3.Controls.Add(PaysTITLE);
             panel3.Controls.Add(CodePostalTEXT);
@@ -153,89 +149,70 @@
             panel3.Controls.Add(VilleTITLE);
             panel3.Controls.Add(AdresseTEXT);
             panel3.Controls.Add(AdresseTITLE);
-            panel3.Controls.Add(NomTEXT);
-            panel3.Controls.Add(PrénomTEXT);
-            panel3.Controls.Add(NomTITLE);
-            panel3.Controls.Add(PrénomTITLE);
+            panel3.Controls.Add(MdpTEXT);
+            panel3.Controls.Add(EmailTEXT);
+            panel3.Controls.Add(MdpTITLE);
+            panel3.Controls.Add(EmailTITLE);
             panel3.Location = new Point(52, 98);
             panel3.Name = "panel3";
             panel3.Size = new Size(405, 255);
             panel3.TabIndex = 34;
             // 
-            // MdpTEXT
+            // NomTEXT
             // 
-            MdpTEXT.AccessibleName = "";
-            MdpTEXT.BorderStyle = BorderStyle.FixedSingle;
-            MdpTEXT.Location = new Point(29, 337);
-            MdpTEXT.Name = "MdpTEXT";
-            MdpTEXT.Size = new Size(305, 28);
-            MdpTEXT.TabIndex = 37;
+            NomTEXT.AccessibleName = "";
+            NomTEXT.BorderStyle = BorderStyle.FixedSingle;
+            NomTEXT.Location = new Point(29, 337);
+            NomTEXT.Multiline = true;
+            NomTEXT.Name = "NomTEXT";
+            NomTEXT.Size = new Size(305, 30);
+            NomTEXT.TabIndex = 23;
             // 
-            // EmailTEXT
+            // PrénomText
             // 
-            EmailTEXT.AccessibleName = "";
-            EmailTEXT.BorderStyle = BorderStyle.FixedSingle;
-            EmailTEXT.Location = new Point(29, 243);
-            EmailTEXT.Name = "EmailTEXT";
-            EmailTEXT.Size = new Size(305, 28);
-            EmailTEXT.TabIndex = 36;
+            PrénomText.AccessibleName = "";
+            PrénomText.BorderStyle = BorderStyle.FixedSingle;
+            PrénomText.Location = new Point(29, 243);
+            PrénomText.Multiline = true;
+            PrénomText.Name = "PrénomText";
+            PrénomText.Size = new Size(305, 30);
+            PrénomText.TabIndex = 22;
             // 
-            // MdpTITLE
+            // NomTITLE
             // 
-            MdpTITLE.AutoSize = true;
-            MdpTITLE.BackColor = Color.White;
-            MdpTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MdpTITLE.ForeColor = Color.Crimson;
-            MdpTITLE.Location = new Point(29, 299);
-            MdpTITLE.Margin = new Padding(4, 0, 4, 0);
-            MdpTITLE.Name = "MdpTITLE";
-            MdpTITLE.Size = new Size(134, 26);
-            MdpTITLE.TabIndex = 35;
-            MdpTITLE.Text = "Mot de Passe";
+            NomTITLE.AutoSize = true;
+            NomTITLE.BackColor = Color.White;
+            NomTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NomTITLE.ForeColor = Color.Crimson;
+            NomTITLE.Location = new Point(29, 299);
+            NomTITLE.Margin = new Padding(4, 0, 4, 0);
+            NomTITLE.Name = "NomTITLE";
+            NomTITLE.Size = new Size(58, 26);
+            NomTITLE.TabIndex = 35;
+            NomTITLE.Text = "Nom";
             // 
-            // EmailTITLE
+            // PrénomTITLE
             // 
-            EmailTITLE.AutoSize = true;
-            EmailTITLE.BackColor = Color.White;
-            EmailTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            EmailTITLE.ForeColor = Color.Crimson;
-            EmailTITLE.Location = new Point(29, 204);
-            EmailTITLE.Margin = new Padding(4, 0, 4, 0);
-            EmailTITLE.Name = "EmailTITLE";
-            EmailTITLE.Size = new Size(65, 26);
-            EmailTITLE.TabIndex = 34;
-            EmailTITLE.Text = "Email";
-            // 
-            // TypeAdresseTEXT
-            // 
-            TypeAdresseTEXT.AccessibleName = "";
-            TypeAdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
-            TypeAdresseTEXT.Location = new Point(29, 977);
-            TypeAdresseTEXT.Name = "TypeAdresseTEXT";
-            TypeAdresseTEXT.Size = new Size(305, 28);
-            TypeAdresseTEXT.TabIndex = 33;
-            // 
-            // TypeAdresseTITLE
-            // 
-            TypeAdresseTITLE.AutoSize = true;
-            TypeAdresseTITLE.BackColor = Color.White;
-            TypeAdresseTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TypeAdresseTITLE.ForeColor = Color.Crimson;
-            TypeAdresseTITLE.Location = new Point(29, 929);
-            TypeAdresseTITLE.Margin = new Padding(4, 0, 4, 0);
-            TypeAdresseTITLE.Name = "TypeAdresseTITLE";
-            TypeAdresseTITLE.Size = new Size(147, 26);
-            TypeAdresseTITLE.TabIndex = 32;
-            TypeAdresseTITLE.Text = "Type d'adresse";
+            PrénomTITLE.AutoSize = true;
+            PrénomTITLE.BackColor = Color.White;
+            PrénomTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PrénomTITLE.ForeColor = Color.Crimson;
+            PrénomTITLE.Location = new Point(29, 204);
+            PrénomTITLE.Margin = new Padding(4, 0, 4, 0);
+            PrénomTITLE.Name = "PrénomTITLE";
+            PrénomTITLE.Size = new Size(85, 26);
+            PrénomTITLE.TabIndex = 34;
+            PrénomTITLE.Text = "Prénom";
             // 
             // PaysTEXT
             // 
             PaysTEXT.AccessibleName = "";
             PaysTEXT.BorderStyle = BorderStyle.FixedSingle;
             PaysTEXT.Location = new Point(29, 871);
+            PaysTEXT.Multiline = true;
             PaysTEXT.Name = "PaysTEXT";
-            PaysTEXT.Size = new Size(305, 28);
-            PaysTEXT.TabIndex = 31;
+            PaysTEXT.Size = new Size(305, 30);
+            PaysTEXT.TabIndex = 28;
             // 
             // PaysTITLE
             // 
@@ -255,9 +232,10 @@
             CodePostalTEXT.AccessibleName = "";
             CodePostalTEXT.BorderStyle = BorderStyle.FixedSingle;
             CodePostalTEXT.Location = new Point(29, 767);
+            CodePostalTEXT.Multiline = true;
             CodePostalTEXT.Name = "CodePostalTEXT";
-            CodePostalTEXT.Size = new Size(305, 28);
-            CodePostalTEXT.TabIndex = 29;
+            CodePostalTEXT.Size = new Size(305, 30);
+            CodePostalTEXT.TabIndex = 27;
             // 
             // EtatTITLE
             // 
@@ -277,9 +255,10 @@
             EtatTEXT.AccessibleName = "";
             EtatTEXT.BorderStyle = BorderStyle.FixedSingle;
             EtatTEXT.Location = new Point(29, 660);
+            EtatTEXT.Multiline = true;
             EtatTEXT.Name = "EtatTEXT";
-            EtatTEXT.Size = new Size(305, 28);
-            EtatTEXT.TabIndex = 27;
+            EtatTEXT.Size = new Size(305, 30);
+            EtatTEXT.TabIndex = 26;
             // 
             // CodePostalTITLE
             // 
@@ -299,8 +278,9 @@
             VilleTEXT.AccessibleName = "";
             VilleTEXT.BorderStyle = BorderStyle.FixedSingle;
             VilleTEXT.Location = new Point(29, 544);
+            VilleTEXT.Multiline = true;
             VilleTEXT.Name = "VilleTEXT";
-            VilleTEXT.Size = new Size(305, 28);
+            VilleTEXT.Size = new Size(305, 30);
             VilleTEXT.TabIndex = 25;
             // 
             // VilleTITLE
@@ -321,9 +301,10 @@
             AdresseTEXT.AccessibleName = "";
             AdresseTEXT.BorderStyle = BorderStyle.FixedSingle;
             AdresseTEXT.Location = new Point(29, 437);
+            AdresseTEXT.Multiline = true;
             AdresseTEXT.Name = "AdresseTEXT";
-            AdresseTEXT.Size = new Size(305, 28);
-            AdresseTEXT.TabIndex = 23;
+            AdresseTEXT.Size = new Size(305, 30);
+            AdresseTEXT.TabIndex = 24;
             // 
             // AdresseTITLE
             // 
@@ -338,50 +319,51 @@
             AdresseTITLE.TabIndex = 22;
             AdresseTITLE.Text = "Adresse";
             // 
-            // NomTEXT
+            // MdpTEXT
             // 
-            NomTEXT.AccessibleName = "";
-            NomTEXT.BorderStyle = BorderStyle.FixedSingle;
-            NomTEXT.Location = new Point(29, 142);
-            NomTEXT.Name = "NomTEXT";
-            NomTEXT.Size = new Size(305, 28);
-            NomTEXT.TabIndex = 21;
+            MdpTEXT.AccessibleName = "";
+            MdpTEXT.BorderStyle = BorderStyle.FixedSingle;
+            MdpTEXT.Location = new Point(29, 142);
+            MdpTEXT.Multiline = true;
+            MdpTEXT.Name = "MdpTEXT";
+            MdpTEXT.Size = new Size(305, 30);
+            MdpTEXT.TabIndex = 21;
             // 
-            // PrénomTEXT
+            // EmailTEXT
             // 
-            PrénomTEXT.AccessibleName = "";
-            PrénomTEXT.BorderStyle = BorderStyle.FixedSingle;
-            PrénomTEXT.Location = new Point(29, 50);
-            PrénomTEXT.Name = "PrénomTEXT";
-            PrénomTEXT.Size = new Size(305, 28);
-            PrénomTEXT.TabIndex = 20;
-            PrénomTEXT.TextChanged += textBoxFirstName_TextChanged;
+            EmailTEXT.AccessibleName = "";
+            EmailTEXT.BorderStyle = BorderStyle.FixedSingle;
+            EmailTEXT.Location = new Point(29, 50);
+            EmailTEXT.Multiline = true;
+            EmailTEXT.Name = "EmailTEXT";
+            EmailTEXT.Size = new Size(305, 30);
+            EmailTEXT.TabIndex = 20;
             // 
-            // NomTITLE
+            // MdpTITLE
             // 
-            NomTITLE.AutoSize = true;
-            NomTITLE.BackColor = Color.White;
-            NomTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            NomTITLE.ForeColor = Color.Crimson;
-            NomTITLE.Location = new Point(29, 104);
-            NomTITLE.Margin = new Padding(4, 0, 4, 0);
-            NomTITLE.Name = "NomTITLE";
-            NomTITLE.Size = new Size(58, 26);
-            NomTITLE.TabIndex = 19;
-            NomTITLE.Text = "Nom";
+            MdpTITLE.AutoSize = true;
+            MdpTITLE.BackColor = Color.White;
+            MdpTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MdpTITLE.ForeColor = Color.Crimson;
+            MdpTITLE.Location = new Point(29, 104);
+            MdpTITLE.Margin = new Padding(4, 0, 4, 0);
+            MdpTITLE.Name = "MdpTITLE";
+            MdpTITLE.Size = new Size(134, 26);
+            MdpTITLE.TabIndex = 19;
+            MdpTITLE.Text = "Mot de Passe";
             // 
-            // PrénomTITLE
+            // EmailTITLE
             // 
-            PrénomTITLE.AutoSize = true;
-            PrénomTITLE.BackColor = Color.White;
-            PrénomTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PrénomTITLE.ForeColor = Color.Crimson;
-            PrénomTITLE.Location = new Point(29, 11);
-            PrénomTITLE.Margin = new Padding(4, 0, 4, 0);
-            PrénomTITLE.Name = "PrénomTITLE";
-            PrénomTITLE.Size = new Size(85, 26);
-            PrénomTITLE.TabIndex = 18;
-            PrénomTITLE.Text = "Prénom";
+            EmailTITLE.AutoSize = true;
+            EmailTITLE.BackColor = Color.White;
+            EmailTITLE.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailTITLE.ForeColor = Color.Crimson;
+            EmailTITLE.Location = new Point(29, 11);
+            EmailTITLE.Margin = new Padding(4, 0, 4, 0);
+            EmailTITLE.Name = "EmailTITLE";
+            EmailTITLE.Size = new Size(65, 26);
+            EmailTITLE.TabIndex = 18;
+            EmailTITLE.Text = "Email";
             // 
             // Inscription
             // 
@@ -420,10 +402,10 @@
         private Panel panel3;
         private TextBox textBox1;
         private Label AdresseTITLE;
-        private TextBox MdpTEXT;
+        private TextBox NomTEXT;
         private TextBox textBoxUsername;
-        private Label NomTITLE;
-        private Label PrénomTITLE;
+        private Label MdpTITLE;
+        private Label EmailTITLE;
         private TextBox textBox5;
         private Label PaysTITLE;
         private TextBox textBox4;
@@ -433,20 +415,18 @@
         private TextBox textBox2;
         private Label VilleTITLE;
         private TextBox textBox6;
-        private Label TypeAdresseTITLE;
         private TextBox textBox7;
         private TextBox textBox8;
-        private Label MdpTITLE;
-        private Label EmailTITLE;
-        private TextBox EmailTEXT;
-        private TextBox TypeAdresseTEXT;
+        private Label NomTITLE;
+        private Label PrénomTITLE;
+        private TextBox PrénomText;
         private TextBox textBoxPays;
         private TextBox CodePostalTEXT;
         private TextBox EtatTEXT;
         private TextBox VilleTEXT;
         private TextBox AdresseTEXT;
-        private TextBox NomTEXT;
-        private TextBox PrénomTEXT;
+        private TextBox MdpTEXT;
+        private TextBox EmailTEXT;
         private TextBox PaysTEXT;
     }
 }

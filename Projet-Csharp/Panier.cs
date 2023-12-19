@@ -45,5 +45,10 @@ namespace Projet_Csharp
             pageDeconnexion.Show(); // Affiche la page de déconnexion
             this.Hide(); // Cache la page de panier actuelle
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            button1 = new Button();
             label1 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -38,6 +39,7 @@
             // panel2
             // 
             panel2.BackColor = Color.MediumSeaGreen;
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
@@ -45,6 +47,18 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(450, 66);
             panel2.TabIndex = 20;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = Properties.Resources.Button_Delete_icon;
+            button1.Location = new Point(415, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(32, 31);
+            button1.TabIndex = 1;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnQuitter;
             // 
             // label1
             // 
@@ -106,5 +120,6 @@
         private Label label1;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Button button1;
     }
 }

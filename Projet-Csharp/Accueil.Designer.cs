@@ -30,18 +30,15 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            panel3 = new Panel();
             btnDECONNEXION = new Button();
             btnCOMPTE = new Button();
             btnPANIER = new Button();
             btnPRODUIT = new Button();
-            LogoDECONNEXION = new PictureBox();
-            LogoPRODUIT = new PictureBox();
-            LogoCOMPTE = new PictureBox();
-            LogoPANIER = new PictureBox();
             Logo1 = new PictureBox();
             ajouter = new Button();
             TITLE = new TextBox();
@@ -59,10 +56,6 @@
             QuantitéTEXT = new TextBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)LogoDECONNEXION).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)LogoPRODUIT).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)LogoCOMPTE).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)LogoPANIER).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Logo1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ListeProduits).BeginInit();
             SuspendLayout();
@@ -70,101 +63,99 @@
             // panel1
             // 
             panel1.BackColor = Color.MediumSeaGreen;
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(btnDECONNEXION);
             panel1.Controls.Add(btnCOMPTE);
             panel1.Controls.Add(btnPANIER);
             panel1.Controls.Add(btnPRODUIT);
-            panel1.Controls.Add(LogoDECONNEXION);
-            panel1.Controls.Add(LogoPRODUIT);
-            panel1.Controls.Add(LogoCOMPTE);
-            panel1.Controls.Add(LogoPANIER);
             panel1.Controls.Add(Logo1);
-            panel1.Location = new Point(2, 0);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(183, 582);
             panel1.TabIndex = 71;
             // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ControlLightLight;
+            panel3.Location = new Point(2, 165);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(5, 32);
+            panel3.TabIndex = 20;
+            // 
             // btnDECONNEXION
             // 
-            btnDECONNEXION.Location = new Point(50, 511);
+            btnDECONNEXION.FlatAppearance.BorderSize = 0;
+            btnDECONNEXION.FlatStyle = FlatStyle.Flat;
+            btnDECONNEXION.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDECONNEXION.ForeColor = SystemColors.ControlLightLight;
+            btnDECONNEXION.Image = Properties.Resources.icon_deconnexion1;
+            btnDECONNEXION.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDECONNEXION.Location = new Point(16, 511);
             btnDECONNEXION.Name = "btnDECONNEXION";
-            btnDECONNEXION.Size = new Size(113, 29);
+            btnDECONNEXION.Size = new Size(164, 32);
             btnDECONNEXION.TabIndex = 11;
             btnDECONNEXION.Text = "Déconnexion";
+            btnDECONNEXION.TextAlign = ContentAlignment.MiddleRight;
             btnDECONNEXION.UseVisualStyleBackColor = true;
             btnDECONNEXION.Click += deconnexion_click;
             // 
             // btnCOMPTE
             // 
-            btnCOMPTE.Location = new Point(50, 421);
+            btnCOMPTE.FlatAppearance.BorderSize = 0;
+            btnCOMPTE.FlatStyle = FlatStyle.Flat;
+            btnCOMPTE.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
+            btnCOMPTE.Image = Properties.Resources.icon_compte1;
+            btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCOMPTE.Location = new Point(16, 421);
             btnCOMPTE.Name = "btnCOMPTE";
-            btnCOMPTE.Size = new Size(113, 29);
+            btnCOMPTE.Size = new Size(164, 32);
             btnCOMPTE.TabIndex = 10;
             btnCOMPTE.Text = "Mon Compte";
+            btnCOMPTE.TextAlign = ContentAlignment.MiddleRight;
             btnCOMPTE.UseVisualStyleBackColor = true;
             btnCOMPTE.Click += compte_click;
             // 
             // btnPANIER
             // 
-            btnPANIER.Location = new Point(50, 279);
+            btnPANIER.FlatAppearance.BorderSize = 0;
+            btnPANIER.FlatStyle = FlatStyle.Flat;
+            btnPANIER.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPANIER.ForeColor = SystemColors.ControlLightLight;
+            btnPANIER.Image = Properties.Resources.icon_panier1;
+            btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPANIER.Location = new Point(16, 279);
             btnPANIER.Name = "btnPANIER";
-            btnPANIER.Size = new Size(113, 29);
+            btnPANIER.Size = new Size(164, 32);
             btnPANIER.TabIndex = 9;
             btnPANIER.Text = "Mon Panier";
+            btnPANIER.TextAlign = ContentAlignment.MiddleRight;
             btnPANIER.UseVisualStyleBackColor = true;
             btnPANIER.Click += panier_click;
             // 
             // btnPRODUIT
             // 
-            btnPRODUIT.Location = new Point(50, 167);
+            btnPRODUIT.FlatAppearance.BorderSize = 0;
+            btnPRODUIT.FlatStyle = FlatStyle.Flat;
+            btnPRODUIT.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPRODUIT.ForeColor = SystemColors.ControlLightLight;
+            btnPRODUIT.Image = Properties.Resources.Icon_produit1;
+            btnPRODUIT.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPRODUIT.Location = new Point(16, 165);
             btnPRODUIT.Name = "btnPRODUIT";
-            btnPRODUIT.Size = new Size(113, 29);
+            btnPRODUIT.RightToLeft = RightToLeft.No;
+            btnPRODUIT.Size = new Size(164, 32);
             btnPRODUIT.TabIndex = 1;
             btnPRODUIT.Text = "Les Produits";
+            btnPRODUIT.TextAlign = ContentAlignment.MiddleRight;
             btnPRODUIT.UseVisualStyleBackColor = true;
-            // 
-            // LogoDECONNEXION
-            // 
-            LogoDECONNEXION.BackgroundImage = (Image)resources.GetObject("LogoDECONNEXION.BackgroundImage");
-            LogoDECONNEXION.Location = new Point(16, 512);
-            LogoDECONNEXION.Name = "LogoDECONNEXION";
-            LogoDECONNEXION.Size = new Size(28, 28);
-            LogoDECONNEXION.TabIndex = 8;
-            LogoDECONNEXION.TabStop = false;
-            // 
-            // LogoPRODUIT
-            // 
-            LogoPRODUIT.BackgroundImage = (Image)resources.GetObject("LogoPRODUIT.BackgroundImage");
-            LogoPRODUIT.Location = new Point(12, 165);
-            LogoPRODUIT.Name = "LogoPRODUIT";
-            LogoPRODUIT.Size = new Size(30, 30);
-            LogoPRODUIT.TabIndex = 1;
-            LogoPRODUIT.TabStop = false;
-            // 
-            // LogoCOMPTE
-            // 
-            LogoCOMPTE.BackgroundImage = (Image)resources.GetObject("LogoCOMPTE.BackgroundImage");
-            LogoCOMPTE.Location = new Point(16, 422);
-            LogoCOMPTE.Name = "LogoCOMPTE";
-            LogoCOMPTE.Size = new Size(28, 28);
-            LogoCOMPTE.TabIndex = 7;
-            LogoCOMPTE.TabStop = false;
-            // 
-            // LogoPANIER
-            // 
-            LogoPANIER.BackgroundImage = (Image)resources.GetObject("LogoPANIER.BackgroundImage");
-            LogoPANIER.Location = new Point(16, 280);
-            LogoPANIER.Name = "LogoPANIER";
-            LogoPANIER.Size = new Size(28, 28);
-            LogoPANIER.TabIndex = 6;
-            LogoPANIER.TabStop = false;
             // 
             // Logo1
             // 
             Logo1.BackColor = Color.White;
             Logo1.BackgroundImage = (Image)resources.GetObject("Logo1.BackgroundImage");
             Logo1.Image = (Image)resources.GetObject("Logo1.Image");
-            Logo1.Location = new Point(63, 10);
+            Logo1.Location = new Point(60, 10);
             Logo1.Name = "Logo1";
             Logo1.Size = new Size(69, 63);
             Logo1.TabIndex = 1;
@@ -173,9 +164,9 @@
             // ajouter
             // 
             ajouter.BackColor = Color.LimeGreen;
-            ajouter.Location = new Point(203, 417);
+            ajouter.Location = new Point(203, 418);
             ajouter.Name = "ajouter";
-            ajouter.Size = new Size(106, 35);
+            ajouter.Size = new Size(109, 35);
             ajouter.TabIndex = 74;
             ajouter.Text = "AJOUTER";
             ajouter.UseVisualStyleBackColor = false;
@@ -225,6 +216,7 @@
             addPANIER.TabIndex = 77;
             addPANIER.Text = "AJOUTER PANIER";
             addPANIER.UseVisualStyleBackColor = true;
+            addPANIER.Click += btnAddPanier;
             // 
             // modif
             // 
@@ -255,8 +247,9 @@
             NomTEXT.AccessibleName = "";
             NomTEXT.BorderStyle = BorderStyle.FixedSingle;
             NomTEXT.Location = new Point(261, 109);
+            NomTEXT.Multiline = true;
             NomTEXT.Name = "NomTEXT";
-            NomTEXT.Size = new Size(191, 28);
+            NomTEXT.Size = new Size(178, 30);
             NomTEXT.TabIndex = 80;
             // 
             // DescriptionTITLE
@@ -274,33 +267,33 @@
             // 
             // ListeProduits
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            ListeProduits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            ListeProduits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             ListeProduits.BackgroundColor = SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            ListeProduits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            ListeProduits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             ListeProduits.ColumnHeadersHeight = 22;
             ListeProduits.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            ListeProduits.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            ListeProduits.DefaultCellStyle = dataGridViewCellStyle6;
             ListeProduits.GridColor = Color.Silver;
-            ListeProduits.Location = new Point(474, 109);
+            ListeProduits.Location = new Point(458, 109);
             ListeProduits.Name = "ListeProduits";
             ListeProduits.RowHeadersVisible = false;
             ListeProduits.RowHeadersWidth = 51;
-            ListeProduits.Size = new Size(644, 403);
+            ListeProduits.Size = new Size(660, 403);
             ListeProduits.TabIndex = 75;
             ListeProduits.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             ListeProduits.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -346,7 +339,7 @@
             DescriptionTEXT.Multiline = true;
             DescriptionTEXT.Name = "DescriptionTEXT";
             DescriptionTEXT.ScrollBars = ScrollBars.Vertical;
-            DescriptionTEXT.Size = new Size(150, 75);
+            DescriptionTEXT.Size = new Size(137, 75);
             DescriptionTEXT.TabIndex = 81;
             // 
             // PrixTEXT
@@ -354,18 +347,20 @@
             PrixTEXT.AccessibleName = "";
             PrixTEXT.BorderStyle = BorderStyle.FixedSingle;
             PrixTEXT.Location = new Point(261, 270);
+            PrixTEXT.Multiline = true;
             PrixTEXT.Name = "PrixTEXT";
-            PrixTEXT.Size = new Size(120, 28);
-            PrixTEXT.TabIndex = 85;
+            PrixTEXT.Size = new Size(120, 30);
+            PrixTEXT.TabIndex = 82;
             // 
             // QuantitéTEXT
             // 
             QuantitéTEXT.AccessibleName = "";
             QuantitéTEXT.BorderStyle = BorderStyle.FixedSingle;
             QuantitéTEXT.Location = new Point(286, 323);
+            QuantitéTEXT.Multiline = true;
             QuantitéTEXT.Name = "QuantitéTEXT";
-            QuantitéTEXT.Size = new Size(95, 28);
-            QuantitéTEXT.TabIndex = 84;
+            QuantitéTEXT.Size = new Size(95, 30);
+            QuantitéTEXT.TabIndex = 83;
             // 
             // guna2Elipse1
             // 
@@ -398,11 +393,8 @@
             Name = "Accueil";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Accueil";
+            Load += Accueil_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)LogoDECONNEXION).EndInit();
-            ((System.ComponentModel.ISupportInitialize)LogoPRODUIT).EndInit();
-            ((System.ComponentModel.ISupportInitialize)LogoCOMPTE).EndInit();
-            ((System.ComponentModel.ISupportInitialize)LogoPANIER).EndInit();
             ((System.ComponentModel.ISupportInitialize)Logo1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ListeProduits).EndInit();
             ResumeLayout(false);
@@ -416,10 +408,6 @@
         private Button btnCOMPTE;
         private Button btnPANIER;
         private Button btnPRODUIT;
-        private PictureBox LogoDECONNEXION;
-        private PictureBox LogoPRODUIT;
-        private PictureBox LogoCOMPTE;
-        private PictureBox LogoPANIER;
         private PictureBox Logo1;
         private Button ajouter;
         private TextBox TITLE;
@@ -436,5 +424,6 @@
         private TextBox PrixTEXT;
         private TextBox QuantitéTEXT;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Panel panel3;
     }
 }
