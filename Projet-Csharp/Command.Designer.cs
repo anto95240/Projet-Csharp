@@ -62,7 +62,7 @@
             btnFACTURE.ForeColor = SystemColors.ControlLightLight;
             btnFACTURE.Image = Properties.Resources.icon_compte1;
             btnFACTURE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFACTURE.Location = new Point(16, 439);
+            btnFACTURE.Location = new Point(16, 438);
             btnFACTURE.Name = "btnFACTURE";
             btnFACTURE.Size = new Size(192, 32);
             btnFACTURE.TabIndex = 21;
@@ -133,7 +133,7 @@
             btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
             btnCOMPTE.Image = Properties.Resources.icon_compte1;
             btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCOMPTE.Location = new Point(16, 301);
+            btnCOMPTE.Location = new Point(16, 308);
             btnCOMPTE.Name = "btnCOMPTE";
             btnCOMPTE.Size = new Size(192, 32);
             btnCOMPTE.TabIndex = 15;
@@ -149,7 +149,7 @@
             btnPANIER.ForeColor = SystemColors.ControlLightLight;
             btnPANIER.Image = Properties.Resources.icon_panier1;
             btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPANIER.Location = new Point(16, 225);
+            btnPANIER.Location = new Point(16, 222);
             btnPANIER.Name = "btnPANIER";
             btnPANIER.Size = new Size(192, 32);
             btnPANIER.TabIndex = 14;

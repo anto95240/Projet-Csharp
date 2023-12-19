@@ -86,7 +86,7 @@
             button2.ForeColor = SystemColors.ControlLightLight;
             button2.Image = Properties.Resources.icon_compte1;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(16, 439);
+            button2.Location = new Point(16, 438);
             button2.Name = "button2";
             button2.Size = new Size(192, 32);
             button2.TabIndex = 21;
@@ -142,7 +142,7 @@
             btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
             btnCOMPTE.Image = Properties.Resources.icon_compte1;
             btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCOMPTE.Location = new Point(16, 301);
+            btnCOMPTE.Location = new Point(16, 308);
             btnCOMPTE.Name = "btnCOMPTE";
             btnCOMPTE.Size = new Size(192, 32);
             btnCOMPTE.TabIndex = 15;
@@ -157,7 +157,7 @@
             btnPANIER.ForeColor = SystemColors.ControlLightLight;
             btnPANIER.Image = Properties.Resources.icon_panier1;
             btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPANIER.Location = new Point(16, 225);
+            btnPANIER.Location = new Point(16, 222);
             btnPANIER.Name = "btnPANIER";
             btnPANIER.Size = new Size(192, 32);
             btnPANIER.TabIndex = 14;

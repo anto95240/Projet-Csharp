@@ -33,15 +33,15 @@ namespace Projet_Csharp
 
         private void LoadUser_AddressData()
         {
-            string Email = EmailTEXT.Text ?? string.Empty;
-            string Password_hash = MdpTEXT.Text ?? string.Empty;
-            string FirstName = PrénomText.Text ?? string.Empty;
-            string LastName = NomTEXT.Text ?? string.Empty;
-            string StreetAddress = AdresseTEXT.Text ?? string.Empty;
-            string City = VilleTEXT.Text ?? string.Empty;
-            string State = EtatTEXT.Text ?? string.Empty;
-            string PostalCode = CodePostalTEXT.Text ?? string.Empty;
-            string Country = PaysTEXT.Text ?? string.Empty;
+            string Email = EmailTEXT.Text;
+            string Password_hash = MdpTEXT.Text;
+            string FirstName = PrénomText.Text;
+            string LastName = NomTEXT.Text;
+            string StreetAddress = AdresseTEXT.Text;
+            string City = VilleTEXT.Text;
+            string State = EtatTEXT.Text;
+            string PostalCode = CodePostalTEXT.Text;
+            string Country = PaysTEXT.Text;
 
             Fonctions fonctions = new Fonctions();
             user_Table user = new user_Table();
