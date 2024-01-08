@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Projet_Csharp.Class_db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,8 +17,17 @@ namespace Projet_Csharp
         public Panier()
         {
             InitializeComponent();
-
+            Con = new Fonctions();
+            AfficherProduits();
+            panelSupprPanier.Visible = false;
+            panelAddCommande.Visible = false;
         }
+
+        Fonctions Con;
+
+
+
+        // Utilisez une instance statique pour accéder à Panier depuis Accueil
 
         private void Panier_Load(object sender, EventArgs e)
         {
@@ -38,6 +49,7 @@ namespace Projet_Csharp
             pageCompte.Show(); // Affiche la page de compte
             this.Hide(); // Cache la page de panier actuelle
         }
+
         private void command_click(object sender, EventArgs e)
         {
             // Redirection vers la page de command après avoir cliqué sur le bouton de compte
@@ -62,21 +74,176 @@ namespace Projet_Csharp
             this.Hide(); // Cache la page de panier actuelle
         }
 
-        private void DisplayProductDetails(Accueil accueil)
+        private void AfficherProduits()
         {
-            // Afficher les détails du produit dans les contrôles appropriés
-            // ...
+            string Req = "SELECT cart_Table.CartId, product_Table.Name, product_Table.Description, categorie_Table.Name AS Category, (product_Table.Price * cart_Table.Quantity) AS Price, cart_Table.Quantity, cart_Table.Statut " +
+                         "FROM product_Table " +
+                         "INNER JOIN cart_Table ON product_Table.ProductId = cart_Table.ProductId " +
+                         "INNER JOIN categorie_Table ON product_Table.CategorieId = categorie_Table.CategorieId";
+
+            ListePanier.DataSource = Con.RecupererData(Req);
         }
 
-        private void AddProductToCommandTable(Accueil accueil)
+        private void btnAfficheProduitAddCommande(object sender, EventArgs e)
         {
-            // Utilisation de l'ID du produit pour accéder à product_Table et obtenir d'autres informations
-            // int productId = accueil.;
-            // ...
+            if (ListePanier.Rows.Count > 0)
+            {
+                // Récupérer les données depuis la base de données pour afficher dans la comboBoxPassCom
+                string Req = "SELECT cart_Table.CartId, product_Table.Name FROM product_Table INNER JOIN cart_Table ON product_Table.ProductId = cart_Table.ProductId";
+                DataTable table = Con.RecupererData(Req);
 
-            // Ajout d'une entrée dans command_Table avec les détails du produit et les infos de la commande
-            // ...
+                // Remplir la comboBoxPassCom avec les noms des produits
+                comboBoxPassCom.DataSource = table;
+                comboBoxPassCom.DisplayMember = "Name"; // Assurez-vous que "Name" correspond au nom de la colonne contenant les noms des produits
+
+                // Si nécessaire, sélectionnez un élément par défaut dans la comboBoxPassCom
+                if (comboBoxPassCom.Items.Count > 0)
+                {
+                    comboBoxPassCom.SelectedIndex = 0;
+                }
+
+                // Afficher le panneau de sélection de produit
+                panelAddCommande.Size = new Size(267, 128);
+                panelAddCommande.Visible = !panelAddCommande.Visible;
+            }
+            else
+            {
+                MessageBox.Show("Le panier est vide. Ajoutez des produits avant de les supprimer.");
+            }
         }
 
+        private void btnAfficheSupprPanier_Click(object sender, EventArgs e)
+        {
+            if (ListePanier.Rows.Count > 0)
+            {
+                // Récupérer les données depuis la base de données pour afficher dans la comboBoxSupprCom
+                string Req = "SELECT cart_Table.CartId, product_Table.Name FROM product_Table INNER JOIN cart_Table ON product_Table.ProductId = cart_Table.ProductId";
+                DataTable table = Con.RecupererData(Req);
+
+                // Remplir la comboBoxSupprCom avec les noms des produits
+                comboBoxSupprCom.DataSource = table;
+                comboBoxSupprCom.DisplayMember = "Name"; // Assurez-vous que "Name" correspond au nom de la colonne contenant les noms des produits
+
+                // Si nécessaire, sélectionnez un élément par défaut dans la comboBoxSupprCom
+                if (comboBoxSupprCom.Items.Count > 0)
+                {
+                    comboBoxSupprCom.SelectedIndex = 0;
+                }
+
+                // Afficher le panneau de sélection de produit
+                panelSupprPanier.Size = new Size(267, 128);
+                panelSupprPanier.Visible = !panelSupprPanier.Visible;
+            }
+            else
+            {
+                MessageBox.Show("Le panier est vide. Ajoutez des produits avant de les supprimer.");
+            }
+        }
+
+        private void btnSUPPR_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedProductRow = ListePanier.CurrentRow.DataBoundItem as DataRowView;
+
+            if (selectedProductRow != null)
+            {
+                int cartId = Convert.ToInt32(selectedProductRow["CartId"]);
+
+                string deleteQuery = "DELETE FROM cart_Table WHERE CartId = @CartId";
+
+                using (SqlConnection connection = new SqlConnection(Con.ConStr))
+                {
+                    using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@CartId", cartId);
+
+                        try
+                        {
+                            connection.Open();
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                AfficherProduits(); // Rafraîchir l'affichage après la suppression
+                                MessageBox.Show("Produit retiré du panier!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Aucun produit trouvé dans le panier.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Erreur lors de la suppression : " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sélectionnez un produit à supprimer du panier.");
+            }
+        }
+
+        private void btnPassCommand_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedProductRow = comboBoxPassCom.SelectedItem as DataRowView;
+
+            if (selectedProductRow != null)
+            {
+                DateTime CommandDate = DateTime.Now; // Obtenir la date actuelle
+                string CommandStatut = "Factured";
+
+                // Obtenir le UserId à partir de user_Table
+                int UserId;
+                int ProductId;
+                using (SqlConnection connection = new SqlConnection(Con.ConStr))
+                {
+                    connection.Open();
+
+                    string ReqSelectUser = "SELECT UserId FROM user_Table /* Mettez ici votre condition pour trouver le bon utilisateur */";
+                    
+                    using (SqlCommand command = new SqlCommand(ReqSelectUser, connection))
+                    {
+                        // Execute la requête SELECT pour obtenir le UserId
+                        object result = command.ExecuteScalar();
+                        if (result != null)
+                        {
+                            UserId = Convert.ToInt32(result);
+                            ProductId = Convert.ToInt32(result);
+
+                            // Insérer le produit sélectionné dans la table command_Table
+                            string ReqInsert = "INSERT INTO command_Table (UserId, ProductId, CommandDate, CommandStatut) " +
+                                               "VALUES (@UserId, @ProductId, @CommandDate, @CommandStatut)";
+
+                            using (SqlCommand insertCommand = new SqlCommand(ReqInsert, connection))
+                            {
+                                insertCommand.Parameters.AddWithValue("@UserId", UserId);
+                                insertCommand.Parameters.AddWithValue("@ProductId", ProductId);
+                                insertCommand.Parameters.AddWithValue("@CommandDate", CommandDate);
+                                insertCommand.Parameters.AddWithValue("@CommandStatut", CommandStatut);
+
+                                int rowsAffected = insertCommand.ExecuteNonQuery();
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Produit ajouté au commande!");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Erreur lors de l'ajout au commande.");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Utilisateur non trouvé.");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sélectionnez un produit avant d'ajouter au commande.");
+            }
+        }
     }
 }

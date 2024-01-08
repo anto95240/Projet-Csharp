@@ -44,13 +44,10 @@ namespace Projet_Csharp
                     string PostalCode = CodePostalTEXT.Text;
                     string Country = PaysTEXT.Text;
 
-                    // Création d'une instance de la classe Fonctions pour utiliser la chaîne de connexion
-                    Fonctions fonctions = new Fonctions();
-
                     // Insérer d'abord dans la table user_Table sans spécifier UserId (car c'est une colonne IDENTITY)
                     string insertUserQuery = "INSERT INTO user_Table (Email, Password_hash) VALUES (@Email, @Password_hash); SELECT SCOPE_IDENTITY();";
 
-                    using (SqlConnection connection = new SqlConnection(fonctions.ConStr)) // Utilise la chaîne de connexion ici
+                    using (SqlConnection connection = new SqlConnection(Con.ConStr)) // Utilise la chaîne de connexion ici
                     {
                         connection.Open();
                         SqlCommand command = new SqlCommand(insertUserQuery, connection);

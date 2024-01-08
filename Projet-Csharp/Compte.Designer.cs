@@ -86,7 +86,7 @@
             button2.ForeColor = SystemColors.ControlLightLight;
             button2.Image = Properties.Resources.icon_compte1;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(16, 438);
+            button2.Location = new Point(16, 432);
             button2.Name = "button2";
             button2.Size = new Size(192, 32);
             button2.TabIndex = 21;
@@ -102,7 +102,7 @@
             btnCommand.ForeColor = SystemColors.ControlLightLight;
             btnCommand.Image = Properties.Resources.icon_compte1;
             btnCommand.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCommand.Location = new Point(16, 374);
+            btnCommand.Location = new Point(16, 371);
             btnCommand.Name = "btnCommand";
             btnCommand.Size = new Size(192, 32);
             btnCommand.TabIndex = 20;
@@ -113,7 +113,7 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.ControlLightLight;
-            panel3.Location = new Point(5, 301);
+            panel3.Location = new Point(5, 290);
             panel3.Name = "panel3";
             panel3.Size = new Size(5, 32);
             panel3.TabIndex = 19;
@@ -142,7 +142,7 @@
             btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
             btnCOMPTE.Image = Properties.Resources.icon_compte1;
             btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCOMPTE.Location = new Point(16, 308);
+            btnCOMPTE.Location = new Point(16, 292);
             btnCOMPTE.Name = "btnCOMPTE";
             btnCOMPTE.Size = new Size(192, 32);
             btnCOMPTE.TabIndex = 15;
@@ -157,7 +157,7 @@
             btnPANIER.ForeColor = SystemColors.ControlLightLight;
             btnPANIER.Image = Properties.Resources.icon_panier1;
             btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPANIER.Location = new Point(16, 222);
+            btnPANIER.Location = new Point(16, 213);
             btnPANIER.Name = "btnPANIER";
             btnPANIER.Size = new Size(192, 32);
             btnPANIER.TabIndex = 14;
@@ -173,7 +173,7 @@
             btnPRODUIT.ForeColor = SystemColors.ControlLightLight;
             btnPRODUIT.Image = Properties.Resources.Icon_produit1;
             btnPRODUIT.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPRODUIT.Location = new Point(16, 143);
+            btnPRODUIT.Location = new Point(16, 135);
             btnPRODUIT.Name = "btnPRODUIT";
             btnPRODUIT.RightToLeft = RightToLeft.No;
             btnPRODUIT.Size = new Size(192, 32);

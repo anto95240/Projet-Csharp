@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projet_Csharp.Class_db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,11 @@ namespace Projet_Csharp
         public Facture()
         {
             InitializeComponent();
+            Con = new Fonctions();
+            AfficherProduits();
         }
 
+        Fonctions Con;
         private void produit_click(object sender, EventArgs e)
         {
             // Redirection vers la page de Accueil après avoir cliqué sur le bouton de deconneexion
@@ -55,6 +59,23 @@ namespace Projet_Csharp
             Deconnexion pageDeconnexion = new Deconnexion();
             pageDeconnexion.Show(); // Affiche la page de déconnexion
             this.Hide(); // Cache la page de Facture actuelle
+        }
+
+        private void Facture_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void AfficherProduits()
+        {
+            string Req = "SELECT command_Table.CommandId, product_Table.Name, product_Table.Description, categorie_Table.Name AS Category, cart_Table.Quantity, invoices_Table.Total, invoices_Table.InvoiceDate AS Date " +
+                         "FROM command_Table " +
+                         "INNER JOIN product_Table ON command_Table.ProductId = product_Table.ProductId " +
+                         "INNER JOIN cart_Table ON command_Table.ProductId = cart_Table.ProductId " +
+                         "INNER JOIN categorie_Table ON product_Table.CategorieId = categorie_Table.CategorieId " +
+                         "INNER JOIN invoices_Table ON command_Table.CommandId = invoices_Table.CommandId";
+
+            ListeFacture.DataSource = Con.RecupererData(Req);
         }
 
     }

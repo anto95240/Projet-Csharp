@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facture));
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
             textBox1 = new TextBox();
             btnFACTURE = new Button();
             btnCOMMAND = new Button();
@@ -39,8 +42,10 @@
             btnPANIER = new Button();
             btnPRODUIT = new Button();
             Logo1 = new PictureBox();
+            ListeFacture = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Logo1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ListeFacture).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -62,7 +67,7 @@
             btnFACTURE.ForeColor = SystemColors.ControlLightLight;
             btnFACTURE.Image = Properties.Resources.icon_compte1;
             btnFACTURE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFACTURE.Location = new Point(16, 438);
+            btnFACTURE.Location = new Point(16, 432);
             btnFACTURE.Name = "btnFACTURE";
             btnFACTURE.Size = new Size(192, 32);
             btnFACTURE.TabIndex = 21;
@@ -77,7 +82,7 @@
             btnCOMMAND.ForeColor = SystemColors.ControlLightLight;
             btnCOMMAND.Image = Properties.Resources.icon_compte1;
             btnCOMMAND.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCOMMAND.Location = new Point(16, 374);
+            btnCOMMAND.Location = new Point(16, 371);
             btnCOMMAND.Name = "btnCOMMAND";
             btnCOMMAND.Size = new Size(192, 32);
             btnCOMMAND.TabIndex = 20;
@@ -104,7 +109,7 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.ControlLightLight;
-            panel3.Location = new Point(5, 438);
+            panel3.Location = new Point(5, 434);
             panel3.Name = "panel3";
             panel3.Size = new Size(5, 32);
             panel3.TabIndex = 19;
@@ -133,7 +138,7 @@
             btnCOMPTE.ForeColor = SystemColors.ControlLightLight;
             btnCOMPTE.Image = Properties.Resources.icon_compte1;
             btnCOMPTE.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCOMPTE.Location = new Point(16, 308);
+            btnCOMPTE.Location = new Point(16, 292);
             btnCOMPTE.Name = "btnCOMPTE";
             btnCOMPTE.Size = new Size(192, 32);
             btnCOMPTE.TabIndex = 15;
@@ -149,7 +154,7 @@
             btnPANIER.ForeColor = SystemColors.ControlLightLight;
             btnPANIER.Image = Properties.Resources.icon_panier1;
             btnPANIER.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPANIER.Location = new Point(16, 222);
+            btnPANIER.Location = new Point(16, 213);
             btnPANIER.Name = "btnPANIER";
             btnPANIER.Size = new Size(192, 32);
             btnPANIER.TabIndex = 14;
@@ -165,7 +170,7 @@
             btnPRODUIT.ForeColor = SystemColors.ControlLightLight;
             btnPRODUIT.Image = Properties.Resources.Icon_produit1;
             btnPRODUIT.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPRODUIT.Location = new Point(16, 143);
+            btnPRODUIT.Location = new Point(16, 135);
             btnPRODUIT.Name = "btnPRODUIT";
             btnPRODUIT.RightToLeft = RightToLeft.No;
             btnPRODUIT.Size = new Size(192, 32);
@@ -185,12 +190,65 @@
             Logo1.TabIndex = 13;
             Logo1.TabStop = false;
             // 
+            // ListeFacture
+            // 
+            dataGridViewCellStyle16.BackColor = Color.White;
+            ListeFacture.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            ListeFacture.BackgroundColor = SystemColors.Control;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle17.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle17.ForeColor = Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
+            ListeFacture.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            ListeFacture.ColumnHeadersHeight = 22;
+            ListeFacture.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.White;
+            dataGridViewCellStyle18.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle18.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
+            ListeFacture.DefaultCellStyle = dataGridViewCellStyle18;
+            ListeFacture.GridColor = Color.Silver;
+            ListeFacture.Location = new Point(279, 88);
+            ListeFacture.Name = "ListeFacture";
+            ListeFacture.RowHeadersVisible = false;
+            ListeFacture.RowHeadersWidth = 51;
+            ListeFacture.Size = new Size(836, 403);
+            ListeFacture.TabIndex = 114;
+            ListeFacture.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            ListeFacture.ThemeStyle.AlternatingRowsStyle.Font = null;
+            ListeFacture.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            ListeFacture.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            ListeFacture.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            ListeFacture.ThemeStyle.BackColor = SystemColors.Control;
+            ListeFacture.ThemeStyle.GridColor = Color.Silver;
+            ListeFacture.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            ListeFacture.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            ListeFacture.ThemeStyle.HeaderStyle.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ListeFacture.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            ListeFacture.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            ListeFacture.ThemeStyle.HeaderStyle.Height = 22;
+            ListeFacture.ThemeStyle.ReadOnly = false;
+            ListeFacture.ThemeStyle.RowsStyle.BackColor = Color.White;
+            ListeFacture.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            ListeFacture.ThemeStyle.RowsStyle.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ListeFacture.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            ListeFacture.ThemeStyle.RowsStyle.Height = 29;
+            ListeFacture.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            ListeFacture.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
             // Facture
             // 
             AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1130, 582);
+            Controls.Add(ListeFacture);
             Controls.Add(textBox1);
             Controls.Add(panel1);
             Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -199,8 +257,10 @@
             Name = "Facture";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Facture";
+            Load += Facture_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Logo1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ListeFacture).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,5 +277,6 @@
         private Button btnPANIER;
         private Button btnPRODUIT;
         private PictureBox Logo1;
+        private Guna.UI2.WinForms.Guna2DataGridView ListeFacture;
     }
 }
