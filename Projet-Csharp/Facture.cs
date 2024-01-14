@@ -73,7 +73,8 @@ namespace Projet_Csharp
                          "INNER JOIN product_Table ON command_Table.ProductId = product_Table.ProductId " +
                          "INNER JOIN cart_Table ON command_Table.ProductId = cart_Table.ProductId " +
                          "INNER JOIN categorie_Table ON product_Table.CategorieId = categorie_Table.CategorieId " +
-                         "INNER JOIN invoices_Table ON command_Table.CommandId = invoices_Table.CommandId";
+                         "INNER JOIN invoices_Table ON command_Table.CommandId = invoices_Table.CommandId " +
+                         "ORDER BY command_Table.CommandId ASC";
 
             ListeFacture.DataSource = Con.RecupererData(Req);
         }

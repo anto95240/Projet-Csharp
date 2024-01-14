@@ -85,6 +85,7 @@ namespace Projet_Csharp
             pageCompte.Show(); // Affiche la page de compte
             this.Hide(); // Cache la page de accueil actuelle
         }
+       
         private void command_click(object sender, EventArgs e)
         {
             // Redirection vers la page de Command après avoir cliqué sur le bouton de compte
@@ -115,12 +116,16 @@ namespace Projet_Csharp
             string Req = "SELECT product_Table.ProductId, product_Table.Name, product_Table.Description, categorie_Table.Name AS Category, product_Table.Price, product_Table.stock_Quantity AS Quantity " +
                 "FROM product_Table " +
                 "INNER JOIN categorie_Table ON product_Table.CategorieId = categorie_Table.CategorieId";
+
             ListeProduits.DataSource = Con.RecupererData(Req);
+
+            ListeProduits.Columns["ProductId"].Visible = false;
+
         }
 
         private void btnAjouter(object sender, EventArgs e)
         {
-            if (NomTEXT.Text == "" || DescriptionTEXT.Text == "" || PrixTEXT.Text == "" || QuantitéTEXT.Text == "")
+            if (NomTEXT.Text == "" || DescriptionTEXT.Text == "" || PrixTEXT.Text == "" || QuantitéTEXT.Text == "" || comboBoxCat.SelectedItem == null)
             {
                 MessageBox.Show("Info Incomplète!!!");
             }
@@ -134,52 +139,39 @@ namespace Projet_Csharp
                     int Price = int.Parse(PrixTEXT.Text); // Convertir en décimal
                     int stock_Quantity = int.Parse(QuantitéTEXT.Text); // Convertir en entier
 
-                    string CatName = CatTEXT.Text; // Supposons que vous avez un champ pour la catégorie, CatTEXT par exemple
+                    // Récupérer la catégorie sélectionnée dans la ComboBox
+                    DataRowView selectedCategory = (DataRowView)comboBoxCat.SelectedItem;
+                    int CategorieId = Convert.ToInt32(selectedCategory["CategorieId"]);
 
-
-                    int CategorieId;
+                    string InsertReq = "INSERT INTO product_Table (CategorieId, Name, Description, Price, stock_Quantity) VALUES (@CategorieId, @Name, @Description, @Price, @stock_Quantity)";
 
                     using (SqlConnection connection = new SqlConnection(Con.ConStr))
                     {
                         connection.Open();
 
-                        string ReqSelectCat = "SELECT CategorieId FROM categorie_Table /* Mettez ici votre condition pour trouver le bon utilisateur */";
-
-                        using (SqlCommand command = new SqlCommand(ReqSelectCat, connection))
+                        using (SqlCommand insertCommand = new SqlCommand(InsertReq, connection))
                         {
-                            // Execute la requête SELECT pour obtenir le UserId
-                            object result = command.ExecuteScalar();
-                            if (result != null)
+                            insertCommand.Parameters.AddWithValue("@CategorieId", CategorieId);
+                            insertCommand.Parameters.AddWithValue("@Name", Name);
+                            insertCommand.Parameters.AddWithValue("@Description", Description);
+                            insertCommand.Parameters.AddWithValue("@Price", Price);
+                            insertCommand.Parameters.AddWithValue("@stock_Quantity", stock_Quantity);
+
+                            int rowsAffected = insertCommand.ExecuteNonQuery();
+                            if (rowsAffected > 0)
                             {
-                                CategorieId = Convert.ToInt32(result);
+                                MessageBox.Show("Produit Ajouté!!!!");
 
-                                string InsertReq = "INSERT INTO product_Table (CategorieId, Name, Description, Price, stock_Quantity) VALUES (@CategorieId, @Name, @Description, @Price, @stock_Quantity)";
+                                AfficherProduits();
 
-                                using (SqlCommand insertCommand = new SqlCommand(InsertReq, connection))
-                                {
-                                    insertCommand.Parameters.AddWithValue("@CategorieId", CategorieId);
-                                    insertCommand.Parameters.AddWithValue("@Name", Name);
-                                    insertCommand.Parameters.AddWithValue("@Description", Description);
-                                    insertCommand.Parameters.AddWithValue("@Price", Price);
-                                    insertCommand.Parameters.AddWithValue("@stock_Quantity", stock_Quantity);
-
-                                    int rowsAffected = insertCommand.ExecuteNonQuery();
-                                    if (rowsAffected > 0)
-                                    {
-                                        MessageBox.Show("Produit Ajouté!!!!");
-
-                                        AfficherProduits();
-
-                                        NomTEXT.Text = "";
-                                        DescriptionTEXT.Text = "";
-                                        PrixTEXT.Text = "";
-                                        QuantitéTEXT.Text = "";
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Erreur lors de l'ajout au commande.");
-                                    }
-                                }
+                                NomTEXT.Text = "";
+                                DescriptionTEXT.Text = "";
+                                PrixTEXT.Text = "";
+                                QuantitéTEXT.Text = "";
+                            }
+                            else
+                            {
+                                MessageBox.Show("Erreur lors de l'ajout au commande.");
                             }
                         }
                     }
@@ -211,25 +203,33 @@ namespace Projet_Csharp
 
         private void ListeProduits_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            NomTEXT.Text = ListeProduits.SelectedRows[0].Cells[1].Value.ToString();
-            DescriptionTEXT.Text = ListeProduits.SelectedRows[0].Cells[2].Value.ToString();
-            CatTEXT.Text = ListeProduits.SelectedRows[0].Cells[3].Value.ToString();
-            PrixTEXT.Text = ListeProduits.SelectedRows[0].Cells[4].Value.ToString();
-            QuantitéTEXT.Text = ListeProduits.SelectedRows[0].Cells[5].Value.ToString();
+            if (e.RowIndex >= 0 && e.RowIndex < ListeProduits.Rows.Count)
+            {
+                DataGridViewRow selectedRow = ListeProduits.Rows[e.RowIndex];
 
-            if (NomTEXT.Text == "")
-            {
-                Cle = 0;
-            }
-            else
-            {
-                Cle = Convert.ToInt32(ListeProduits.SelectedRows[0].Cells[0].Value.ToString());
+                NomTEXT.Text = selectedRow.Cells["Name"].Value?.ToString() ?? "";
+                DescriptionTEXT.Text = selectedRow.Cells["Description"].Value?.ToString() ?? "";
+                CatTEXT.Text = selectedRow.Cells["Category"].Value?.ToString() ?? "";
+                PrixTEXT.Text = selectedRow.Cells["Price"].Value?.ToString() ?? "";
+                QuantitéTEXT.Text = selectedRow.Cells["Quantity"].Value?.ToString() ?? "";
+
+                if (int.TryParse(selectedRow.Cells["ProductId"].Value?.ToString(), out int productId))
+                {
+                    Cle = productId;
+                }
+                else
+                {
+                    Cle = 0;
+                }
             }
         }
 
+
+
+
         private void btnModifier(object sender, EventArgs e)
         {
-            if (NomTEXT.Text == "" || DescriptionTEXT.Text == "" || PrixTEXT.Text == "" || QuantitéTEXT.Text == "")
+            if (NomTEXT.Text == "" || DescriptionTEXT.Text == "" || PrixTEXT.Text == "" || QuantitéTEXT.Text == "" || comboBoxCat.SelectedItem == null)
             {
                 MessageBox.Show("Info Incomplète!!!");
             }
@@ -239,42 +239,30 @@ namespace Projet_Csharp
                 {
                     string Name = NomTEXT.Text;
                     string Description = DescriptionTEXT.Text;
-                    int Price = int.Parse(PrixTEXT.Text); // Convertir en décimal
-                    int stock_Quantity = int.Parse(QuantitéTEXT.Text); // Convertir en entier
+                    int Price = int.Parse(PrixTEXT.Text);
+                    int stock_Quantity = int.Parse(QuantitéTEXT.Text);
 
-                    string CatName = CatTEXT.Text; // Supposons que vous avez un champ pour la catégorie, CatTEXT par exemple
-
-                    int CategorieId;
+                    DataRowView selectedCategory = (DataRowView)comboBoxCat.SelectedItem;
+                    int CategorieId = Convert.ToInt32(selectedCategory["CategorieId"]);
 
                     using (SqlConnection connection = new SqlConnection(Con.ConStr))
                     {
                         connection.Open();
 
-                        string ReqSelectCat = "SELECT CategorieId FROM categorie_Table /* Mettez ici votre condition pour trouver le bon utilisateur */";
+                        string Req = "UPDATE product_Table SET CategorieId = '{0}', Name = '{1}', Description = '{2}', Price = '{3}', stock_Quantity = '{4}' WHERE ProductId = {5}";
 
-                        using (SqlCommand command = new SqlCommand(ReqSelectCat, connection))
-                        {
-                            // Execute la requête SELECT pour obtenir le UserId
-                            object result = command.ExecuteScalar();
-                            if (result != null)
-                            {
-                                CategorieId = Convert.ToInt32(result);
-                                string Req = "UPDATE product_Table SET CategorieId = '{0}', Name = '{1}', Description = '{2}', Price = '{3}', stock_Quantity = '{4}' WHERE ProductId = {5}";
+                        Req = string.Format(Req, CategorieId, Name, Description, Price, stock_Quantity, Cle);
+                        Con.EnvoyerData(Req);
 
-                                Req = string.Format(Req, CategorieId, Name, Description, Price, stock_Quantity, Cle);
-                                Con.EnvoyerData(Req);
+                        AfficherProduits();
 
-                                MessageBox.Show("Produit Modifié!!!!");
+                        NomTEXT.Text = "";
+                        DescriptionTEXT.Text = "";
+                        PrixTEXT.Text = "";
+                        QuantitéTEXT.Text = "";
+                        comboBoxCat.SelectedItem = selectedCategory;
 
-                                AfficherProduits();
-
-                                NomTEXT.Text = "";
-                                DescriptionTEXT.Text = "";
-                                PrixTEXT.Text = "";
-                                QuantitéTEXT.Text = "";
-
-                            }
-                        }
+                        MessageBox.Show("Produit Modifié!!!!");
                     }
                 }
                 catch (Exception ex)
@@ -283,6 +271,9 @@ namespace Projet_Csharp
                 }
             }
         }
+
+
+
 
         private void btnSupprimer(object sender, EventArgs e)
         {
@@ -294,24 +285,34 @@ namespace Projet_Csharp
             {
                 try
                 {
-                    string Name = NomTEXT.Text;
-                    string Description = DescriptionTEXT.Text;
-                    int Price = int.Parse(PrixTEXT.Text); // Convertir en décimal
-                    int stock_Quantity = int.Parse(QuantitéTEXT.Text); // Convertir en entier
+                    string Req = "DELETE from product_Table WHERE ProductId = @ProductId";
 
-                    string Req = "DELETE from product_Table WHERE ProductId = {0} ";
-                    Req = string.Format(Req, Cle);
+                    using (SqlConnection connection = new SqlConnection(Con.ConStr))
+                    {
+                        connection.Open();
 
-                    // Exécution de la commande
-                    Con.EnvoyerData(Req);
+                        using (SqlCommand deleteCommand = new SqlCommand(Req, connection))
+                        {
+                            deleteCommand.Parameters.AddWithValue("@ProductId", Cle);
 
+                            // Exécution de la commande
+                            int rowsAffected = deleteCommand.ExecuteNonQuery();
 
-                    AfficherProduits();
-                    NomTEXT.Text = "";
-                    DescriptionTEXT.Text = "";
-                    PrixTEXT.Text = "";
-                    QuantitéTEXT.Text = "";
-                    MessageBox.Show("Produit Supprimé!!!");
+                            if (rowsAffected > 0)
+                            {
+                                AfficherProduits();
+                                NomTEXT.Text = "";
+                                DescriptionTEXT.Text = "";
+                                PrixTEXT.Text = "";
+                                QuantitéTEXT.Text = "";
+                                MessageBox.Show("Produit Supprimé!!!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Erreur lors de la suppression du produit.");
+                            }
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -319,7 +320,6 @@ namespace Projet_Csharp
                 }
             }
         }
-
 
         private void Accueil_Load(object sender, EventArgs e)
         {
@@ -366,16 +366,19 @@ namespace Projet_Csharp
             if (selectedProductRow != null)
             {
                 int ProductId = Convert.ToInt32(selectedProductRow["ProductId"]);
+
                 string Quantity = QuantityProduit.Text;
                 string Statut = "Reserved";
 
                 // Obtenir le UserId à partir de user_Table
                 int UserId;
+
                 using (SqlConnection connection = new SqlConnection(Con.ConStr))
                 {
                     connection.Open();
 
                     string ReqSelect = "SELECT UserId FROM user_Table /* Mettez ici votre condition pour trouver le bon utilisateur */";
+                    
                     using (SqlCommand command = new SqlCommand(ReqSelect, connection))
                     {
                         // Execute la requête SELECT pour obtenir le UserId

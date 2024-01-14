@@ -69,7 +69,7 @@ namespace Projet_Csharp
         private void AfficherProduits()
         {
 
-            string Req = "SELECT command_Table.CommandId, product_Table.Name, product_Table.Description, categorie_Table.Name AS Category, (product_Table.Price * cart_Table.Quantity) AS Price, cart_Table.Quantity, command_Table.CommandDate AS Date, command_Table.CommandStatut AS Statut " +
+            string Req = "SELECT product_Table.Name, product_Table.Description, categorie_Table.Name AS Category, (product_Table.Price * cart_Table.Quantity) AS Price, cart_Table.Quantity, command_Table.CommandDate AS Date, command_Table.CommandStatut AS Statut " +
                          "FROM command_Table " +
                          "INNER JOIN product_Table ON command_Table.ProductId = product_Table.ProductId " +
                          "INNER JOIN categorie_Table ON product_Table.CategorieId = categorie_Table.CategorieId " +
@@ -84,49 +84,7 @@ namespace Projet_Csharp
 
         }
 
-        private void btnSUPPR_Click(object sender, EventArgs e)
-        {
-            DataRowView selectedProductRow = ListeCommand.CurrentRow.DataBoundItem as DataRowView;
 
-            if (selectedProductRow != null)
-            {
-                int CommandId = Convert.ToInt32(selectedProductRow["CommandId"]);
-
-                string deleteQuery = "DELETE FROM command_Table WHERE CommandId = @CommandId";
-
-                using (SqlConnection connection = new SqlConnection(Con.ConStr))
-                {
-                    using (SqlCommand command = new SqlCommand(deleteQuery, connection))
-                    {
-                        command.Parameters.AddWithValue("@CommandId", CommandId);
-
-                        try
-                        {
-                            connection.Open();
-                            int rowsAffected = command.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                AfficherProduits(); // Rafraîchir l'affichage après la suppression
-                                MessageBox.Show("Produit retiré du panier!");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Aucun produit trouvé dans le panier.");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Erreur lors de la suppression : " + ex.Message);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Sélectionnez un produit à supprimer du panier.");
-            }
-        }
 
         private void btnANNULER_COMMANDE_Click(object sender, EventArgs e)
         {
@@ -141,10 +99,7 @@ namespace Projet_Csharp
                 comboBoxSupprCom.DisplayMember = "Name"; // Assurez-vous que "Name" correspond au nom de la colonne contenant les noms des produits
 
                 // Si nécessaire, sélectionnez un élément par défaut dans la comboBoxSupprCom
-                if (comboBoxSupprCom.Items.Count > 0)
-                {
-                    comboBoxSupprCom.SelectedIndex = 0;
-                }
+                
 
                 // Afficher le panneau de sélection de produit
                 panelSupprCommand.Size = new Size(267, 128);
@@ -160,19 +115,18 @@ namespace Projet_Csharp
         {
             if (ListeCommand.Rows.Count > 0)
             {
-                // Récupérer les données depuis la base de données pour afficher dans la comboBoxPassCom
-                string Req = "SELECT cart_Table.CartId, product_Table.Name FROM product_Table INNER JOIN cart_Table ON product_Table.ProductId = cart_Table.ProductId";
+                // Récupérer les données depuis la base de données pour afficher dans la comboBoxFacture
+                string Req = "SELECT command_Table.CommandId, product_Table.ProductId, product_Table.Name " +
+                             "FROM command_Table " +
+                             "INNER JOIN product_Table ON command_Table.ProductId = product_Table.ProductId";
                 DataTable table = Con.RecupererData(Req);
 
-                // Remplir la comboBoxPassCom avec les noms des produits
+                // Remplir la comboBoxFacture avec les noms des produits
                 comboBoxFacture.DataSource = table;
                 comboBoxFacture.DisplayMember = "Name"; // Assurez-vous que "Name" correspond au nom de la colonne contenant les noms des produits
-
-                // Si nécessaire, sélectionnez un élément par défaut dans la comboBoxPassCom
-                if (comboBoxFacture.Items.Count > 0)
-                {
-                    comboBoxFacture.SelectedIndex = 0;
-                }
+               
+                // Si nécessaire, sélectionnez un élément par défaut dans la comboBoxFacture
+                
 
                 // Afficher le panneau de sélection de produit
                 panelFacture.Size = new Size(267, 128);
@@ -184,127 +138,158 @@ namespace Projet_Csharp
             }
         }
 
-        private void btnFACTURATION_Click(object sender, EventArgs e)
+
+        private void btnSUPPR_Click(object sender, EventArgs e)
         {
-            DataRowView selectedProductRow = comboBoxFacture.SelectedItem as DataRowView;
-
-            if (selectedProductRow != null)
+            if (comboBoxSupprCom.SelectedIndex != -1)
             {
-                DateTime InvoiceDate = DateTime.Now; // Obtenir la date actuelle
+                DataRowView selectedProductRow = comboBoxSupprCom.SelectedItem as DataRowView;
 
-                int UserId;
-                int CartId;
-                int CommandId;
-
-                // Récupérer le UserId depuis user_Table
-                string ReqSelectUser = "SELECT UserId FROM user_Table /* Mettez ici votre condition pour trouver le bon utilisateur */";
-                using (SqlConnection connection = new SqlConnection(Con.ConStr))
+                if (selectedProductRow != null)
                 {
-                    connection.Open();
+                    int CommandId = Convert.ToInt32(selectedProductRow["CommandId"]);
 
-                    using (SqlCommand command = new SqlCommand(ReqSelectUser, connection))
+                    string deleteQuery = "DELETE FROM command_Table WHERE CommandId = @CommandId";
+
+                    using (SqlConnection connection = new SqlConnection(Con.ConStr))
                     {
-                        object result = command.ExecuteScalar();
-                        if (result != null)
+                        using (SqlCommand command = new SqlCommand(deleteQuery, connection))
                         {
-                            UserId = Convert.ToInt32(result);
+                            command.Parameters.AddWithValue("@CommandId", CommandId);
 
-                            // Récupérer le CartId depuis cart_Table
-                            string ReqSelectCartId = "SELECT CartId FROM cart_Table /* Mettez ici votre condition pour trouver le bon panier */";
-                            using (SqlCommand cartCommand = new SqlCommand(ReqSelectCartId, connection))
+                            try
                             {
-                                object cartResult = cartCommand.ExecuteScalar();
-                                if (cartResult != null)
+                                connection.Open();
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
                                 {
-                                    CartId = Convert.ToInt32(cartResult);
-
-                                    // Récupérer le CommandId depuis command_Table
-                                    string ReqSelectCommandId = "SELECT CommandId FROM command_Table /* Mettez ici votre condition pour trouver la bonne commande */";
-                                    using (SqlCommand commandCommand = new SqlCommand(ReqSelectCommandId, connection))
-                                    {
-                                        object commandResult = commandCommand.ExecuteScalar();
-                                        if (commandResult != null)
-                                        {
-                                            CommandId = Convert.ToInt32(commandResult);
-
-                                            // Récupérer le prix depuis product_Table
-                                            string ReqSelectPrice = "SELECT Price FROM product_Table /* Mettez ici votre condition pour trouver le bon produit */";
-                                            using (SqlCommand priceCommand = new SqlCommand(ReqSelectPrice, connection))
-                                            {
-                                                object priceResult = priceCommand.ExecuteScalar();
-                                                if (priceResult != null)
-                                                {
-                                                    decimal Price = Convert.ToDecimal(priceResult);
-
-                                                    // Récupérer la quantité depuis cart_Table
-                                                    string ReqSelectQuantity = "SELECT Quantity FROM cart_Table /* Mettez ici votre condition pour trouver le bon panier */";
-                                                    using (SqlCommand quantityCommand = new SqlCommand(ReqSelectQuantity, connection))
-                                                    {
-                                                        object quantityResult = quantityCommand.ExecuteScalar();
-                                                        if (quantityResult != null)
-                                                        {
-                                                            int Quantity = Convert.ToInt32(quantityResult);
-
-                                                            // Calculer le Total (Price * Quantity)
-                                                            decimal Total = Price * Quantity;
-
-                                                            // Insertion dans invoices_Table
-                                                            string ReqInsert = "INSERT INTO invoices_Table (UserId, CartId, CommandId, Total, InvoiceDate) " +
-                                                                               "VALUES (@UserId, @CartId, @CommandId, @Total, @InvoiceDate)";
-                                                            using (SqlCommand insertCommand = new SqlCommand(ReqInsert, connection))
-                                                            {
-                                                                insertCommand.Parameters.AddWithValue("@UserId", UserId);
-                                                                insertCommand.Parameters.AddWithValue("@CartId", CartId);
-                                                                insertCommand.Parameters.AddWithValue("@CommandId", CommandId);
-                                                                insertCommand.Parameters.AddWithValue("@Total", Total);
-                                                                insertCommand.Parameters.AddWithValue("@InvoiceDate", InvoiceDate);
-
-                                                                int rowsAffected = insertCommand.ExecuteNonQuery();
-                                                                if (rowsAffected > 0)
-                                                                {
-                                                                    MessageBox.Show("Commande ajouté à la facture !");
-                                                                }
-                                                                else
-                                                                {
-                                                                    MessageBox.Show("Erreur lors de l'ajout à la facture.");
-                                                                }
-                                                            }
-                                                        }
-                                                        else
-                                                        {
-                                                            MessageBox.Show("Quantité non trouvée.");
-                                                        }
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    MessageBox.Show("Prix non trouvé.");
-                                                }
-                                            }
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Commande non trouvé.");
-                                        }
-                                    }
+                                    AfficherProduits(); // Rafraîchir l'affichage après la suppression
+                                    MessageBox.Show("Produit retiré du panier!");
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Panier non trouvé.");
+                                    MessageBox.Show("Aucun produit trouvé dans le panier.");
                                 }
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Utilisateur non trouvé.");
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Erreur lors de la suppression : " + ex.Message);
+                            }
                         }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Aucun produit sélectionné.");
                 }
             }
             else
             {
-                MessageBox.Show("Sélectionnez un produit avant d'ajouter à la commande.");
+                MessageBox.Show("Sélectionnez un produit avant de passer une commande.");
             }
         }
+
+
+
+
+        private void btnFACTURATION_Click(object sender, EventArgs e)
+        {
+            if (comboBoxFacture.SelectedIndex != -1) // Vérifie s'il y a un élément sélectionné dans la comboBox
+            {
+                DataRowView selectedProductRow = comboBoxFacture.SelectedItem as DataRowView;
+
+                if (selectedProductRow != null)
+                {
+                    int CommandId = Convert.ToInt32(selectedProductRow["CommandId"]);
+                    int UserId;
+
+                    DateTime InvoiceDate = DateTime.Now; // Obtenir la date actuelle
+
+                    // Récupérer le UserId depuis user_Table
+                    string ReqSelectUser = "SELECT UserId FROM user_Table /* Mettez ici votre condition pour trouver le bon utilisateur */";
+
+                    using (SqlConnection connection = new SqlConnection(Con.ConStr))
+                    {
+                        connection.Open();
+
+                        using (SqlCommand userCommand = new SqlCommand(ReqSelectUser, connection))
+                        {
+                            object userResult = userCommand.ExecuteScalar();
+                            if (userResult != null)
+                            {
+                                UserId = Convert.ToInt32(userResult);
+
+                                decimal Price;
+                                int Quantity;
+
+                                // Récupérer le prix et la quantité du produit depuis product_Table ou cart_Table
+                                string ReqSelectDetails = "SELECT command_Table.CommandId, product_Table.Price, cart_Table.Quantity " +
+                                                  "FROM command_Table " +
+                                                  "INNER JOIN product_Table ON command_Table.ProductId = product_Table.ProductId " +
+                                                  "INNER JOIN cart_Table ON product_Table.ProductId = cart_Table.ProductId " +
+                                                  "WHERE command_Table.CommandId = @CommandId";
+
+                                using (SqlCommand detailsCommand = new SqlCommand(ReqSelectDetails, connection))
+                                {
+                                    detailsCommand.Parameters.AddWithValue("@CommandId", CommandId);
+                                    SqlDataReader reader = detailsCommand.ExecuteReader();
+
+                                    if (reader.Read())
+                                    {
+                                        Price = Convert.ToDecimal(reader["Price"]);
+                                        Quantity = Convert.ToInt32(reader["Quantity"]);
+                                        reader.Close();
+
+                                        decimal Total = Price * Quantity;
+
+                                        // Insertion dans invoices_Table
+                                        string ReqInsert = "INSERT INTO invoices_Table (UserId, CommandId, Total, InvoiceDate) " +
+                                                            "VALUES (@UserId, @CommandId, @Total, @InvoiceDate)";
+                                        using (SqlCommand insertCommand = new SqlCommand(ReqInsert, connection))
+                                        {
+                                            insertCommand.Parameters.AddWithValue("@UserId", UserId);
+                                            insertCommand.Parameters.AddWithValue("@CommandId", CommandId);
+                                            insertCommand.Parameters.AddWithValue("@Total", Total);
+                                            insertCommand.Parameters.AddWithValue("@InvoiceDate", InvoiceDate);
+
+                                            int rowsAffected = insertCommand.ExecuteNonQuery();
+                                            if (rowsAffected > 0)
+                                            {
+                                                MessageBox.Show("Commande ajoutée à la facture !");
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Erreur lors de l'ajout à la facture.");
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        reader.Close();
+                                        MessageBox.Show("Détails de commande non trouvés.");
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Utilisateur non trouvé.");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Aucun produit sélectionné.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sélectionnez un produit avant de passer une commande.");
+            }
+        }
+
+
+
     }
 }
