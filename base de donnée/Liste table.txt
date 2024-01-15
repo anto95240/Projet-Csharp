@@ -1,0 +1,105 @@
+CREATE TABLE [dbo].[address_Table] (
+    [AddressId]     INT           IDENTITY (1, 1) NOT NULL,
+    [UserId]        INT           NOT NULL,
+    [FirstName]     VARCHAR (80)  NOT NULL,
+    [LastName]      VARCHAR (80)  NOT NULL,
+    [StreetAddress] VARCHAR (100) NOT NULL,
+    [City]          VARCHAR (50)  NOT NULL,
+    [State]         VARCHAR (50)  NOT NULL,
+    [PostalCode]    VARCHAR (30)  NOT NULL,
+    [Country]       VARCHAR (50)  NOT NULL,
+    CONSTRAINT [PK_address_Table] PRIMARY KEY CLUSTERED ([AddressId] ASC),
+    CONSTRAINT [FK_user_address] FOREIGN KEY ([UserId]) REFERENCES [dbo].[user_Table] ([UserId])
+);
+
+
+
+CREATE TABLE [dbo].[cart_Table] (
+    [CartId]    INT          IDENTITY (100, 1) NOT NULL,
+    [UserId]    INT          NOT NULL,
+    [ProductId] INT          NOT NULL,
+    [Quantity]  INT          NOT NULL,
+    [Statut]    VARCHAR (30) NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY CLUSTERED ([CartId] ASC),
+    CONSTRAINT [FK_user_cart] FOREIGN KEY ([UserId]) REFERENCES [dbo].[user_Table] ([UserId]),
+    CONSTRAINT [FK_product_cart] FOREIGN KEY ([ProductId]) REFERENCES [dbo].[product_Table] ([ProductId])
+);
+
+
+CREATE TABLE [dbo].[categorie_Table] (
+    [CategorieId] INT          IDENTITY (10, 1) NOT NULL,
+    [Name]        VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([CategorieId] ASC)
+);
+
+
+
+CREATE TABLE [dbo].[command_Table] (
+    [CommandId]     INT          IDENTITY (100, 1) NOT NULL,
+    [UserId]        INT          NOT NULL,
+    [ProductId]     INT          NOT NULL,
+    [CommandDate]   DATE         NOT NULL,
+    [CommandStatut] VARCHAR (30) NOT NULL,
+    CONSTRAINT [PK_command_Table] PRIMARY KEY CLUSTERED ([CommandId] ASC),
+    CONSTRAINT [FK_user_command] FOREIGN KEY ([UserId]) REFERENCES [dbo].[user_Table] ([UserId]),
+    CONSTRAINT [FK_product_command] FOREIGN KEY ([ProductId]) REFERENCES [dbo].[product_Table] ([ProductId])
+);
+
+
+
+CREATE TABLE [dbo].[invoices_Table] (
+    [InvoiceId]   INT        IDENTITY (100, 1) NOT NULL,
+    [CommandId]   INT        NOT NULL,
+    [UserId]      INT        NOT NULL,
+    [Total]       FLOAT (53) NOT NULL,
+    [InvoiceDate] DATE       NOT NULL,
+    CONSTRAINT [PK_invoice_Table] PRIMARY KEY CLUSTERED ([InvoiceId] ASC),
+    CONSTRAINT [FK_command_command] FOREIGN KEY ([CommandId]) REFERENCES [dbo].[command_Table] ([CommandId]),
+    CONSTRAINT [FK_user_invoice] FOREIGN KEY ([UserId]) REFERENCES [dbo].[user_Table] ([UserId])
+);
+
+
+
+CREATE TABLE [dbo].[jointure_Table] (
+    [Id]        INT NOT NULL,
+    [UserId]    INT NOT NULL,
+    [AddressId] INT NOT NULL,
+    [CartId]    INT NOT NULL,
+    [ProductId] INT NOT NULL,
+    [InvoiceId] INT NOT NULL,
+    [CommandId] INT NOT NULL,
+    CONSTRAINT [PK_id_jointure] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_cart_jointure] FOREIGN KEY ([CartId]) REFERENCES [dbo].[cart_Table] ([CartId]),
+    CONSTRAINT [FK_command_jointure] FOREIGN KEY ([CommandId]) REFERENCES [dbo].[command_Table] ([CommandId]),
+    CONSTRAINT [FK_product_jointure] FOREIGN KEY ([ProductId]) REFERENCES [dbo].[product_Table] ([ProductId]),
+    CONSTRAINT [FK_invoices_jointure] FOREIGN KEY ([InvoiceId]) REFERENCES [dbo].[invoices_Table] ([InvoiceId]),
+    CONSTRAINT [FK_user_jointure] FOREIGN KEY ([UserId]) REFERENCES [dbo].[user_Table] ([UserId]),
+    CONSTRAINT [FK_address_jointure] FOREIGN KEY ([AddressId]) REFERENCES [dbo].[address_Table] ([AddressId])
+);
+
+
+
+
+
+CREATE TABLE [dbo].[product_Table] (
+    [ProductId]      INT           IDENTITY (100, 1) NOT NULL,
+    [CategorieId]    INT           NOT NULL,
+    [Name]           VARCHAR (100) NOT NULL,
+    [Description]    TEXT          NOT NULL,
+    [Price]          INT           NOT NULL,
+    [stock_Quantity] INT           NOT NULL,
+    CONSTRAINT [PK_product_Table] PRIMARY KEY CLUSTERED ([ProductId] ASC),
+    CONSTRAINT [FK_product_Table] FOREIGN KEY ([CategorieId]) REFERENCES [dbo].[categorie_Table] ([CategorieId])
+);
+
+
+CREATE TABLE [dbo].[user_Table] (
+    [UserId]        INT           IDENTITY (100, 1) NOT NULL,
+    [Email]         VARCHAR (255) NOT NULL,
+    [Password_hash] VARCHAR (100) NOT NULL,
+    CONSTRAINT [PK_user_Table] PRIMARY KEY CLUSTERED ([UserId] ASC)
+);
+
+
+
+

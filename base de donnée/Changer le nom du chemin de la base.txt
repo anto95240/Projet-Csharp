@@ -1,0 +1,6 @@
+Changer le nom du chemin de la base de donnée dans le fichier Class_bd/Fonction.cs : 
+- Aller dans Affichage -> explorateur de serveur
+- Dans explorateur de serveur faites connexion à une base de donnée
+- sélectionner Fichier de base de données Microsoft SQL Server (SqlClient) puis Fournisseur de données .NET framework pour SQL Server
+- Puis sélectionner le fichier sélectionner le fichier Base de donnée/e-commerce.mdf 
+- Après que la connexion à la basse de donnée est créer, faites clique droit propriété puis copier le nom et le coller à la place du nom existant

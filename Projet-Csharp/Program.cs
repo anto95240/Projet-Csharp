@@ -9,9 +9,9 @@ namespace Projet_Csharp
         static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            // see https://aka.ms/applxicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Compte());
+            Application.Run(new Chargement());
         }
     }
 }
